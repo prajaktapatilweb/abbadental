@@ -9,6 +9,7 @@ import LabTabs from '../components/home/LabTabs';
 import Navbar from "../components/header/navbar";
 import Countdown from "../components/home/Countdown";
 import Clinicinfo from "../components/home/Clinicinfo";
+import Awards from "../components/home/Awards";
 const Testimonial = lazy(() => import('../components/home/Testimonial'))
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <Suspense fallback=
         {<div>Component are loading please wait...</div>}>
         <Photogallery />
+        <Awards/>
         <Testimonial></Testimonial>
       </Suspense>
       <Equipment />

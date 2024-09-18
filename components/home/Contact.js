@@ -14,6 +14,7 @@ import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import IconButton from "@mui/material/IconButton";
 import GoogleRecaptcha from '../GoogleRecaptcha';
+import Image from 'next/image';
 
 
 const All = [
@@ -91,54 +92,20 @@ const Contact = () => {
 
           </div>
 
+          </section>
+        {/* <!-- End Contact Section --> */}
+      </Container>
+<section>
+          <Grid container spacing={0} sx={{p:0,backgroundColor:'white'}} >
 
-          <Grid container spacing={2}>
-
-                <Grid item xs={12} md={3}>
-                  <div class="info-box" style={{ background: '#ffffff' }}>
-
-                    <i class="bx"><LocationOnIcon /></i>
-                    <h3 style={{fontSize:'18px'}}> Airoli</h3>
-                    <p>R.No. B-001, Plot No. A-6/2, Suvarna Dham Bldg, Sector 9, Near HDFC Bank, Airoli, Navi Mumbai - 400 708.</p>
-                 
-                 
-                    {/* <i class="bx"><EmailTwoToneIcon style={{ color: '#49caeb' }}></EmailTwoToneIcon></i> */}
-                    <h3>Working Hours </h3>
-                    <p> Monday to Saturday:<br/>
-                   11:00 AM – 03:00 PM<br/>
-06:00 PM – 10:00 PM</p>
-
-<p>Sunday<br/>
-12:00 PM – 03:00 <br/>PM(By Appointment Only)</p>
-<Link  href={`tel:${contactno1}`} target="_blank">
-                                    +919833389890
-                                </Link>{" "}
-                 
-                  </div>
-                </Grid>
-              
-            <Grid item xs={12} md={3} sx={{display:'flex'}}>
-                  <div class="info-box" style={{ background: '#ffffff' }}>
-
-                    <i class="bx"><LocationOnIcon /></i>
-                    <h3 style={{fontSize:'18px'}}> Thane</h3>
-                    <p>Shop No.1, Ground Floor, New Sahjeevan Society, near Panchganga, 2nd Rabodi, Thane West, Thane 400601.
-</p>
-<h3>Working Hours</h3>
-                    <p>Monday to Sunday:<br/>
-10:00 AM – 02:00 PM<br/>
-05:00 PM – 10:00 PM</p>
-                  
-                 
-                    {/* <h3>Contact Us</h3> */}
-                    
-                                
-                                <Link href={`tel:${contactno2}`} target="_blank">
-                                        +919702955057
-                                </Link>
-                               <br/>
-                  </div>
-                </Grid>
+            <Grid item xs={12} md={6} sx={{display:'flex'}}>
+            <Image
+                        alt={'Clinic'}
+                        src='/images/contactimg.jpg'
+                        width={100}
+                        height={100}
+                        layout='responsive'></Image>
+              </Grid>
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
               <Card sx={{ px: 3, py: 4 }}>
                 <Formik
@@ -268,10 +235,8 @@ const Contact = () => {
             </Grid>
           {/* </Grid> */}
           </Grid>
+          </section>
 
-        </section>
-        {/* <!-- End Contact Section --> */}
-      </Container>
     </Box>
   );
 };

@@ -17,6 +17,7 @@ import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import { Link as ScrollLink } from "react-scroll";
 import { StyledButton } from "../styled-button";
 import Countdown from "../home/Countdown";
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import Navbar from "./navbar";
 
 
@@ -55,8 +56,8 @@ function ResponsiveAppBar() {
         setFlag(!flag);
     };
 
-  const contactno1 = "+919833389890";
-  const contactno2 = "+919702955057";
+  const contactno1 = "+919713435111";
+  const contactno2 = "+919923708233";
 
 
 
@@ -104,23 +105,25 @@ function ResponsiveAppBar() {
                                
                                 <Link href={`tel:${contactno2}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                        +919702955057
+                                        +919713435111
+
                                     </a>
                                 </Link>
                                 /
 
                                 <Link  href={`tel:${contactno1}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                    +919833389890
+                                    +919923708233
+
                                     </a>
                                 </Link>{" "}
                                 <IconButton aria-label="email" style={{ color: 'white' }}>
                                     <EmailTwoToneIcon />{" "}
                                 </IconButton>
                                 <Link 
-                               href={`mailto:${'Dynamicdentalcare2013@gmail.com'}`} target="_blank">
+                               href={`mailto:${'dr.abbaddentalclinic@gmail.com'}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                    Dynamicdentalcare2013@gmail.com
+                                    dr.abbaddentalclinic@gmail.com
                                     </a>
                                 </Link>
                             </Box>
@@ -142,7 +145,7 @@ function ResponsiveAppBar() {
                             <IconButton aria-label="facebook">
                                 {" "}
                                 <a
-                                    href="https://www.facebook.com/dranujdynamicdentalcare/"
+                                    href="https://www.facebook.com/abbaddentalclinicnashik/"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="facebook"
@@ -153,7 +156,7 @@ function ResponsiveAppBar() {
                            
                             <IconButton aria-label="instagram">
                                 <a
-                                    href="https://www.instagram.com/dranuj6344/"
+                                    href=" https://www.instagram.com/abbaddentalclinic/"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="instagram"
@@ -163,9 +166,20 @@ function ResponsiveAppBar() {
                                     ></InstagramIcon>
                                 </a>
                             </IconButton>
-                            <IconButton aria-label="linkedin">
+                        
+                            <IconButton aria-label="youtube">
                                 <a
-                                    href="https://jsdl.in/DT-43QAIIEQQYA"
+                                    href=" https://www.youtube.com/@abbaddentalclinicnashik"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label="youtube"
+                                >
+                                    <YouTubeIcon sx={{ color: "white" }}></YouTubeIcon>
+                                </a>
+                            </IconButton>
+                            <IconButton aria-label="justdial">
+                                <a
+                                    href="https://www.justdial.com/Nashik/Abbad-Dental-Clinic-Implant-Center-Opp-BYK-College-Next-to-Fastrack-Showroom-College-Road/0253PX253-X253-221218231157-S3D4_BZDET"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="linkedin"
@@ -176,206 +190,11 @@ function ResponsiveAppBar() {
                                       
                                 </a>
                             </IconButton>
-                            {/* <IconButton aria-label="youtube">
-                                <a
-                                    href="https://www.youtube.com/channel/UCaHUj0eP9LiEK5zL7QrNbNw"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    aria-label="youtube"
-                                >
-                                    <YouTubeIcon sx={{ color: "white" }}></YouTubeIcon>
-                                </a>
-                            </IconButton> */}
                         </Box>
                     </Box>
                 </Container>
             </section>
-            {/* <section style={{
-                // background: '#121f38',
-                 width: '100%', padding: 3,
-                background: 'rgba( 255, 255, 255, 0.4)',
-                // backgroundColor:'white',
-                boxShadow: ' 0 10px 10px 1px #0000001f',
-                backdropFilter: 'blur( 8px )',
-                textAlign: 'center', justifyContent: 'center', alignItems: 'center',
-                // borderBottom: '1px solid #ffffff36',
-                display: 'flex'
-            }}>
-                <Toolbar disableGutters >
-
-
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "flex", sm: "flex", md: "flex", lg: "none" },
-                        }}
-                    >
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "left",
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: "block", sm: "block", md: "block", lg: "none" },
-                            }}
-                        >
-                            {pages.map((page, i) => {
-                                // if (page.submenu) {
-                                //     return <AccountMenu list={page.submenu} />
-
-                                // } else {
-                                return (
-                                    <>
-                                        <Link
-                                            key={i}
-                                            href={page.linkID}
-                                            sx={{
-                                                fontWeight: 800,
-                                                letterSpacing: ".1rem",
-                                                color: "black",
-                                                textDecoration: "none",
-                                                textAlign: "center",
-                                            }}
-                                        >
-                                            <MenuItem
-                                                key={page}
-                                                onClick={
-                                                    page.submenu
-                                                        ? handleOpenMobileSubMenu
-                                                        : handleCloseNavMenu
-                                                }
-                                            >
-                                                <Grid container direction="row" alignItems="center">
-                                                    {page.label} 
-                                                </Grid>
-                                            </MenuItem>
-                                        </Link>
-                                       
-                                    </>
-                                );
-                            })}
-                        </Menu>
-                    </Box>
-                    <Box sx={{flexGrow:1}}>                    
-                        <Image src="/images/ddclogo1.png" width={150} height={80} objectFit="contain"></Image>
-                        </Box>
-
-                    {/* dekstop menu *
-                    <Box
-                        sx={{
-                            flexGrow: 10,
-                            display: { xs: "none", md: "flex", textDecoration: "none" },
-                        }}
-                    >
-                        {pages.map((page, i) => {
-                            if (page.submenu) {
-                                
-                                return (
-                                    <Box sx={{ flexGrow: 0 }}>
-                                        
-                                        <Menu
-                                            sx={{ mt: "45px" }}
-                                            id="menu-appbar"
-                                            anchorEl={anchorElUser}
-                                            anchorOrigin={{
-                                                vertical: "top",
-                                                horizontal: "right",
-                                            }}
-                                            keepMounted
-                                            transformOrigin={{
-                                                vertical: "top",
-                                                horizontal: "right",
-                                            }}
-                                            open={Boolean(anchorElUser)}
-                                            onClose={handleCloseUserMenu}
-                                        >
-                                            {/* {settings.map((setting) => (
-                                            <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                                <Typography textAlign="center">{setting}</Typography>
-                                            </MenuItem>
-                                        ))} *
-                                            {page?.submenu?.map((item, i) => (
-                                                <Link
-                                                    key={i}
-                                                    href={item.linkID}
-                                                    sx={{
-                                                        // mr: 2,
-                                                        fontWeight: 800,
-                                                        letterSpacing: ".1rem",
-                                                        color: "black",
-                                                        textDecoration: "none",
-                                                        textAlign: "center",
-                                                    }}
-                                                >
-                                                    <MenuItem key={i} onClick={handleCloseUserMenu}>
-                                                        <Typography variant="h5">{item.label}</Typography>
-                                                    </MenuItem>
-                                                </Link>
-                                            ))}
-                                        </Menu>
-                                    </Box>
-                                );
-                            } else {
-                                return (
-                                    <Link
-                                        key={i}
-                                        href={page.linkID}
-                                        sx={{
-                                            display: {
-                                                xs: "none",
-                                                sm: "none",
-                                                md: "none",
-                                                lg: "flex",
-                                            },
-                                            fontWeight: 900,
-                                            letterSpacing: ".1rem",
-                                            color: '#29357a',
-                                            textDecoration: "none",
-                                            float: "right",
-
-                                            '&:hover': {
-                                                color:'white'
-                                            }
-
-                                          
-                                        }}
-                                        
-                                    >
-                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography
-                                                variant="h5"
-                                                sx={{ fontSize: { md: 15, lg: 16, xl: 16 } }}
-                                            >
-                                                {page.label}
-                                            </Typography>
-                                        </MenuItem>
-                                    </Link>
-                                );
-                            }
-                        })}
-                    </Box>
-
-                </Toolbar>
-            </section> */}
+        
             <section style={{
                  padding: 3,
                 background: 'rgba( 255, 255, 255, 0.4)',

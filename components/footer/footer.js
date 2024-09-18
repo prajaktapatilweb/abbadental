@@ -6,6 +6,10 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollUp from "../home/ScrollUp";
+import AddLocationIcon from '@mui/icons-material/AddLocation';
+import MoreTimeIcon from '@mui/icons-material/MoreTime';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+ 
 const Footer = () => {
   const contactno1 = "+919833389890";
   const contactno2 = "+919702955057";
@@ -23,7 +27,7 @@ const Footer = () => {
    
       <Container sx={{ textAlign: { xs: "center", md: "left" }, maxWidth: { xl: 1300 } }}>
         <Grid container spacing={2} alignItems='center' justifyContent='center'>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={12}>
             <Box sx={{ mb: { xs: 3, md: 0 } }}>
             <Image src="/images/ddclogo.jpeg" width={180} height={100} ></Image>
 
@@ -36,7 +40,92 @@ const Footer = () => {
              
             </Box>
           </Grid>
-          <Grid item xs={12} md={2}>
+    
+             
+
+
+          <Grid
+                        container
+                        alignItems="center"
+                        justifyContent="center"
+                        textAlign="center"
+                    >
+                        <Grid item xs={12} sm={12} md={12} alignItems='center' justifyContent='center' textAlign='center'>
+
+                            <Typography
+                                sx={{
+                                    color: "white",
+                                    // mb: { xs: 1, md: 2 },
+                                    fontSize: { xs: 34, md: 40 },
+                                    fontWeight: "bold",
+                                    fontFamily: "Open Sans, sans-serif"
+                                }}
+                            >
+                                Our Locations
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} alignItems='center' justifyContent='center' textAlign='center' sx={{ borderRight: '1px solid lightgrey',pr:2 }}>
+                       <Grid container alignItems='center' justifyContent='center' textAlign='center'>
+                        <Grid item xs={1}  md={1} >
+                       <AddLocationIcon sx={{ fontSize: 25, color: 'primary.main' }} />
+                        </Grid>
+                        <Grid item xs={11}  md={11} sx={{textAlign:'justify',mb:2}}>
+                          
+                           2-3, Jubiliant Heights, near Nirman House, Vidya Vikas Circle, towards College road, Nashik, Maharashtra 422005
+                            </Grid>
+                            </Grid>
+                            <Grid container alignItems='center' justifyContent='center' textAlign='center'>
+                        <Grid item xs={1}  md={1} >
+                            <MoreTimeIcon sx={{ fontSize: 23, marginRight: 1, color: 'primary.main' }} />
+</Grid>
+                            <Grid item xs={11}  md={11} sx={{textAlign:'justify',mb:2}}>
+                            <b>Monday to Saturday:</b> 10 AM to 09 PM<br></br>
+                            <b>Sunday:</b> 10 AM to 01 PM
+                            </Grid>
+                            </Grid>
+                            <Grid container alignItems='center' justifyContent='center' textAlign='center'>
+                        <Grid item xs={1}  md={1} >
+                            <PhoneInTalkIcon sx={{ fontSize: 23, marginRight: 1, color: 'primary.main' }} />
+
+                            </Grid>
+                            <Grid item xs={11}  md={11} sx={{textAlign:'justify'}}>
+
+                            0253 2507965, 97134 35111
+                          </Grid>
+                        </Grid>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} alignItems='center' justifyContent='center' textAlign='center' sx={{pl:2 }}>
+                       <Grid container alignItems='center' justifyContent='center' textAlign='center'>
+                        <Grid item xs={1}  md={1} >
+                       <AddLocationIcon sx={{ fontSize: 25, color: 'primary.main' }} />
+                        </Grid>
+                        <Grid item xs={11}  md={11} sx={{textAlign:'justify',mb:2}}>
+                        2055, Dahi Pool, Nehru Chowk, next to Sandeep Cut Piece Center, Naikwadi Pura, Panchavati, Nashik, Maharashtra 422001
+
+                            </Grid>
+                            </Grid>
+                            <Grid container alignItems='center' justifyContent='center' textAlign='center'>
+                        <Grid item xs={1}  md={1} >
+                            <MoreTimeIcon sx={{ fontSize: 23, marginRight: 1, color: 'primary.main' }} />
+</Grid>
+                            <Grid item xs={11}  md={11} sx={{textAlign:'justify',mb:2}}>
+                            <b>Monday to Saturday:</b> 10 AM to 08:30 PM<br></br>
+                            <b>Sunday:</b> 10 AM to 01 PM
+                            </Grid>
+                            </Grid>
+                            <Grid container alignItems='center' justifyContent='center' textAlign='center'>
+                        <Grid item xs={1}  md={1} >
+                            <PhoneInTalkIcon sx={{ fontSize: 23, marginRight: 1, color: 'primary.main' }} />
+
+                            </Grid>
+                            <Grid item xs={11}  md={11} sx={{textAlign:'justify'}}>
+
+                            0253 2507965, 99237 08233
+                          </Grid>
+                        </Grid>
+                        </Grid>
+                    </Grid>
+          <Grid item xs={12} md={12}>
             <Typography variant="h4" sx={{ fontWeight: "400" }} gutterBottom>
               Site Links
             </Typography>
@@ -67,75 +156,9 @@ const Footer = () => {
             </Typography>
           
           
-
-             
-
-            {/* <FooterNavigation /> */}
-          </Grid>
-
-          {/* <Grid item xs={12} md={3}>
-            <Typography variant="h4" sx={{ fontWeight: "400" }} gutterBottom>
-              Treatments
-            </Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Root Canal</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Dental Implants</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Full Mouth Reconstruction</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Braces & Aligners</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Crown & Bridges</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Wisdom Teeth Extraction</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Dental X-Rays​</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Teeth Whitening​</Typography>
-            <Typography variant="h5" sx={{ mb: 1, fontWeight: '300' }}>Cosmetic Dentistry</Typography>
-
-          </Grid> */}
-          <Grid item xs={12} md={5}>
-            <Typography variant="h4" sx={{ fontWeight: "400" }} gutterBottom>
-              Get In Touch
-            </Typography>
-          
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15076.329523138258!2d72.9939084!3d19.1478709!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bf5357d89b7f%3A0xed6d36e32f7534ab!2sDynamic%20Dental%20Care!5e0!3m2!1sen!2sin!4v1715864098424!5m2!1sen!2sin"  width="48%"
-              height="100%"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              style={{ marginBottom: 3, marginTop: 3,marginRight:4 }}></iframe> 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15071.132131692939!2d72.9851153!3d19.2046766!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b936d2fde0c1%3A0xf5ef3c3e031df47f!2sDynamic%20Dental%20Care%20-%20Best%20dentist%20in%20thane!5e0!3m2!1sen!2sin!4v1715864246797!5m2!1sen!2sin"   width="48%"
-              height="100%"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              style={{ marginBottom: 3, marginTop: 3 }}></iframe>
-
-          
-
-            {/* <FooterSocialLinks /> */}
-
-          </Grid>
-
-          <Box>
-            {/* <div style={{ position: 'fixed', right: '40px', bottom: '40px', zIndex: 996, background: 'black', borderRadius: 5 }}>
-              <Link
-                href={`tel:${contactno2}`}
-                target="_blank"
-                className="footermenu"
-                style={{ textDecoration: "underline", display: "inline-block" }}
-              >
-
-                <Image src="/images/telephone.png" width={40} height={40} style={{ paddingInline: 5, paddingTop: 5 }} alt="phone" />
-              </Link>
-            </div> */}
-            {/* <div style={{ position: 'fixed', left: '40px', bottom: '40px', zIndex: 996 }}>
-              <Link
-                href={`https://wa.me/${contactno2}`}
-                target="_blank"
-                className="footermenu"
-                style={{ textDecoration: "underline", display: "inline-block" }}
-              >
-                <Image src="/images/whatsapp.webp" width={50} height={50} />
-              </Link>
-            </div> */}
-          </Box>
-
-
-          {/* <Whatsappnew /> */}
+</Grid>
+        
+       
           <Grid item xs={12} sx={{ textAlign: 'center' }}>
 
             {/* Designed by <b>Prajakta Bhushankumar Patil</b> */}

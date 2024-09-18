@@ -1,116 +1,90 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Slider from "react-slick";
-import Container from "@mui/material/Container";
-import { useTheme, styled } from "@mui/material/styles";
-import { IconButton, useMediaQuery } from "@mui/material";
-import IconArrowBack from "@mui/icons-material/ArrowBack";
-import IconArrowForward from "@mui/icons-material/ArrowForward";
-import { data } from "./popular-course.data";
-import { CourseCardItem } from "../course";
-const SliderArrow = (props) => {
-  const { onClick, type, className } = props;
-  return (
-    <IconButton
-      sx={{
-        backgroundColor: "background.paper",
-        color: "primary.main",
-        "&:hover": {
-          backgroundColor: "primary.main",
-          color: "primary.contrastText",
+import React from 'react'
+import { green, pink } from '@mui/material/colors';
+import Avatar from '@mui/material/Avatar';
+import FolderIcon from '@mui/icons-material/Folder';
+import PageviewIcon from '@mui/icons-material/Pageview';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import { Box, Card, Container, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
+import { deepOrange } from '@mui/material/colors';
+
+
+export default function Dentalservices() {
+    var Details = [
+        {
+            icons: "/images/icons/implant.png",
+            title: 'Dental implants',
         },
-        bottom: { xs: "-70px !important", md: "-28px !important" },
-        left: "unset !important",
-        right: type === "prev" ? "60px !important" : "0 !important",
-        zIndex: 10,
-        boxShadow: 1,
-      }}
-      disableRipple
-      color="inherit"
-      onClick={onClick}
-      className={className}
-    >
-      {type === "next" ? (
-        <IconArrowForward sx={{ fontSize: 22 }} />
-      ) : (
-        <IconArrowBack sx={{ fontSize: 22 }} />
-      )}
-    </IconButton>
-  );
-};
-const StyledDots = styled("ul")(({ theme }) => ({
-  "&.slick-dots": {
-    position: "absolute",
-    left: 0,
-    bottom: -20,
-    paddingLeft: theme.spacing(1),
-    textAlign: "left",
-    "& li": {
-      marginRight: theme.spacing(2),
-      "&.slick-active>div": {
-        backgroundColor: theme.palette.primary.main,
-      },
-    },
-  },
-}));
-const Dentalservices = () => {
-  const { breakpoints } = useTheme();
-  const matchMobileView = useMediaQuery(breakpoints.down("sm"));
-  const matchMobileView1 = useMediaQuery(breakpoints.down("md"));
-  const sliderConfig = {
-    infinite: true,
-    autoplay: true,
-    speed: 300,
-    slidesToShow: matchMobileView ? 1 : matchMobileView1 ? 2 : 3,
-    slidesToScroll: 1,
-    prevArrow: <SliderArrow type="prev" />,
-    nextArrow: <SliderArrow type="next" />,
-    dots: true,
-    appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
-    customPaging: () => (
-      <Box
-        sx={{
-          height: 8,
-          width: 30,
-          backgroundColor: "divider",
-          display: "inline-block",
-          borderRadius: 4,
-        }}
-      />
-    ),
-  };
-  return (
-    <Box
-      id="treatments"
-      sx={{
-        py: { xs: 7, md: 7 },
+        {
+            icons: "/images/icons/dental-care.png",
+            title: 'Crowns & Bridges',
+        },
+        {
+            icons: "/images/icons/dental-care2.png",
+            title: 'Tooth Extraction',
+        },
 
-        backgroundColor: "#f3fbfd",
-        // background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
-      }}
-    >
-      <Container maxWidth="lg">
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={12}>
-            <div class="section-title">
-              <h2>Smile Solutions Hub</h2>
-              <p style={{marginTop:-5}}> Crafting Your Dream Smile: Our Range of Expert Services</p>
-            </div>
+        {
+            icons: "/images/icons/dental-care2.png",
+            title: 'Pediatric Dentistry',
+        },
+        {
+            icons: "/images/icons/braces.png",
+            title: 'Braces & Aligners',
+        },
+        {
+            icons: "/images/icons/root.png",
+            title: 'Root Canal',
+        },
+        {
+            icons: "/images/icons/whitening.png",
+            title: 'Teeth Whitening',
+        },
+        {
+            icons: "/images/icons/veeners.png",
+            title: 'Dental Veneers',
+        },
+        {
+            icons: "/images/icons/dental-care2.png",
+            title: 'Full Mouth Reconstruction',
 
-          </Grid>
+        }
+    ]
+    return (
+        <div>
+            <Box
+                id="services"
+                sx={{ py: { xs: 10, md: 10 }, backgroundColor: "white" }}
+            >
+                <Container>
+                    {/* <Heading data={headList2}></Heading> */}
+                    <Typography variant='h5' sx={{ textAlign: 'center', mb: 3, color: 'white' }}>
+                        Explore a wide range of dental services at our dental clinic in Dombivli. Schedule your appointment now for expert care.
 
-          <Grid item xs={12} md={12}>
-            <Slider {...sliderConfig}>
-              {data.map((item) => (
-                <CourseCardItem key={String(item.id)} item={item} />
-              ))}
-            </Slider>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
-  );
-};
-export default Dentalservices;
+                    </Typography>
+                    <Grid container spacing={3} alignItems='center' justifyContent='center' textAlign='center'>
+                        {Details.map((item, i) => (
 
+                            <Grid item xs={12} md={4}>
+                    <Grid container spacing={3} alignItems='center' justifyContent='center' textAlign='center'>
+                    <Grid item xs={12} md={2}>
+
+                                    <Avatar alt="R" src='' sx={{ margin: 'auto', width: 60, height: 60, background: '#309cd1', padding: 5, }}><Image src={item.icons} width={50} height={50}></Image></Avatar>
+</Grid>
+                         
+<Grid item xs={12} md={8}>
+
+                                    <Typography variant='h4' sx={{ py: 2 }}> {item.title} </Typography>
+                                </Grid></Grid>  
+
+                            </Grid>
+
+                        ))}
+
+
+                    </Grid>
+                </Container >
+            </Box>
+        </div >
+    )
+}

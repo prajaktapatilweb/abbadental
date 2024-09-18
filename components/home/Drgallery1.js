@@ -84,7 +84,7 @@ const Drgallery1 = () => {
 
             <Slider {...sliderConfig}>
                 {/* {data.map((item) => (<PhotoCardItem key={String(item.id)} item={item} />))} */}
-                {[...Array(4)].slice(0).map((e, i) => (
+                {[...Array(8)].slice(0).map((e, i) => (
                     <Drgalleryitem1 key={i} item={i + 1} />
                 ))}
             </Slider>
