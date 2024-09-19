@@ -197,7 +197,7 @@ function ResponsiveAppBar() {
         
             <section style={{
                  padding: 3,
-                background: 'rgba( 255, 255, 255, 0.4)',
+                // background: 'rgba( 255, 255, 255, 0.4)',
                 boxShadow: ' 0 10px 10px 1px #0000001f',
                 backdropFilter: 'blur( 8px )',
                 borderBottom: '1px solid #ffffff36',

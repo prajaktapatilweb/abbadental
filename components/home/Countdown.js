@@ -17,81 +17,76 @@ export default function Countdown() {
         {
             icons: "/images/icons/implant.png",
             title: 'Years of Experience',
-            link:'contactform'
+            link: 'contactform'
         },
         {
             icons: "/images/icons/dental-care.png",
             title: 'Total Patients',
-            link:'contactform'
+            link: 'contactform'
 
         },
         {
             icons: "/images/icons/dental-care2.png",
             title: 'Award Winner',
-            link:'contactform'
+            link: 'contactform'
 
         },
 
         {
             icons: "/images/icons/dental-care2.png",
             title: 'Our services',
-            link:'contactform'
+            link: 'contactform'
 
         },
-      
-     
+
+
     ]
 
     return (
         <div>
-            <Box>
-                <Card sx={{
-                    background: 'white',
-                    boxShadow: ' 0 10px 10px 1px #0000001f',
-                    backdropFilter: 'blur( 8px )',
-                    // -webkitBackdropFilter: blur( 2px );
-                    // borderRadius: 3,
-                    border: '1px solid #ffffff36',
-                    p: 5,
-                    mt: -7,
-                    mx: { xs: 7, sm: 7, md: 4 }
-                    // background: #00000038;
+            <Container sx={{
+                backgroundColor: '#3b3a85',  p: 5,
+                mt: -7, borderRadius: 3, 
+                backdropFilter: 'blur( 8px )',
+                transition: 'box-shadow 0.3s ease',
+                '&:hover': {
+                  boxShadow:'rgba(100, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 10px -2px 6px 5px inset',
+                },
+            }}>
 
-                }}>
-                     <Grid container spacing={0} alignItems='center' justifyContent='center' textAlign='center'>
-                        {Details.map((item, i) => (
+                <Grid container spacing={0} alignItems='center' justifyContent='center' textAlign='center'>
+                    {Details.map((item, i) => (
 
-                            <Grid item xs={12} md={3}>
-                    <Grid container spacing={2} alignItems='center' justifyContent='center' textAlign='center'>
-                    <Grid item xs={12} md={2}>
+                        <Grid item xs={12} md={3}>
+                            <Grid container spacing={2} alignItems='center' justifyContent='center' textAlign='center'>
+                                <Grid item xs={12} md={2}>
 
-                                    <Avatar alt="R" src='' sx={{ margin: 'auto', width: '30', height: 30, background: '#309cd1', padding: 3, }}><Image src={item.icons} width={30} height={30}></Image></Avatar>
-</Grid>
-                         
-<Grid item xs={12} md={8}>
+                                    <Avatar alt="R" src='' sx={{ margin: 'auto', width: '30', height: 30, background: 'white', padding: 3, }}><Image src={item.icons} width={30} height={30}></Image></Avatar>
+                                </Grid>
 
-<ScrollLink
-  to="contactform" // ID of the target element
-  smooth={true}    // Enables smooth scrolling
-  duration={350}   // Duration of the scrolling animation
-  offset={-50}     // Optional: Adjust the scroll offset if you have a fixed header
-  
->
-  <Typography variant='h4' sx={{ py: 2, color: 'black',cursor:'pointer' }}>
-    {item.title}
-  </Typography>
-</ScrollLink>
-                                </Grid></Grid>  
+                                <Grid item xs={12} md={8}>
 
-                            </Grid>
+                                    <ScrollLink
+                                        to="contactform" // ID of the target element
+                                        smooth={true}    // Enables smooth scrolling
+                                        duration={350}   // Duration of the scrolling animation
+                                        offset={-50}     // Optional: Adjust the scroll offset if you have a fixed header
 
-                        ))}
+                                    >
+                                        <Typography variant='h4' sx={{ py: 2, color: 'white', cursor: 'pointer' }}>
+                                            {item.title}
+                                        </Typography>
+                                    </ScrollLink>
+                                </Grid></Grid>
+
+                        </Grid>
+
+                    ))}
 
 
-                    </Grid>
-                </Card>
+                </Grid>
 
-            </Box>
+            </Container>
         </div>
     );
 }

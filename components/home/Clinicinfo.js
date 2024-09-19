@@ -1,36 +1,12 @@
 import React from "react";
-import Image from "next/image";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import LinearProgress, {
-    linearProgressClasses,
-} from "@mui/material/LinearProgress";
-import { data } from "./feature.data";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import Fadeupside from "../Animations/Fadeupside";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import StarIcon from "@mui/icons-material/Star";
-import FileDownloadDoneIcon from '@mui/icons-material/FileDownloadDone';
-import Countdown from "./Countdown";
-import typography from "../../config/theme/typography";
 import Drgallery from "./Drgallery";
 
-
-const explist = [
-    'Experienced team of professionals dedicated to improving and maintaining your oral health.',
-    'Comprehensive range of services, including preventive dentistry, root canal treatment, and dental implants.',
-    'Utilization of the latest advancements in dental technology for precise diagnoses and efficient treatments.',
-    'Warm and welcoming environment ensuring patient comfort and relaxation throughout their dental journey.',
-    'Specialization in children\'s dentistry for a positive dental experience for young patients.',
-    'Skilled dental surgeon providing advanced dental treatments to address diverse oral health needs.',
-
-];
 const Clinicinfo = () => {
     const text = "Dynamic Dental Care - Best dentist in Thane";
     const letters = Array.from(text);
@@ -97,8 +73,7 @@ const Clinicinfo = () => {
         <>
 
             {/* <!-- ======= About Us Section ======= --> */}
-            <section id="about" class="about" style={{ background: 'white' }}>
-                <Container>
+                <Container sx={{pt:4,pb:10}}>
 
                     <Grid container spacing={3} >
                         <Grid item xs={12} md={6}>
@@ -140,7 +115,6 @@ const Clinicinfo = () => {
                     </Grid>
 
                 </Container>
-            </section>
         </>
     );
 };

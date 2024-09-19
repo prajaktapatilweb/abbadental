@@ -9,7 +9,6 @@ export default function Awards() {
 
 
             <Grid container sx={{ justifyContent: 'center', alignItems: 'center' }} spacing={0}>
-
                 <Grid item xs={12} sm={6} md={5} order={2} >
 
                    <Drgallery1/>

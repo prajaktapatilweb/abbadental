@@ -40,7 +40,7 @@ const StyledDots = styled("ul")(({ theme }) => ({
     "&.slick-dots": {
         position: "absolute",
         left: 0,
-        bottom: -30,
+        bottom: -40,
         paddingLeft: theme.spacing(1),
         textAlign: "center",
         "& li": {
@@ -57,12 +57,11 @@ const Drgallery = () => {
     const sliderConfig = {
         infinite: true,
         autoplay: true,
+        arrows:false,
         adaptiveheight: false,
         speed: 300,
         slidesToShow: matchMobileView ? 1 : 1,
         slidesToScroll: 1,
-        prevArrow: <SliderArrow type="prev" />,
-        nextArrow: <SliderArrow type="next" />,
         dots: true,
         appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
         customPaging: () => (

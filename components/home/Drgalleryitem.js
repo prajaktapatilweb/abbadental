@@ -4,37 +4,21 @@ import Box from '@mui/material/Box';
 import { iconButtonClasses } from '@mui/material/IconButton';
 const Drgalleryitem = ({ item }) => {
     return (
+
         <Box sx={{
-            px: 1,
+            borderRadius: 5,
         }}>
-            <Box sx={{
-                p: 1,
-                // backgroundColor: 'background.paper',
-                borderRadius: 1,
-                transition: (theme) => theme.transitions.create(['box-shadow']),
-                boxShadow: 5,
-                '&:hover': {
-                    boxShadow: 2,
-                    [`& .${iconButtonClasses.root}`]: {
-                        backgroundColor: 'primary.main',
-                        color: 'primary.contrastText',
-                        boxShadow: 2,
-                    },
-                },
-            }}>
-                <Box>
+            <Image
+                alt={'Clinic' + item.id}
+                src={`/images/clinics1/clinic${item}.jpg`}
+                width={100}
+                height={100}
+                style={{ borderRadius: 5 }}
 
-                    <Image
-                        alt={'Clinic' + item.id}
-                        src={`/images/clinics1/clinic${item}.jpg`}
-                        width={100}
-                        height={100}
+                layout='responsive'></Image>
 
-                        layout='responsive'></Image>
+        </Box>
 
-                </Box>
-
-            </Box>
-        </Box>);
+    );
 };
 export default Drgalleryitem;

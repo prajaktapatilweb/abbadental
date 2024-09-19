@@ -54,29 +54,54 @@ export default function Dentalservices() {
         <div>
             <Box
                 id="services"
-                sx={{ py: { xs: 10, md: 10 }, backgroundColor: "white" }}
+                sx={{ py: { xs: 10, md: 5 }, backgroundColor: "white" }}
             >
+                <div class="section-title">
+                    <h2>Testimonials</h2>
+                    <p>Genuine Google Reviews from Our Satisfied Patients</p>
+                </div>
                 <Container>
                     {/* <Heading data={headList2}></Heading> */}
-                    <Typography variant='h5' sx={{ textAlign: 'center', mb: 3, color: 'white' }}>
+                    {/* <Typography variant='h5' sx={{ textAlign: 'center', mb: 3, color: 'black' }}>
                         Explore a wide range of dental services at our dental clinic in Dombivli. Schedule your appointment now for expert care.
 
-                    </Typography>
-                    <Grid container spacing={3} alignItems='center' justifyContent='center' textAlign='center'>
+                    </Typography> */}
+                    <Grid container spacing={3}>
                         {Details.map((item, i) => (
 
-                            <Grid item xs={12} md={4}>
-                    <Grid container spacing={3} alignItems='center' justifyContent='center' textAlign='center'>
-                    <Grid item xs={12} md={2}>
+<Grid item xs={12} md={4} key={i} sx={{ display: 'flex' }}>
+<Card
+  sx={{
+    backgroundColor: 'primary.main',
+    p: 3,
+    display: 'flex',
+    flexDirection: 'column',
+    width:'100%',
+    height: '100%', // Makes sure the card takes up the full height
+    '&:hover': {
+      backgroundColor: 'primary.dark',
+      boxShadow:
+        'rgba(100, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 10px -2px 6px 5px inset',
+      '& .MuiAvatar-root': {
+        backgroundColor: 'red', // Change avatar color on hover
+      },
+    },
+  }}
+>
+                    <Grid container spacing={3} alignItems='center' justifyContent='center'>
+                    <Grid item xs={12} md={3}>
 
-                                    <Avatar alt="R" src='' sx={{ margin: 'auto', width: 60, height: 60, background: '#309cd1', padding: 5, }}><Image src={item.icons} width={50} height={50}></Image></Avatar>
+                                    <Avatar alt="R" src='' sx={{  width: 50, height: 50, backgroundColor:'primary.dark', padding: 4, 
+                                        
+                                     }}><Image src={item.icons} width={40} height={40}></Image></Avatar>
 </Grid>
                          
-<Grid item xs={12} md={8}>
+<Grid item xs={12} md={9}>
 
-                                    <Typography variant='h4' sx={{ py: 2 }}> {item.title} </Typography>
+                                    <Typography variant='h5'> {item.title} </Typography>
+                               <p style={{marginTop:3,textAlign:'justify'}}>kjjkdf nnfbkjggf ngfkbjjgf  kkjgfbkjjg ngfkjbkj</p>
                                 </Grid></Grid>  
-
+                                </Card>
                             </Grid>
 
                         ))}
