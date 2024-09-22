@@ -126,7 +126,7 @@ Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, w
 
             <Grid item xs={12} sm={6} order={2}>
               <Image
-      src="/images/dr/drnikhil2.jpg"
+      src="/images/dr/drleena.jpg"
       alt="Dr Nikhil"
       width={100}
       height={100}
@@ -153,7 +153,7 @@ Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, w
                     }}
                   >
                     
-                    Dr. Nikhil Abbad
+                    Dr. Leena Abbad
                   </Typography>
                   <span
                     style={{
@@ -162,9 +162,7 @@ Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, w
                       fontWeight: 500,
                     }}
                   >
-                   M.D.S. Consultant, Prosthodontist, Crown, Bridge & Oral Implantologist
-
-                  
+                  B.D.S, Dental Surgeon        
                   </span>
 
                   {/* {messages['dashboard.analytics.eddieMassy']} */}
@@ -179,16 +177,16 @@ Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, w
 
                     }}
                   >
-                  Dr. Nikhil Abbad is a highly accomplished Consultant Prosthodontist with over 8 years of experience, recognized as one of the best dentists in Nashik. Specializing in Crowns, Bridges, and Oral Implants, he has a distinguished educational background with an M.D.S. in Prosthodontics and Oral Implantology.
-
-Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, where he provides expert care in Implant Surgery and Full Mouth Rehabilitation. His professional journey and achievements include:
+             Dr. Leena Abbad is a skilled Dental Surgeon with extensive expertise in Endodontics and Restorative Dentistry. Graduating with a B.D.S. from Pravara Institute of Medical Sciences, Loni, she has garnered over 4 years of experience in the field. Dr. Leena is particularly renowned for her proficiency in painless single-sitting root canals and her keen eye for smile correction and design.
+<br></br>
+As the co-founder of Abbad Dental Clinic and Implant Center in Nashik, Dr. Leena combines her deep knowledge and technical skills to deliver exceptional dental care, focusing on advanced endodontic procedures and aesthetic enhancements. Her dedication to staying at the forefront of dental innovation is evident from her active participation in major dental conferences and her commitment to ongoing education.
 <br/>
-<b>Specialty:</b> Prosthodontics, Crown & Bridge, Oral Implantology<br/>
-<b>Degrees:</b> M.D.S., Modern Dental College, Indore<br/>
-<b>Experience: </b>Over 8 years in advanced prosthodontics and implantology<br/>
-<b>Achievements:</b> Gold Medalist in MDS program; specialized training in Digital Smile Designing (University of Los Angeles)<br/>
-<b>Research: </b>Published articles in international journals; awarded for best paper presentations in implant dentistry<br/>
-
+<b>Specialty : </b>Dental Surgery<br/>
+<b>Degrees : </b>B.D.S., Pravara Institute of Medical Sciences, Loni<br/>
+{/* <b>Experience : </b>Over 4 years at Aastha Dental Hospital and Microscopic Root Canal Centre<br/>
+<b>Expertise : </b>Single Sitting Root Canals, Painless Root Canals, Smile Correction, Smile Design<br/> */}
+{/* <b>Education & Training : </b>Attended International 3D Cleaning Congress and International Congress on Stem Cells in Dentistry<br></br>
+<b>Affiliation : </b> Member, Indian Dental Association, Nashik Chapter<br/> */}
 
 {/* <p>Dr. Nikhil Abbad is passionate about improving patients' confidence through effective dental treatments. He is a dedicated member of the Indian Dental Association, Nashik Chapter, and remains committed to enhancing global healthcare through his expertise. If you’re searching for a “dentist near me”, your search ends here.
 </p> */}

@@ -204,7 +204,7 @@ const Contact = () => {
                           </Box>
                         </Grid>
                         <Grid item xs={12} sx={{ mb: { xs: 3, lg: 3 } }}>
-                          <GoogleRecaptcha />
+                          {/* <GoogleRecaptcha /> */}
                           <ErrorMessage name="recaptcha" component="div" style={{ color: 'red' }} />
 
                         </Grid>

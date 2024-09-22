@@ -65,12 +65,12 @@ function ResponsiveAppBar() {
         <AppBar
         position="static"
         sx={{
-            backgroundImage: `linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/clinicback4.jpg")`,
-            // backgroundImage: ` url("/images/clinicback.jpg")`,
+            // backgroundImage: `linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/clinicback4.jpg")`,
+            backgroundImage: ` url("/images/heroback5.jpeg")`,
            
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundPosition:'center',
+            backgroundPosition:'right',
             display: "flex",
             height: "100%",
         }}
@@ -197,7 +197,7 @@ function ResponsiveAppBar() {
         
             <section style={{
                  padding: 3,
-                // background: 'rgba( 255, 255, 255, 0.4)',
+                background: 'rgba( 255, 255, 255, 0.4)',
                 boxShadow: ' 0 10px 10px 1px #0000001f',
                 backdropFilter: 'blur( 8px )',
                 borderBottom: '1px solid #ffffff36',
@@ -205,43 +205,46 @@ function ResponsiveAppBar() {
             }}>
 <Navbar/>
 </section>
-            <Box sx={{ my: 10 }}>
+            <Box sx={{ my: 18 }}>
                 {/* <Container> */}
                 <Grid
                     container
                     alignItems="center"
                     justifyContent="center"
-                    textAlign="center"
+                    textAlign="left"
                 >
-                    <Grid item xs={12} md={12}>
-                        <Box sx={{mt:20,mb:5}}>
-                            {/* <Typography
+                    <Grid item xs={12} md={7} sx={{p:3,mt:{xs:7,sm:7,md:-7}}}>
+                        <Box>
+                           
+                            <Typography
+                                variant="h2"
+                                sx={{
+                                    position: "relative",
+                                    fontSize:{xs:'35px',sm:'25px',md:'40px'},
+                                    letterSpacing: 1.5,
+                                    fontWeight: '1000',
+                                    color: {xs:'white',sm:'white', md:"#28282B"},
+                                    lineHeight: 1.5,
+                                    fontFamily: '"Poppins", sans-serif',
+                                    '-webkit-text-stroke': '1px #28282B',
+                                 
+                                    
+                                }}
+                            >
+                                {" "}
+                                Dental Galaxy® One-Stop
+Solution For All Your Dental Care Needs!
+                            </Typography>
+                            <Hidden smDown>
+                            <Typography
                                 variant="p"
                                 sx={{ color: "white", lineHeight: 1.6, fontSize: 23,mt:10 }}
                             >
                                 {" "}
                                 Experience the Best Dentist in Airoli & Thane!
-                            </Typography> */}
-                            <Typography
-                                component="h2"
-                                sx={{
-                                    // width: { md: 850 },
-                                    position: "relative",
-                                    fontSize: { xs: 35, md: 40, lg: 40 },
-                                    
-                                    // mb: { xs: 3, sm: 2,md:20 },
-                                    letterSpacing: 1.5,
-                                    fontWeight: "bold",
-                                    color: "black",
-                                    lineHeight: 1.5,
-                                }}
-                            >
-                                {" "}
-                                Your Journey to Dental Wellness Starts Here!
                             </Typography>
-                      
-
-                            {/* <Box sx={{ "& button": { mt: 2, mb: 7 } }}>
+                            </Hidden>
+                            <Box sx={{ "& button": { mt: 2, mb: 7, } }}>
                                 <ScrollLink
                                     to="contactform"
                                     spy={true}
@@ -258,17 +261,19 @@ function ResponsiveAppBar() {
                                             fontSize: 17,
                                             border: "1px solid",
                                             borderRadius: 1,
-                                            background:'#70cad2',
+                                            background:'#2b337d',
                                             borderColor: "#70cad2",
-                                            color: "#2b337d",
+                                            color: "white",
                                         }}
                                     >
                                         Enquire Now
                                     </StyledButton>
                                 </ScrollLink>
-                            </Box> */}
+                            </Box> 
                         </Box>
                     </Grid>
+                    <Grid item xs={12} md={5}>
+                        </Grid>
                 </Grid>
                 {/* </Container> */}
             </Box>

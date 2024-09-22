@@ -45,13 +45,14 @@ export default function Countdown() {
     return (
         <div>
             <Container sx={{
-                backgroundColor: '#3b3a85',  p: 5,
-                mt: -7, borderRadius: 3, 
+                backgroundColor: 'white',  p: 7,
+                mt: -15, borderRadius: 4, 
+                boxShadow:'rgba(100, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 10px -2px 6px 5px inset',
+            
                 backdropFilter: 'blur( 8px )',
                 transition: 'box-shadow 0.3s ease',
-                '&:hover': {
-                  boxShadow:'rgba(100, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 10px -2px 6px 5px inset',
-                },
+                // '&:hover': {
+                // },
             }}>
 
                 <Grid container spacing={0} alignItems='center' justifyContent='center' textAlign='center'>
@@ -61,7 +62,7 @@ export default function Countdown() {
                             <Grid container spacing={2} alignItems='center' justifyContent='center' textAlign='center'>
                                 <Grid item xs={12} md={2}>
 
-                                    <Avatar alt="R" src='' sx={{ margin: 'auto', width: '30', height: 30, background: 'white', padding: 3, }}><Image src={item.icons} width={30} height={30}></Image></Avatar>
+                                    <Avatar alt="R" src='' sx={{ margin: 'auto', width: '30', height: 30, background: '#312d79', padding: 3, }}><Image src={item.icons} width={30} height={30}></Image></Avatar>
                                 </Grid>
 
                                 <Grid item xs={12} md={8}>
@@ -73,7 +74,7 @@ export default function Countdown() {
                                         offset={-50}     // Optional: Adjust the scroll offset if you have a fixed header
 
                                     >
-                                        <Typography variant='h4' sx={{ py: 2, color: 'white', cursor: 'pointer' }}>
+                                        <Typography variant='h4' sx={{ py: 2, color: '#312d79', cursor: 'pointer' }}>
                                             {item.title}
                                         </Typography>
                                     </ScrollLink>

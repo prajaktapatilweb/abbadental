@@ -1,12 +1,10 @@
 import React from 'react'
-import { green, pink } from '@mui/material/colors';
+
 import Avatar from '@mui/material/Avatar';
-import FolderIcon from '@mui/icons-material/Folder';
-import PageviewIcon from '@mui/icons-material/Pageview';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+
 import { Box, Card, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import { deepOrange } from '@mui/material/colors';
+
 
 
 export default function Dentalservices() {
@@ -72,18 +70,20 @@ export default function Dentalservices() {
 <Grid item xs={12} md={4} key={i} sx={{ display: 'flex' }}>
 <Card
   sx={{
-    backgroundColor: 'primary.main',
+    backgroundColor: 'white',
     p: 3,
     display: 'flex',
     flexDirection: 'column',
     width:'100%',
     height: '100%', // Makes sure the card takes up the full height
+    boxShadow:
+        'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',
+     
     '&:hover': {
       backgroundColor: 'primary.dark',
-      boxShadow:
-        'rgba(100, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 10px -2px 6px 5px inset',
+      color:'white',
       '& .MuiAvatar-root': {
-        backgroundColor: 'red', // Change avatar color on hover
+        backgroundColor: 'white', // Change avatar color on hover
       },
     },
   }}
@@ -99,7 +99,7 @@ export default function Dentalservices() {
 <Grid item xs={12} md={9}>
 
                                     <Typography variant='h5'> {item.title} </Typography>
-                               <p style={{marginTop:3,textAlign:'justify'}}>kjjkdf nnfbkjggf ngfkbjjgf  kkjgfbkjjg ngfkjbkj</p>
+                               <p style={{marginTop:3,textAlign:'justify'}}>Maintaining the beauty of your natural smile and your health, it the top priority of our dental team</p>
                                 </Grid></Grid>  
                                 </Card>
                             </Grid>

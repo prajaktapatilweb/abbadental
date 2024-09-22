@@ -6,6 +6,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import Drgallery from "./Drgallery";
+import Heading from "./Heading";
+import { headList2 } from "../constants/titlefile";
 
 const Clinicinfo = () => {
     const text = "Dynamic Dental Care - Best dentist in Thane";
@@ -73,8 +75,8 @@ const Clinicinfo = () => {
         <>
 
             {/* <!-- ======= About Us Section ======= --> */}
-                <Container sx={{pt:4,pb:10}}>
-
+                <Container sx={{py:10}}>
+                {/* <Heading data={headList2}></Heading> */}
                     <Grid container spacing={3} >
                         <Grid item xs={12} md={6}>
                             <Drgallery />
@@ -89,8 +91,8 @@ const Clinicinfo = () => {
                             {/* <img src="/images/dr-akshays-dentavenue-dental-clinic-chembur-mumbai.webp" class="img-fluid" alt="" /> */}
                         </Grid>
                         <Grid item xs={12} md={6} textAlign='justify'>
-                            <Typography variant="h1" sx={{ fontSize: { xs: 27, md: 33 }, mt: { xs: 3, md: 0 } }}>Abbad Dental Clinic & Implant Centre</Typography>
-                            <p class="fst-italic" style={{ marginTop: 4, marginBottom: 0 }}>
+                            <Typography component="h2" sx={{ fontSize: { xs: 27, md: 31 },fontWeight:'700',  fontFamily: '"Poppins", sans-serif', my: { xs: 3, md: 0 },mb:1 }}>Abbad Dental Clinic & Implant Centre</Typography>
+                            <p class="fst-italic" style={{ marginTop: 4, marginBottom: 0,fontFamily: '"Poppins", sans-serif' }}>
                                 Welcome to Abbad Dental Clinic and Implant Center, where you will receive care from the best dentist in Nashik. Our clinic is led by the esteemed Dr. Nikhil Abbad, M.D.S., a highly skilled Consultant Prosthodontist specializing in Crowns, Bridges, and Oral Implants, and Dr. Leena Abbad, B.D.S., an expert in Endodontics and Restorative Dentistry. Together, they offer top-tier, compassionate care through a multidisciplinary approach.
                                 <br></br>
                                 At our dental clinic in Nashik, we provide comprehensive care for all ages, ensuring a comfortable and enjoyable experience. Our services include full mouth rehabilitation, dental implants, root canal treatment, dental veneers, digital smile designing, crowns & bridges, and braces. With our advanced CBCT machine and cutting-edge digital procedures, we deliver precise and effective treatments to enhance your smile and overall dental health.
