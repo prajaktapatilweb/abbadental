@@ -1,15 +1,10 @@
-import React from "react";
-import Box from "@mui/material/Box";
+import React, { useRef } from 'react'
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import { Avatar, Card, Typography } from "@mui/material";
-import CountUp from "react-countup";
-import AddLocationIcon from '@mui/icons-material/AddLocation';
-import MoreTimeIcon from '@mui/icons-material/MoreTime';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import Image from "next/image";
 import { Link as ScrollLink } from 'react-scroll';
-import { StyledButton } from "../styled-button";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 export default function Countdown() {
 
@@ -42,8 +37,29 @@ export default function Countdown() {
 
     ]
 
+ // Define the fade-up animation variants
+const fadeUpVariants = {
+    hidden: { opacity: 0, y: 100 },  // Initial state: invisible and below the viewport
+    visible: { 
+      opacity: 1, 
+      y: 0,  // Moves up to its original position
+      transition: {
+        duration: 0.8, // Duration of the animation
+        ease: 'easeInOut', // Easing function
+      },
+    },
+  };
+
     return (
         <div>
+           <motion.div
+  className="textcontainer"
+  variants={fadeUpVariants}
+  initial="hidden"         // Start in the hidden state
+  whileInView="visible"    // Animate to the visible state when in view
+  viewport={{ once: true }} // Optionally only animate once
+>
+
             <Container sx={{
                 backgroundColor: 'white',  p: 7,
                 mt: -15, borderRadius: 4, 
@@ -88,6 +104,7 @@ export default function Countdown() {
                 </Grid>
 
             </Container>
+            </motion.div>
         </div>
     );
 }

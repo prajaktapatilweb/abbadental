@@ -7,8 +7,8 @@ export default function Awards() {
   return (
     <div>
 
-
-            <Grid container sx={{ justifyContent: 'center', alignItems: 'center' }} spacing={0}>
+<section style={{backgroundColor:'white'}}>
+            <Grid container sx={{ justifyContent: 'center', alignItems: 'center',my:5}} spacing={0}>
                 <Grid item xs={12} sm={6} md={5} order={2} >
 
                    <Drgallery1/>
@@ -16,9 +16,9 @@ export default function Awards() {
                 <Grid item xs={12} sm={6} md={7}>
                     {/* <Typography variant='h7' sx={{ fontWeight: 800, color: '#0a8fdc' }}>WHY CHOOSE AGILEWATERS?</Typography>
                     <br></br><br></br> */}
-                    <Box sx={{ background: '#e6f4fb', p: 5, marginRight: 0 }}>
+                    <Box sx={{ background: '#d1d2e6', p: 5, marginRight: 0 }}>
 
-                        <Typography variant='h1' sx={{ color: '#013387' }}>
+                        <Typography variant='h1' sx={{ color: 'primary.dark' }}>
                             We are amongst top 5 Agile Consulting & Recruitment Company in India.
                         </Typography>
                         <br></br>
@@ -31,7 +31,7 @@ export default function Awards() {
                 </Grid>
             </Grid>
  
-
+            </section>
     </div>
   )
 }

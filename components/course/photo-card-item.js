@@ -5,23 +5,11 @@ import { iconButtonClasses } from '@mui/material/IconButton';
 const PhotoCardItem = ({ item }) => {
   return (
     <Box sx={{
-      px: 1,
-      py: 1,
+      // px: 1,
+      // py: 1,
+      pb:5
     }}>
-      <Box sx={{
-        p: 1,
-        // backgroundColor: 'background.paper',
-        borderRadius: 4,
-        transition: (theme) => theme.transitions.create(['box-shadow']),
-        '&:hover': {
-          boxShadow: 2,
-          [`& .${iconButtonClasses.root}`]: {
-            backgroundColor: 'primary.main',
-            color: 'primary.contrastText',
-            boxShadow: 2,
-          },
-        },
-      }}>
+      <Box sx={{p: 1,}}>
         <Box>
          
           <Image
@@ -29,7 +17,9 @@ const PhotoCardItem = ({ item }) => {
             src={`/images/patients/patients${item}.jpg`}
             width={100}
             height={100}
-            layout='responsive'></Image>
+            layout='responsive'
+            style={{borderRadius:5,border:'3px solid #2b337d',}}
+            ></Image>
        
 
          

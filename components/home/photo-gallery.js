@@ -16,9 +16,9 @@ const SliderArrow = (props) => {
     <IconButton
       sx={{
         backgroundColor: "background.paper",
-        color: "primary.main",
+        color: "primary.dark",
         "&:hover": {
-          backgroundColor: "primary.main",
+          backgroundColor: "primary.dark",
           color: "primary.contrastText",
         },
         bottom: { xs: "-70px !important", md: "-28px !important" },
@@ -44,13 +44,17 @@ const StyledDots = styled("ul")(({ theme }) => ({
   "&.slick-dots": {
     position: "absolute",
     left: 0,
-    bottom: -20,
+    bottom: -40,
+  
     paddingLeft: theme.spacing(1),
     textAlign: "left",
+    
+    marginBottom:20,
     "& li": {
       marginRight: theme.spacing(2),
+    
       "&.slick-active>div": {
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary.dark,
       },
     },
   },
@@ -77,6 +81,7 @@ const Photogallery = () => {
           backgroundColor: "divider",
           display: "flex",
           borderRadius: 4,
+      
         }}
       />
     ),
@@ -85,8 +90,10 @@ const Photogallery = () => {
     <Box
       id="gallery"
       sx={{
-        py: { xs: 7, md: 7 },
-        backgroundColor: "#f7fcfc",
+        py: { xs: 7, md: 3 },
+        // backgroundColor:'#9cdeea',
+        backgroundImage: ` url("/images/Slide2.jpg")`,
+        height:'100'
       }}
     >
       <Container maxWidth="lg">

@@ -80,34 +80,28 @@ const Contact = () => {
   };
 
   return (
-    <Box id='contactform' sx={{ backgroundColor: '#f3fbfd' }}>
-      <Container >
-        {/* <!-- ======= Contact Section ======= --> */}
-        <section id="contact" class="contact">
-          <div class="container">
+   
+      
+      
+        
 
-            <div class="section-title">
-              <h2>Contact</h2>
-            </div>
-
-          </div>
-
-          </section>
-        {/* <!-- End Contact Section --> */}
-      </Container>
-<section>
-          <Grid container spacing={0} sx={{p:0,backgroundColor:'white'}} >
+          <Grid container spacing={0}  sx={{p:0,backgroundColor:'white',mb:2}} >
+         
 
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
             <Image
                         alt={'Clinic'}
-                        src='/images/contactimg.jpg'
+                        src='/images/contactimg3.jpg'
                         width={100}
                         height={100}
                         layout='responsive'></Image>
               </Grid>
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
-              <Card sx={{ px: 3, py: 4 }}>
+              <Card sx={{ px: 3, py:3 }}>
+              <div class="section-title" style={{textAlign:'left'}}>
+          <h2>Smile Gallery</h2>
+          <p>Where Happiness Shines Bright</p>
+        </div>
                 <Formik
                   validateOnChange={true}
                   initialValues={{
@@ -215,6 +209,7 @@ const Contact = () => {
                       <div>
                         <Button
                           variant='contained'
+                         
                           color='primary'
                           disabled={isSubmitting}
                           sx={{
@@ -222,6 +217,7 @@ const Contact = () => {
                             textTransform: 'capitalize',
                             fontSize: 16,
                             minWidth: 160,
+                            backgroundColor:'primary.dark'
                           }}
                           type='submit'
                         >
@@ -235,9 +231,9 @@ const Contact = () => {
             </Grid>
           {/* </Grid> */}
           </Grid>
-          </section>
+        
 
-    </Box>
+  
   );
 };
 export default Contact;

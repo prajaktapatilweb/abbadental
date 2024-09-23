@@ -33,8 +33,8 @@ export default function Equipment() {
         <div>
             <Box
                 sx={{
-                    py: { xs: 6, md: 6 },
-                    backgroundColor: "#f3fbfd",
+                    py: { xs: 6, md: 10 },
+                    backgroundColor: "#d1d2e6",
                 }}
             >
                 <Container>

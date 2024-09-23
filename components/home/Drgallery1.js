@@ -41,13 +41,13 @@ const StyledDots = styled("ul")(({ theme }) => ({
     "&.slick-dots": {
         position: "absolute",
         left: 0,
-        bottom: -30,
+        bottom: -40,
         paddingLeft: theme.spacing(1),
         textAlign: "center",
         "& li": {
             marginRight: theme.spacing(2),
             "&.slick-active>div": {
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: theme.palette.primary.dark,
             },
         },
     },

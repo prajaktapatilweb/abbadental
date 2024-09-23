@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
+import {  motion } from "framer-motion";
 import { Card, Grid, Hidden, Link } from "@mui/material";
 import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -59,7 +60,31 @@ function ResponsiveAppBar() {
   const contactno1 = "+919713435111";
   const contactno2 = "+919923708233";
 
+  const textVariants={
+    initial:{
+        x:-500,
+        opacity:0,
+    },
+    
+    animate:{
+        x:0,
+        opacity:1,
+        transition:{
+        
+            duration:1,
+            staggerChildren:0.1
+        }
+    },
+    scrollbutton:{
+        opacity:0,
+        y:10,
+        transition:{
+            duration:2,
+            repeat:Infinity
+        }
+    }
 
+}
 
     return (
         <AppBar
@@ -214,13 +239,13 @@ function ResponsiveAppBar() {
                     textAlign="left"
                 >
                     <Grid item xs={12} md={7} sx={{p:3,mt:{xs:7,sm:7,md:-7}}}>
-                        <Box>
-                           
-                            <Typography
-                                variant="h2"
-                                sx={{
+                    <motion.div className="textcontainer" variants={textVariants}
+        initial="initial"
+        animate="animate"
+        >
+                           <Box  sx={{
                                     position: "relative",
-                                    fontSize:{xs:'35px',sm:'25px',md:'40px'},
+                                    fontSize:{xs:'30px',sm:'25px',md:'28px'},
                                     letterSpacing: 1.5,
                                     fontWeight: '1000',
                                     color: {xs:'white',sm:'white', md:"#28282B"},
@@ -229,12 +254,13 @@ function ResponsiveAppBar() {
                                     '-webkit-text-stroke': '1px #28282B',
                                  
                                     
-                                }}
-                            >
+                                }}>
+                           <motion.h2  variants={textVariants} >
                                 {" "}
                                 Dental Galaxy® One-Stop
 Solution For All Your Dental Care Needs!
-                            </Typography>
+                            </motion.h2>
+                            </Box>
                             <Hidden smDown>
                             <Typography
                                 variant="p"
@@ -270,7 +296,7 @@ Solution For All Your Dental Care Needs!
                                     </StyledButton>
                                 </ScrollLink>
                             </Box> 
-                        </Box>
+                       </motion.div>
                     </Grid>
                     <Grid item xs={12} md={5}>
                         </Grid>

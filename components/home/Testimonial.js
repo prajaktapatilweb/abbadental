@@ -15,9 +15,9 @@ const SliderArrow = (props) => {
         <IconButton
             sx={{
                 backgroundColor: "background.paper",
-                color: "primary.main",
+                color: "primary.dark",
                 "&:hover": {
-                    backgroundColor: "primary.main",
+                    backgroundColor: "primary.dark",
                     color: "primary.contrastText",
                 },
                 bottom: "-28px !important",
@@ -50,7 +50,7 @@ const StyledDots = styled("ul")(({ theme }) => ({
         "& li": {
             marginRight: theme.spacing(2),
             "&.slick-active>div": {
-                backgroundColor: theme.palette.primary.main,
+                backgroundColor: theme.palette.primary.dark,
             },
         },
     },

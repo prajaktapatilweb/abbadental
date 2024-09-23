@@ -37,7 +37,7 @@ const Footer = () => {
             <Grid item xs={12} sm={12} md={4} alignItems='center' justifyContent='center' sx={{p:3}}>
 
               <Box sx={{ mb: { xs: 3, md: 0 } }}>
-                <Image src="/images/ddclogo.jpeg" width={180} height={100} style={{marginBottom:'7px'}} ></Image>
+                <Image src="/images/logo5.png" width={180} height={100} style={{marginBottom:'7px'}} ></Image>
 
 
                 <Typography  sx={{ letterSpacing: 1, mb: 2,textAlign:'justify' }}>

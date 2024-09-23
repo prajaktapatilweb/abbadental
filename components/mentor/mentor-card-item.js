@@ -9,7 +9,7 @@ const MentorCardItem = ({ item }) => {
           {item.description}
           <br></br>
         </p>
-        <img src={item.photo} class="testimonial-img" alt="testimonial" />
+        <img src={item.photo} class="testimonial-img" alt="testimonial"  />
 
         <h3>{item.name}</h3>
       </div>

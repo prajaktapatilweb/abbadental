@@ -29,25 +29,27 @@ const DrAkshay = () => {
   ];
   return (
     <>
-      <Container>
+   
+     
+
+    <Box  id="Doctors" sx={{py:8}}>
+    <Container>
         <div class="section-title">
         <h2>Meet Our Team of Expert Dentists</h2>
 <p>Leaders in Dental Excellence</p>
 </div>
-     </ Container>   
-     
-
-    <Box  id="Doctors">
+     </ Container>
 
         <Grid
           container
           spacing={0}
           alignItems="center"
           justifyContent="center"
+          sx={{fontFamily: '"Poppins", sans-serif'}}
         >
 
             
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={6} sx={{p:1}}>
               <Image
       src="/images/dr/drnikhil2.jpg"
       alt="Dr Nikhil"
@@ -56,7 +58,12 @@ const DrAkshay = () => {
     layout="responsive"
     objectFit="contain"
       style={{
-      
+      borderTop:'10px  #2b337d solid',
+      paddingRight:3,
+      paddingBottom:3,
+      borderLeft:'10px  #1799b3 outset',
+      borderBottomLeftRadius:'15px',
+      borderTopRightRadius:'10px',
         boxShadow:
           "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
       }}
@@ -80,9 +87,9 @@ const DrAkshay = () => {
                   </Typography>
                   <span
                     style={{
-                      fontSize: "18px",
+                      fontSize: "17px",
 
-                      fontWeight: 500,
+                      fontWeight: '500',
                     }}
                   >
                    M.D.S. Consultant, Prosthodontist, Crown, Bridge & Oral Implantologist
@@ -124,7 +131,7 @@ Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, w
 
 
 
-            <Grid item xs={12} sm={6} order={2}>
+            <Grid item xs={12} sm={6} order={2} sx={{p:1}}>
               <Image
       src="/images/dr/drleena.jpg"
       alt="Dr Nikhil"
@@ -133,7 +140,12 @@ Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, w
     layout="responsive"
     objectFit="contain"
       style={{
-      
+        borderRight:'10px  #2b337d solid',
+      paddingTop:3,
+      paddingLeft:3,
+      borderBottom:'10px  #1799b3 solid',
+      borderBottomLeftRadius:'15px',
+      borderTopRightRadius:'10px',
         boxShadow:
           "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
       }}

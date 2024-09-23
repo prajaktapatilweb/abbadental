@@ -10,67 +10,7 @@ import Heading from "./Heading";
 import { headList2 } from "../constants/titlefile";
 
 const Clinicinfo = () => {
-    const text = "Dynamic Dental Care - Best dentist in Thane";
-    const letters = Array.from(text);
-    // const words = text.split(" ");
-
-    const containers = {
-        hidden: { opacity: 0.5 },
-        visible: (i = 1) => ({
-            opacity: 1,
-            transition: { staggerChildren: 0.1, delayChildren: 0.07 * i },
-        }),
-    };
-
-    const child = {
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: {
-                type: "spring",
-
-                damping: 12,
-                stiffness: 100,
-            },
-        },
-        hidden: {
-            opacity: 0,
-            x: 20,
-            transition: {
-                type: "spring",
-
-                damping: 12,
-                stiffness: 100,
-            },
-        },
-    };
-
-    const controls = useAnimation();
-    const ref = useRef(null);
-    const isInView = useInView(ref);
-
-    useEffect(() => {
-        if (isInView) {
-            controls.start("visible");
-        }
-    }, [controls, isInView]);
-
-    // para fadeup
-    const Variants = {
-        offscreen: {
-            y: 50
-        },
-        onscreen: {
-            y: 10,
-            // rotate: -10,
-            transition: {
-                type: "spring",
-                bounce: 0.4,
-                duration: 0.8
-            }
-        }
-    };
-
+   
     return (
         <>
 

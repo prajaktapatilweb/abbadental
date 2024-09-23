@@ -66,7 +66,7 @@ export default function Dentalservices() {
         <div>
             <Box
                 id="services"
-                sx={{ py: { xs: 10, md: 5 }, backgroundColor: "white" }}
+                sx={{ pt: { xs: 10, md: 7}, pb:10, backgroundColor: "white" }}
             >
                 <div class="section-title">
                     <h2>Testimonials</h2>
@@ -88,6 +88,7 @@ export default function Dentalservices() {
                                         p: 3,
                                         display: 'flex',
                                         flexDirection: 'column',
+                                        fontFamily: '"Poppins", sans-serif',
                                         width: '100%',
                                         height: '100%', // Makes sure the card takes up the full height
                                         boxShadow:
