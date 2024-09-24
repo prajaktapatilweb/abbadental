@@ -170,7 +170,7 @@ const fadeRightVariants = {
         viewport={{ once: true }} // Animation triggers only once
       >
             <Image
-              src="/images/dr/drleena.jpg"
+              src="/images/dr/drleena.JPG"
               alt="Dr Nikhil"
               width={100}
               height={100}

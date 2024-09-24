@@ -14,7 +14,7 @@ class MyDocument extends Document {
         
 
           <meta charSet="utf-8" />
-          <link rel="icon" href="/ddclogo.jpg" />
+          <link rel="icon" href="/abad.jpg" />
           {/* <meta name="google-site-verification" content="4GKM3x2UsEDZaIUgwspCYDUJwYNK0YBE80HfNGgJ77U" /> */}
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.background.paper} />
