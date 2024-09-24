@@ -61,6 +61,7 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+  font-family: 'Poppins, sans-serif';
 }
 
 .section-title h2 {
@@ -580,3 +581,4 @@ section {
   }
 }
 /* end scroll*/
+

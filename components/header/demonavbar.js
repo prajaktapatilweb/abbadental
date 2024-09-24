@@ -1,15 +1,10 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import MenuItem from "@mui/material/MenuItem";
 import {  motion } from "framer-motion";
-import { Card, Grid, Hidden, Link } from "@mui/material";
+import { Grid, Hidden, Link,Container } from "@mui/material";
 import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -17,45 +12,12 @@ import CallTwoToneIcon from "@mui/icons-material/CallTwoTone";
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import { Link as ScrollLink } from "react-scroll";
 import { StyledButton } from "../styled-button";
-import Countdown from "../home/Countdown";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Navbar from "./navbar";
 
 
-const pages = [
-    { linkID: "/#home", label: "Home" },
-    { linkID: "/#aboutus", label: "About Us" },
-    { linkID: "/#treatments", label: "Treatments" },
-    { linkID: "/#Doctors", label: "Doctors" },
-    { linkID: "/#testimonials", label: "Testimonials" },
-    { linkID: "/#gallery", label: "Gallery" },
-    { linkID: "/#contactform", label: "Contact" },
-];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const [flag, setFlag] = React.useState(false);
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
-    const handleOpenMobileSubMenu = () => {
-        // handleCloseNavMenu()
-        setFlag(!flag);
-    };
 
   const contactno1 = "+919713435111";
   const contactno2 = "+919923708233";
@@ -249,25 +211,24 @@ function ResponsiveAppBar() {
                                     letterSpacing: 1.5,
                                     fontWeight: '1000',
                                     color: {xs:'white',sm:'white', md:"#28282B"},
-                                    lineHeight: 1.5,
+                                    lineHeight: 1,
                                     fontFamily: '"Poppins", sans-serif',
-                                    '-webkit-text-stroke': '1px #28282B',
+                                    // '-webkit-text-stroke': '1px #28282B',
                                  
                                     
                                 }}>
                            <motion.h2  variants={textVariants} >
                                 {" "}
-                                Dental Galaxy® One-Stop
-Solution For All Your Dental Care Needs!
+                                Where Precision Meets Luxury
+
                             </motion.h2>
                             </Box>
                             <Hidden smDown>
                             <Typography
                                 variant="p"
-                                sx={{ color: "white", lineHeight: 1.6, fontSize: 23,mt:10 }}
+                                sx={{ color: "white", lineHeight: 1.6, fontSize: 23 }}
                             >
-                                {" "}
-                                Experience the Best Dentist in Airoli & Thane!
+                               Expert Care for Every Stage of Life
                             </Typography>
                             </Hidden>
                             <Box sx={{ "& button": { mt: 2, mb: 7, } }}>
@@ -285,10 +246,10 @@ Solution For All Your Dental Care Needs!
                                         sx={{
                                             mb: { xs: 3, sm: 0, md: 0 },
                                             fontSize: 17,
-                                            border: "1px solid",
+                                          
                                             borderRadius: 1,
                                             background:'#2b337d',
-                                            borderColor: "#70cad2",
+                                           
                                             color: "white",
                                         }}
                                     >

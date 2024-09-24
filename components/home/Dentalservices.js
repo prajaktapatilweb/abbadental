@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
-
 import Avatar from '@mui/material/Avatar';
-
 import { Box, Card, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-
-
+import { motion } from 'framer-motion';
 
 export default function Dentalservices() {
     var Details = [
@@ -59,29 +56,56 @@ export default function Dentalservices() {
         }
     ]
 
+    
 
-     // State to track if the card is hovered
-     const [hoveredCard, setHoveredCard] = useState(null);
+    // State to track if the card is hovered
+    const [hoveredCard, setHoveredCard] = useState(null);
+
+    // Animation variants
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Stagger each child (card) by 0.2 seconds
+      },
+    },
+  };
+  
+  const fadeUpVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start from below and invisible
+    visible: {
+      opacity: 1,
+      y: 0, // Animate to its final position
+      transition: {
+        duration: 0.8,
+        ease: 'easeInOut',
+      },
+    },
+  };
     return (
         <div>
             <Box
                 id="services"
-                sx={{ pt: { xs: 10, md: 7}, pb:10, backgroundColor: "white" }}
+                sx={{ pt: { xs: 10, md: 7 }, pb: 10, backgroundColor: "white" }}
             >
                 <div class="section-title">
-                    <h2>Testimonials</h2>
-                    <p>Genuine Google Reviews from Our Satisfied Patients</p>
+                    <h2>The Art of Luxurious Dentistry</h2>
+                    <p>Unparalleled Care for Those Who Expect the Best</p>
                 </div>
-                <Container>
-                    {/* <Heading data={headList2}></Heading> */}
-                    {/* <Typography variant='h5' sx={{ textAlign: 'center', mb: 3, color: 'black' }}>
-                        Explore a wide range of dental services at our dental clinic in Dombivli. Schedule your appointment now for expert care.
-
-                    </Typography> */}
+             {/* Framer Motion Container for the animation */}
+        <Container component={motion.div} variants={containerVariants} initial="hidden" animate="visible">
+         
                     <Grid container spacing={3}>
                         {Details.map((item, i) => (
 
                             <Grid item xs={12} md={4} key={i} sx={{ display: 'flex' }}>
+                                   {/* Each card with fade-up animation */}
+                <motion.div  variants={fadeUpVariants}
+                  initial="hidden"
+                  whileInView="visible" // Animation triggers when the element is in view
+                  viewport={{ once: true }} // Only animate once
+                  >
                                 <Card
                                     sx={{
                                         backgroundColor: 'white',
@@ -99,14 +123,14 @@ export default function Dentalservices() {
                                             color: 'white',
                                             '& .MuiAvatar-root': {
                                                 backgroundColor: 'white', // Change avatar color on hover
-                                          
+
                                             },
-                                           
+
                                         },
                                     }}
                                     onMouseEnter={() => setHoveredCard(i)} // Set hover state for the current card
                                     onMouseLeave={() => setHoveredCard(null)}  // Reset hover state when not hovering
-                                  
+
                                 >
                                     <Grid container spacing={3} alignItems='center' justifyContent='center'>
                                         <Grid item xs={12} md={3}>
@@ -115,12 +139,12 @@ export default function Dentalservices() {
                                                 width: 50, height: 50, backgroundColor: 'primary.dark', padding: 4,
 
                                             }}>
-                     <Image
-                    src={hoveredCard === i ? item.icons1 : item.icons} // Change image based on hover state
-                    width={40}
-                    height={40}
-                  />
-                    </Avatar>
+                                                <Image
+                                                    src={hoveredCard === i ? item.icons1 : item.icons} // Change image based on hover state
+                                                    width={40}
+                                                    height={40}
+                                                />
+                                            </Avatar>
                                         </Grid>
 
                                         <Grid item xs={12} md={9}>
@@ -129,6 +153,7 @@ export default function Dentalservices() {
                                             <p style={{ marginTop: 3, textAlign: 'justify' }}>Maintaining the beauty of your natural smile and your health, it the top priority of our dental team</p>
                                         </Grid></Grid>
                                 </Card>
+                                </motion.div>
                             </Grid>
 
                         ))}
