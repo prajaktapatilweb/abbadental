@@ -1,27 +1,16 @@
 import React, { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
-import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import { orange } from '@mui/material/colors';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import ContactsIcon from '@mui/icons-material/Contacts';
-import AppScrollbar from './AppScrollbar';
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
 import CallTwoToneIcon from "@mui/icons-material/CallTwoTone";
-import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import Image from 'next/image';
 import { Link } from '@mui/material';
 import ScrollUp from '../home/ScrollUp';
 
 const AppThemeSetting = () => {
-  const [isSettingOpen, setSettingOpen] = useState(false);
-  const [isColorSettingOpen, setColorSettingOpen] = useState(false);
+ 
 
-  const contactno2 = "+919702955057";
+  const contactno2 = "+919713435111";
 
   return (
     <>    

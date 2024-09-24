@@ -10,48 +10,56 @@ export default function Dentalservices() {
             icons: "/images/icons/implant.png",
             icons1: "/images/icons/implant1.png",
             title: 'Dental implants',
+            desc:'Restore your smile with durable and natural-looking dental implants.'
         },
         {
             icons: "/images/icons/dental-care.png",
             icons1: "/images/icons/dental-care1.png",
             title: 'Crowns & Bridges',
+            desc:'Enhance your smile with custom crowns and bridges that fit seamlessly.'
         },
         {
             icons: "/images/icons/dental-care2.png",
             icons1: "/images/icons/dental-care3.png",
             title: 'Tooth Extraction',
+            desc:'Experience a comfortable and safe tooth extraction process.'
         },
 
         {
             icons: "/images/icons/dental-care.png",
             icons1: "/images/icons/dental-care3.png",
             title: 'Pediatric Dentistry',
+            desc:'Ensure your child’s dental health with gentle, specialized care.'
         },
         {
             icons: "/images/icons/braces.png",
             icons1: "/images/icons/braces1.png",
             title: 'Braces & Aligners',
+            desc:'Achieve a straighter smile with our advanced braces and aligners.'
         },
         {
             icons: "/images/icons/root.png",
             icons1: "/images/icons/root1.png",
-            title: 'Root Canal',
+            title: 'RCT (Root Canal Treatment)',
+            desc:'Relieve pain and save your tooth with our gentle root canal treatment.'
         },
         {
             icons: "/images/icons/whitening.png",
             icons1: "/images/icons/whitening1.png",
             title: 'Teeth Whitening',
+            desc:'Brighten your smile with fast and effective professional whitening.'
         },
         {
             icons: "/images/icons/veeners.png",
             icons1: "/images/icons/veeners1.png",
-
             title: 'Dental Veneers',
+            desc:'Transform your smile with custom veneers for a flawless look.'
         },
         {
             icons: "/images/icons/dental-care2.png",
             icons1: "/images/icons/dental-care3.png",
             title: 'Full Mouth Reconstruction',
+            desc:'Rebuild and enhance your smile with a personalized reconstruction plan.'
 
         }
     ]
@@ -150,7 +158,7 @@ const containerVariants = {
                                         <Grid item xs={12} md={9}>
 
                                             <Typography variant='h5'> {item.title} </Typography>
-                                            <p style={{ marginTop: 3, textAlign: 'justify' }}>Maintaining the beauty of your natural smile and your health, it the top priority of our dental team</p>
+                                            <p style={{ marginTop: 3, textAlign: 'justify' }}>{item.desc}</p>
                                         </Grid></Grid>
                                 </Card>
                                 </motion.div>

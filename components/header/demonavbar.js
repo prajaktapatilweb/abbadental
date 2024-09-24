@@ -19,8 +19,9 @@ import Navbar from "./navbar";
 
 function ResponsiveAppBar() {
 
-  const contactno1 = "+919713435111";
-  const contactno2 = "+919923708233";
+  const contactno1 ="+919713435111";
+  const contactno2 = "+919923708233" 
+
 
   const textVariants={
     initial:{
@@ -90,7 +91,7 @@ function ResponsiveAppBar() {
                                     <CallTwoToneIcon />
                                 </IconButton>
                                
-                                <Link href={`tel:${contactno2}`} target="_blank">
+                                <Link href={`tel:${contactno1}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
                                         +919713435111
 
@@ -98,7 +99,7 @@ function ResponsiveAppBar() {
                                 </Link>
                                 /
 
-                                <Link  href={`tel:${contactno1}`} target="_blank">
+                                <Link  href={`tel:${contactno2}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
                                     +919923708233
 
@@ -211,27 +212,27 @@ function ResponsiveAppBar() {
                                     letterSpacing: 1.5,
                                     fontWeight: '1000',
                                     color: {xs:'white',sm:'white', md:"#28282B"},
-                                    lineHeight: 1,
+                                    lineHeight: 1.3,
                                     fontFamily: '"Poppins", sans-serif',
                                     // '-webkit-text-stroke': '1px #28282B',
                                  
                                     
                                 }}>
                            <motion.h2  variants={textVariants} >
-                                {" "}
-                                Where Precision Meets Luxury
+                              
+                                Where Precision Meets Unmatched Luxury in Dental Care
 
                             </motion.h2>
                             </Box>
                             <Hidden smDown>
                             <Typography
                                 variant="p"
-                                sx={{ color: "white", lineHeight: 1.6, fontSize: 23 }}
+                                sx={{ color: "white", lineHeight: 0, fontSize: 23 }}
                             >
                                Expert Care for Every Stage of Life
                             </Typography>
                             </Hidden>
-                            <Box sx={{ "& button": { mt: 2, mb: 7, } }}>
+                            <Box sx={{ "& button": { mt: 3, mb: 7, } }}>
                                 <ScrollLink
                                     to="contactform"
                                     spy={true}

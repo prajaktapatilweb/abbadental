@@ -1,7 +1,6 @@
 import React from 'react';
-import { Typography, Card, Link } from '@mui/material';
+import { Card, Link } from '@mui/material';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Axios from 'axios';
 import { Field, Form, Formik,ErrorMessage } from 'formik';
 import * as yup from 'yup';
@@ -9,12 +8,10 @@ import AppTextField from '../Formik/AppTextField';
 import { Button, FormControl, Grid, InputLabel } from '@mui/material';
 import CustomizedSelectFormik from '../Formik/CustomizedSelectFormik';
 import { useRouter } from 'next/router';
-import CallTwoToneIcon from "@mui/icons-material/CallTwoTone";
-import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import IconButton from "@mui/material/IconButton";
 import GoogleRecaptcha from '../GoogleRecaptcha';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
 
 
 const All = [
@@ -50,9 +47,6 @@ const validationSchema = yup.object({
 
 const Contact = () => {
 
-  const contactno1 = "+919833389890";
-  const contactno2 = "+919702955057";
-
   const router = useRouter()
   const onSubmit = async (values, submitProps) => {
     console.log({ values })
@@ -79,28 +73,72 @@ const Contact = () => {
       });
   };
 
+            // Define the fade-right animation variants
+const fadeRightVariants = {
+  hidden: { opacity: 0, x: 100 },  // Start from the right (100px offset)
+  visible: { 
+    opacity: 1, 
+    x: 0,  // Move to its original position (x: 0 means no offset)
+    transition: {
+      duration: 0.8,  // Duration of the animation
+      ease: 'easeInOut',  // Easing function for a smooth motion
+
+    },
+  },
+};
+
+       // Define the fade-left animation variants
+       const fadeLeftVariants = {
+        hidden: { opacity: 0, x: -100, y: 0 },  // Start from the left (-100px offset) and slightly below (50px down)
+      visible: { 
+        opacity: 1, 
+        x: 0,  // Move to original position horizontally
+        y: 0,  // Move to original position vertically
+          transition: {
+            duration: 0.8,  // Duration of the animation
+            ease: 'easeInOut',  // Easing function for a smooth motion
+      
+          },
+        },
+      };
+
   return (
    
       
-      
+      <Box id="contactform">
         
 
           <Grid container spacing={0}  sx={{p:0,backgroundColor:'white',mb:2}} >
          
 
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
+            {/* <motion.div
+  className="textcontainer"
+  variants={fadeLeftVariants}
+  initial="hidden"         // Start in the hidden state
+  whileInView="visible"    // Animate to the visible state when in view
+  viewport={{ once: true }} // Optionally only animate once
+> */}
             <Image
                         alt={'Clinic'}
                         src='/images/contactimg3.jpg'
                         width={100}
                         height={100}
                         layout='responsive'></Image>
+                        {/* </motion.div> */}
               </Grid>
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
+            <motion.div
+  className="textcontainer"
+  variants={fadeRightVariants}
+  initial="hidden"         // Start in the hidden state
+  whileInView="visible"    // Animate to the visible state when in view
+  viewport={{ once: true }} // Optionally only animate once
+>
               <Card sx={{ px: 3, py:3 }}>
               <div class="section-title" style={{textAlign:'left'}}>
-          <h2>Smile Gallery</h2>
-          <p>Where Happiness Shines Bright</p>
+          <h2>Premier Dental Equipment</h2>
+          <p>Innovative Tools for Optimal Patient Care</p>
         </div>
                 <Formik
                   validateOnChange={true}
@@ -115,7 +153,7 @@ const Contact = () => {
                   validationSchema={validationSchema}
                   onSubmit={onSubmit}
                 >
-                  {({ initialValues, values, errors, isSubmitting }) => (
+                  {({ isSubmitting }) => (
                     <Form style={{ textAlign: 'left' }}>
                       <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
@@ -198,7 +236,7 @@ const Contact = () => {
                           </Box>
                         </Grid>
                         <Grid item xs={12} sx={{ mb: { xs: 3, lg: 3 } }}>
-                          {/* <GoogleRecaptcha /> */}
+                          <GoogleRecaptcha />
                           <ErrorMessage name="recaptcha" component="div" style={{ color: 'red' }} />
 
                         </Grid>
@@ -228,11 +266,12 @@ const Contact = () => {
                   )}
                 </Formik>
               </Card>
+</motion.div>
             </Grid>
           {/* </Grid> */}
           </Grid>
         
-
+          </Box>
   
   );
 };

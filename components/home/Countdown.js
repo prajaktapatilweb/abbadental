@@ -1,36 +1,37 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import { Avatar, Card, Typography } from "@mui/material";
+import { Avatar,  Typography } from "@mui/material";
 import Image from "next/image";
-import { Link as ScrollLink } from 'react-scroll';
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import StarIcon from '@mui/icons-material/Star';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import { motion} from "framer-motion";
 
-export default function Countdown() {
-
+export default function Countdown() { 
     var Details = [
         {
-            icons: "/images/icons/implant.png",
-            title: 'Years of Experience',
-            link: 'contactform'
+            icons: <SentimentSatisfiedAltIcon/>,
+            title: <span> 20000+ <br/> Happy Smiles</span>,
+           
         },
         {
-            icons: "/images/icons/dental-care.png",
-            title: 'Total Patients',
-            link: 'contactform'
+            icons: <PersonAddAlt1Icon/>,
+            title:  <span> 16+<br/> Years of Experience</span>,
+          
 
         },
         {
-            icons: "/images/icons/dental-care2.png",
-            title: 'Award Winner',
-            link: 'contactform'
+            icons:<VolunteerActivismIcon/>,
+            title: <span>1000+ <br></br> Dental Implants</span>,
+            
 
         },
 
         {
-            icons: "/images/icons/dental-care2.png",
-            title: 'Our services',
-            link: 'contactform'
+            icons: <StarIcon/>,
+            title: <span>4.9 <br/> Google Rating</span>,
 
         },
 
@@ -61,7 +62,7 @@ const fadeUpVariants = {
 >
 
             <Container sx={{
-                backgroundColor: 'white',  py:{xs:3,sm:3,md:7},px:4,
+                backgroundColor: 'white',  py:{xs:3,sm:3,md:7},
                 mt: -15, borderRadius: 4, 
                 boxShadow:
                 'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',
@@ -76,25 +77,17 @@ const fadeUpVariants = {
                     {Details.map((item, i) => (
 
                         <Grid item xs={12} md={3}>
-                            <Grid container spacing={0} alignItems='center' justifyContent='center' textAlign='center'>
-                                <Grid item xs={2} md={2}>
+                            <Grid container spacing={0} alignItems='center' justifyContent='center'>
+                                <Grid item xs={2} md={3}  textAlign='right'>
 
-                                    <Avatar alt="R" src='' sx={{ margin: 'auto', width: '30', height: 30, background: '#312d79', padding: 3, }}><Image src={item.icons} width={30} height={30}></Image></Avatar>
+                                    <Avatar alt="" src="" sx={{ margin: 'auto', width: '35', height: 35, background: '#312d79', padding: 3, }}>{item.icons}</Avatar>
                                 </Grid>
 
-                                <Grid item xs={8} md={8}>
-
-                                    <ScrollLink
-                                        to="contactform" // ID of the target element
-                                        smooth={true}    // Enables smooth scrolling
-                                        duration={350}   // Duration of the scrolling animation
-                                        offset={-50}     // Optional: Adjust the scroll offset if you have a fixed header
-
-                                    >
-                                        <Typography variant='h4' sx={{ py: 2, color: '#312d79', cursor: 'pointer' }}>
+                                <Grid item xs={8} md={9}>
+                                        <Typography variant='h4' sx={{ py: 1, color: '#312d79', cursor: 'pointer' }}>
                                             {item.title}
                                         </Typography>
-                                    </ScrollLink>
+                                 
                                 </Grid></Grid>
 
                         </Grid>

@@ -22,7 +22,7 @@ export default async function handler(req, res) {
                 const date = moment().utcOffset("+05:30").format('MMMM Do YYYY, h:mm:ss a')
                 const clientIp = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||
                     req.socket.remoteAddress;
-                const emailSubject = 'New Enquiry through Dynamic Dental Care Website'
+                const emailSubject = 'New Enquiry through Abbad Dental Clinic '
                 const emailContent =
                     `Dear Admin, \n \n Details of the person contacted you are as follows \n
                   Name: ${req.body.name} \n
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
                 client.sendMail(
                     {
                         from: `Web Developer <${process.env.EMAILID}>`,
-                        to: "Dynamicdentalcare2013@gmail.com,prajubpatil@gmail.com",
+                        to: "dr.abbaddentalclinic@gmail.com,prajubpatil@gmail.com",
                         subject: emailSubject,
                         text: emailContent
                     }

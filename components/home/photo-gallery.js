@@ -1,57 +1,23 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Slider from "react-slick";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
 import { useTheme, styled } from "@mui/material/styles";
-import { IconButton, useMediaQuery } from "@mui/material";
-import IconArrowBack from "@mui/icons-material/ArrowBack";
-import IconArrowForward from "@mui/icons-material/ArrowForward";
-import { data } from "./photo-gallery.data";
+import { useMediaQuery } from "@mui/material";
 import PhotoCardItem from "../course/photo-card-item";
-const SliderArrow = (props) => {
-  const { onClick, type, className } = props;
-  return (
-    <IconButton
-      sx={{
-        backgroundColor: "background.paper",
-        color: "primary.dark",
-        "&:hover": {
-          backgroundColor: "primary.dark",
-          color: "primary.contrastText",
-        },
-        bottom: { xs: "-70px !important", md: "-28px !important" },
-        left: "unset !important",
-        right: type === "prev" ? "60px !important" : "0 !important",
-        zIndex: 10,
-        boxShadow: 1,
-      }}
-      disableRipple
-      color="inherit"
-      onClick={onClick}
-      className={className}
-    >
-      {type === "next" ? (
-        <IconArrowForward sx={{ fontSize: 22 }} />
-      ) : (
-        <IconArrowBack sx={{ fontSize: 22 }} />
-      )}
-    </IconButton>
-  );
-};
+import { motion} from "framer-motion";
+
+
 const StyledDots = styled("ul")(({ theme }) => ({
   "&.slick-dots": {
-    position: "absolute",
+    position: "relative",
     left: 0,
-    bottom: -40,
-  
     paddingLeft: theme.spacing(1),
-    textAlign: "left",
-    
-    marginBottom:20,
+    textAlign: "center",
+    marginBottom:35,
+   
     "& li": {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
     
       "&.slick-active>div": {
         backgroundColor: theme.palette.primary.dark,
@@ -65,35 +31,56 @@ const Photogallery = () => {
   const sliderConfig = {
     infinite: true,
     autoplay: true,
+    arrows:false,
     adaptiveheight: false,
     speed: 300,
     slidesToShow: matchMobileView ? 1 : 3,
     slidesToScroll: 1,
-    prevArrow: <SliderArrow type="prev" />,
-    nextArrow: <SliderArrow type="next" />,
     dots: true,
     appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
       <Box
         sx={{
-          height: 8,
-          width: 30,
+          height: 20,
+          width: 20,
           backgroundColor: "divider",
           display: "flex",
           borderRadius: 4,
+         
       
         }}
       />
     ),
   };
+
+   // Define the fade-up animation variants
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 120 },  // Initial state: invisible and below the viewport
+  visible: { 
+    opacity: 1, 
+    y: 0,  // Moves up to its original position
+    transition: {
+      duration: 0.9, // Duration of the animation
+      ease: 'easeInOut', // Easing function
+    },
+  },
+};
   return (
+    <motion.div
+    className="textcontainer"
+    variants={fadeUpVariants}
+    initial="hidden"         // Start in the hidden state
+    whileInView="visible"    // Animate to the visible state when in view
+    viewport={{ once: true }} // Optionally only animate once
+  >
     <Box
       id="gallery"
       sx={{
-        py: { xs: 7, md: 3 },
-        // backgroundColor:'#9cdeea',
-        backgroundImage: ` url("/images/Slide2.jpg")`,
-        height:'100'
+        py: { xs: 7, md: 3},
+        backgroundImage: ` url("/images/Slide01.jpg")`,
+        backgroundRepeat:'no-repeat',
+        
+
       }}
     >
       <Container maxWidth="lg">
@@ -112,6 +99,7 @@ const Photogallery = () => {
       </Container>
 
     </Box>
+    </motion.div>
   );
 };
 export default Photogallery;

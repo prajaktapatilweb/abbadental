@@ -4,12 +4,8 @@ import Box from '@mui/material/Box';
 import { iconButtonClasses } from '@mui/material/IconButton';
 const PhotoCardItem = ({ item }) => {
   return (
-    <Box sx={{
-      // px: 1,
-      // py: 1,
-      pb:5
-    }}>
-      <Box sx={{p: 1,}}>
+    <Box>
+      <Box sx={{p: 1}}>
         <Box>
          
           <Image

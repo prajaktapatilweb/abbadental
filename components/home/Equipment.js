@@ -2,100 +2,130 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import IconButton, { iconButtonClasses } from "@mui/material/IconButton";
-import Image from "next/image";
 import { Typography } from "@mui/material";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+// Define the parent container animation variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3, // Stagger the appearance of each child by 0.3 seconds
+    },
+  },
+};
+
+// Define the animation variants for each box
+const fadeInRightVariants = {
+  hidden: { opacity: 0, x: 100 }, // Start from the right and invisible
+  visible: {
+    opacity: 1,
+    x: 0, // Move to the original position
+    transition: {
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  },
+};
 
 export default function Equipment() {
-    var Details = [
-        {
-            img: "/images/equip/eqip21.jpg",
-            altitle: "Dental Scanner",
-            desc: "Dental Scanner",
-        },
-        {
-            img: "/images/equip/equip22.jpg",
-            altitle: "Digital X Ray",
-            desc: "Digital X Ray",
-        },
-        {
-            img: "/images/equip/equip23.jpg",
-            altitle: "Dental Loupes",
-            desc: "Dental Loupes",
-        },
-        {
-            img: "/images/equip/equip24.jpg",
-            altitle: "Portable X Ray",
-            desc: "Portable X Ray",
-        },
-    ];
-    return (
-        <div>
-            <Box
-                sx={{
-                    py: { xs: 6, md: 10 },
-                    backgroundColor: "#d1d2e6",
-                }}
-            >
-                <Container>
-                    <div class="section-title">
-                        <h2>Equipments</h2>
-                    </div>
+  const Details = [
+    {
+      img: "/images/equip/eqip21.jpg",
+      altitle: "Dental Scanner",
+      desc: "Dental Scanner",
+    },
+    {
+      img: "/images/equip/equip22.jpg",
+      altitle: "Digital X Ray",
+      desc: "Digital X Ray",
+    },
+    {
+      img: "/images/equip/equip23.jpg",
+      altitle: "Dental Loupes",
+      desc: "Dental Loupes",
+    },
+    {
+      img: "/images/equip/equip24.jpg",
+      altitle: "Portable X Ray",
+      desc: "Portable X Ray",
+    },
+  ];
 
-                    <Grid container spacing={1}>
-                        {Details.map((item, i) => (
-                            <Grid item xs={12} md={3} key={i}>
-                                <Box>
-                                    <Box
-                                        sx={{
-                                            p: 1,
-                                            backgroundColor: "background.paper",
-                                            borderRadius: 4,
-                                            boxShadow: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px',
-                                            transition: (theme) =>
-                                                theme.transitions.create(["box-shadow"]),
-                                            "&:hover": {
-                                                boxShadow: 2,
-                                                [`& .${iconButtonClasses.root}`]: {
-                                                    backgroundColor: "primary.main",
-                                                    color: "primary.contrastText",
-                                                    boxShadow: 2,
-                                                },
-                                            },
-                                        }}
-                                    >
-                                        <Box
-                                            sx={{
-                                                lineHeight: 0,
-                                                overflow: "hidden",
-                                                borderRadius: 3,
-                                                mb: 2,
-                                            }}
-                                        >
-                                            <Image
-                                                src={item.img}
-                                                width={100}
-                                                height={100}
-                                                layout="responsive"
-                                                alt={"Course " + item.altitle}
-                                            />
-                                        </Box>
-                                        <Box sx={{ mb: 2 }}>
-                                            <Typography
-                                                component="h2"
-                                                variant="h5"
-                                                sx={{ textAlign: "center", fontSize: "1.2rem" }}
-                                            >
-                                                {item.desc}
-                                            </Typography>
-                                        </Box>
-                                    </Box>
-                                </Box>
-                            </Grid>
-                        ))}
-                    </Grid>
-                </Container>
-            </Box>
-        </div>
-    );
+  return (
+    <div>
+      <Box
+        sx={{
+          py: { xs: 6, md: 10 },
+          backgroundColor: "#d1d2e6",
+        }}
+      >
+        <Container>
+          <div className="section-title">
+            <h2>Equipments</h2>
+          </div>
+
+          {/* Apply motion.div to the container with staggered animation */}
+          <Grid
+            container
+            spacing={1}
+            component={motion.div}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }} // Ensure the animation triggers once
+          >
+            {Details.map((item, i) => (
+              <Grid item xs={12} md={3} key={i}>
+                {/* Each box is animated while it comes into view */}
+                <motion.div variants={fadeInRightVariants}>
+                  <Box
+                    sx={{
+                      p: 1,
+                      backgroundColor: "background.paper",
+                      borderRadius: 4,
+                      boxShadow:
+                        "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
+                      transition: (theme) =>
+                        theme.transitions.create(["box-shadow"]),
+                      "&:hover": {
+                        boxShadow: 2,
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        lineHeight: 0,
+                        overflow: "hidden",
+                        borderRadius: 3,
+                        mb: 2,
+                      }}
+                    >
+                      <Image
+                        src={item.img}
+                        width={100}
+                        height={100}
+                        layout="responsive"
+                        alt={item.altitle}
+                      />
+                    </Box>
+                    <Box sx={{ mb: 2 }}>
+                      <Typography
+                        component="h2"
+                        variant="h5"
+                        sx={{ textAlign: "center", fontSize: "1.2rem" }}
+                      >
+                        {item.desc}
+                      </Typography>
+                    </Box>
+                  </Box>
+                </motion.div>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+    </div>
+  );
 }

@@ -1,59 +1,60 @@
-import { Link } from "@mui/material";
+
 
 export const data = [
     {
 
         id: 1,
-        photo: '/images/mentors/testi1.jpeg',
-        name: 'Shrinand Sagavkar',
+        photo: '/images/mentors/testis1.jpeg',
+        name: 'Supriya Sanghavi',
         category: '',
-        description: 'Very excellent treatment. I am totally satisfied and happy because I have prolonged dental and Gums issues so many years I can\'t brush after removing some teeth and route canal and installing dental bridge. My problem is solved. Thanks to Dr. Mishra',
+        description: 'I visited Dr. Leena Abbad for my dental treatment. It was a completely painless procedure where in she took all the required precautions every time..  Very good service, hygiene and helpful staff. I would highly recommend it to everyone.',
 
     },
     {
 
         id: 2,
-        photo: '/images/mentors/testi2.jpeg',
-        name: 'Siddhi Sakpal',
+        photo: '/images/mentors/testis2.jpeg',
+        name: 'Pallavi Birhade',
         category: '',
-        description: 'Used digital cap impression to make the job much easier. It was a good experience😊',
+        description: 'It was great experience in terms of diagnosis and treatment. Dr. Nikhil helped me to understand the cause and possible consequences and how the treatment will avoid future issues. This was great help and even the entire staff and doctors team is very supportive and helpful.',
 
     },
     {
 
         id: 3,
-        photo: '/images/mentors/testi3.jpeg',
-        name: 'Ranjeet Mishra',
-        category: '',
-        description: 'Doctor is very co- operative and supportive.  I had been in her contact since 2019, very nice experience.',
+        photo: '/images/mentors/testis4.jpeg',
+        name: 'Vaishnavi Patil',
+        category: ' ',
+        description: <span>I highly recommend. He is so far the best dentist I have been to. Dr explains each and every procedure properly , he will clear all your doubts and give you the best solution and the work is perfect.</span>,
 
     },
-
     {
 
         id: 4,
-        photo: '/images/mentors/testi4.jpeg',
-        name: 'Priyanka Dutta',
-        category: ' ',
-        description: <span>Doctor Shweta is very professional, very thorough. I went for dental filling, she made sure the entire procedure is painless and as comfortable as can be for me. The filling were absolutely precise. Thank you so much.</span>,
+        photo: '/images/mentors/testis3.jpeg',
+        name: 'Vibhavari Khadke',
+        category: '',
+        description: 'My mother in law is such a delicate and sensitive person, and Dr. Nikhil Abbad  is not only an Excellent Doctor, he is simple, superb Human being, Sober, approachable, a Great Social Worker, friendly approach with a smiling face with his selfless service. He is an extraordinarily intelligent Doctor with human values. He always gives genuine advice , I hardly find such a  personality. Our best wishes are always with you sir...',
 
     },
+
+ 
     {
 
         id: 5,
-        photo: '/images/mentors/testi5.jpeg',
-        name: ' Shailja Shukla',
+        photo: '/images/mentors/testis5.jpeg',
+        name: 'Rajesh Surana',
         category: ' ',
-        description: <span>I consulted Dr Shweta and Dr Anuj for my mother's root canal, the treatment which my mom received is the best. My mother is very happy, she smiles confidently. Highly recommend! Thank you so much to them.</span>,
+        description: <span>It was a great experience. I came from Pune to get a proper treatment with expertise and care as I’m diabetic and Dr Nikhil Abbad proved that he is truly an expert in his profession. He is a patient caring person. His first priority is patient’s comfort and satisfaction. I strongly recommend him for a complete dental care for a person of any age. His staff and team is also very cooperative and supportive. Impressed with post operative follow-ups taken by his team.</span>,
 
     },
     {
 
         id: 6,
-        photo: '/images/mentors/testi6.jpeg',
-        name: ' DHRUV CHAWDA ',
+        photo: '/images/mentors/testis6.jpeg',
+        name: 'ASHUTOSH JAIN',
         category: ' ',
-        description: <span>Excellent diagnosis and treatment.. Complete resolution of all the dental problems that I was suffering since 2 years .. Good staff.. Thanks Doctor</span>,
+        description: <span>I had the pleasure of taking my mother to one of the best dental clinics in Nashik, and I must say it was an excellent experience. The doctor was highly professional and qualified, and we were referred to this clinic by my cousin. From the very first day of the treatment to the post-treatment care, everything was handled with utmost precision and care. The staff was courteous, and their genuine care for patients was evident throughout. I will definitely recommend this clinic to everyone seeking top-notch dental care.</span>,
 
     },
    

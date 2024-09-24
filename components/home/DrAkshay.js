@@ -43,8 +43,8 @@ const fadeRightVariants = {
       <Box id="Doctors" sx={{ py: 8 }}>
         <Container>
           <div class="section-title">
-            <h2>Meet Our Team of Expert Dentists</h2>
-            <p>Leaders in Dental Excellence</p>
+            <h2>Your Dental Experts Await</h2>
+            <p>Your Smile is in the Hands of the Best</p>
           </div>
         </ Container>
 

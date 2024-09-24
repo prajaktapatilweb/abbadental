@@ -43,9 +43,6 @@ const StyledDots = styled("ul")(({ theme }) => ({
     "&.slick-dots": {
         position: "absolute",
         left: 0,
-
-
-        // paddingLeft: theme.spacing(1),
         textAlign: "center",
         "& li": {
             marginRight: theme.spacing(2),
@@ -90,8 +87,8 @@ const Testimonial = () => {
         >
             <Container>
                 <div class="section-title">
-                    <h2>Testimonials</h2>
-                    <p>Genuine Google Reviews from Our Satisfied Patients</p>
+                    <h2>What Our Patients Say</h2>
+                    <p>Hear from Those Who Trust Us with Their Smiles</p>
                 </div>
                 <Slider {...sliderConfig}>
                     {data.map((item) => (
