@@ -5,7 +5,6 @@ import { createEmotionCache } from "../utils";
 import { MUIProvider } from "../providers";
 import "slick-carousel/slick/slick.css";
 import "../assets/css/style.css";
-import "../components/home/heroadd/hero1.css";
 import "../styles/react-slick.css";
 import { useRouter } from "next/router";
 
