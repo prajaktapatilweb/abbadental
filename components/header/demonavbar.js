@@ -53,14 +53,13 @@ function ResponsiveAppBar() {
         <AppBar
         position="static"
         sx={{
-            // backgroundImage: `linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/clinicback4.jpg")`,
-            backgroundImage: ` url("/images/heroback5.jpeg")`,
-           
+            backgroundImage:{xs: `linear-gradient(rgba(0, 109, 107, 0.1), rgba(0, 109, 107, 0.6)), url("/images/back11.jpg")`,sm:`linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/back11.jpg")`,md:` url("/images/heroback1.jpg")`},
+          
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundPosition:'right',
-            display: "flex",
-            height: "100%",
+            backgroundPosition:'center',
+        
+           
         }}
     >
             <section style={{
@@ -201,14 +200,14 @@ function ResponsiveAppBar() {
                     justifyContent="center"
                     textAlign="left"
                 >
-                    <Grid item xs={12} md={7} sx={{p:3,mt:{xs:7,sm:7,md:-7}}}>
+                    <Grid item xs={12} md={7} sx={{p:3,mt:{xs:0,sm:0,md:-7}}}>
                     <motion.div className="textcontainer" variants={textVariants}
         initial="initial"
         animate="animate"
         >
                            <Box  sx={{
                                     position: "relative",
-                                    fontSize:{xs:'30px',sm:'25px',md:'28px'},
+                                    fontSize:{xs:'32px',sm:'30px',md:'28px'},
                                     letterSpacing: 1.5,
                                     fontWeight: '1000',
                                     color: {xs:'white',sm:'white', md:"#28282B"},
@@ -246,7 +245,7 @@ function ResponsiveAppBar() {
                                         variant="outlined"
                                         sx={{
                                             mb: { xs: 3, sm: 0, md: 0 },
-                                            fontSize: 17,
+                                            fontSize: 20,
                                           
                                             borderRadius: 1,
                                             background:'#2b337d',

@@ -15,8 +15,8 @@ export default function Home() {
     <>
       <Countdown />
       <Clinicinfo></Clinicinfo>
-      <Dentalservices></Dentalservices>
-      <DrAkshay></DrAkshay>
+      <Dentalservices/>
+       <DrAkshay></DrAkshay> 
       <Suspense fallback=
         {<div>Component are loading please wait...</div>}>
         <Photogallery />
@@ -24,7 +24,7 @@ export default function Home() {
         <Testimonial></Testimonial>
       </Suspense>
       <Equipment />
-      <Contact></Contact>
+      <Contact></Contact> 
     </>
   )
 }

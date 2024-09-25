@@ -5,19 +5,18 @@ import { motion } from 'framer-motion';
 
 
 export default function Awards() {
-           // Define the fade-right animation variants
-const fadeRightVariants = {
-    hidden: { opacity: 0, x: 100 },  // Start from the right (100px offset)
-    visible: { 
-      opacity: 1, 
-      x: 0,  // Move to its original position (x: 0 means no offset)
-      transition: {
-        duration: 0.8,  // Duration of the animation
-        ease: 'easeInOut',  // Easing function for a smooth motion
-  
-      },
+ // Define the fade-up animation variants
+ const fadeUpVariants = {
+  hidden: { opacity: 0, y: 100 },  // Initial state: invisible and below the viewport
+  visible: { 
+    opacity: 1, 
+    y: 0,  // Moves up to its original position
+    transition: {
+      duration: 0.8, // Duration of the animation
+      ease: 'easeInOut', // Easing function
     },
-  };
+  },
+};
   
          // Define the fade-left animation variants
          const fadeLeftVariants = {
@@ -41,7 +40,7 @@ const fadeRightVariants = {
                 <Grid item xs={12} sm={6} md={5} order={2} >
                 <motion.div
   className="textcontainer"
-  variants={fadeRightVariants}
+  variants={fadeUpVariants}
   initial="hidden"         // Start in the hidden state
   whileInView="visible"    // Animate to the visible state when in view
   viewport={{ once: true }} // Optionally only animate once

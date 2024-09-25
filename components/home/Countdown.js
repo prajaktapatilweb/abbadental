@@ -1,7 +1,7 @@
 import React from 'react'
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import { Avatar,  Typography } from "@mui/material";
+import { Avatar,  Box,  Typography } from "@mui/material";
 import Image from "next/image";
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
@@ -53,6 +53,7 @@ const fadeUpVariants = {
 
     return (
         <div>
+            <Box sx={{mx:2,zIndex:1,position:'relative'}}>
            <motion.div
   className="textcontainer"
   variants={fadeUpVariants}
@@ -62,13 +63,14 @@ const fadeUpVariants = {
 >
 
             <Container sx={{
+                width:'100%',
                 backgroundColor: 'white',  py:{xs:3,sm:3,md:7},
                 mt: -15, borderRadius: 4, 
                 boxShadow:
                 'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',
               
                 '&:hover': {
-                    backdropFilter: 'blur( 8px )',
+                   
                     transition: 'box-shadow 0.3s ease',
                 },
             }}>
@@ -99,6 +101,7 @@ const fadeUpVariants = {
 
             </Container>
             </motion.div>
+            </Box>
         </div>
     );
 }

@@ -5,26 +5,28 @@ import Container from "@mui/material/Container";
 import { Typography } from "@mui/material";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
-// Define the parent container animation variants
-const containerVariants = {
-  hidden: {},
+// Define animation variants for each box (fade-up motion)
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 50 }, // Start with opacity 0 and slightly below
   visible: {
+    opacity: 1,
+    y: 0, // Reset to normal position
     transition: {
-      staggerChildren: 0.3, // Stagger the appearance of each child by 0.3 seconds
+      duration: 0.8, // Animation duration
+      ease: "easeInOut",
     },
   },
 };
 
-// Define the animation variants for each box
-const fadeInRightVariants = {
-  hidden: { opacity: 0, x: 100 }, // Start from the right and invisible
+// Parent container animation that staggers each child's appearance
+const containerVariants = {
+  hidden: {},
   visible: {
-    opacity: 1,
-    x: 0, // Move to the original position
     transition: {
-      duration: 0.8,
-      ease: "easeInOut",
+      staggerChildren: 0.3, // Stagger each child's animation by 0.3 seconds
     },
   },
 };
@@ -53,6 +55,9 @@ export default function Equipment() {
     },
   ];
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs")); // Check if screen is mobile (small screen)
+
   return (
     <div>
       <Box
@@ -78,8 +83,8 @@ export default function Equipment() {
           >
             {Details.map((item, i) => (
               <Grid item xs={12} md={3} key={i}>
-                {/* Each box is animated while it comes into view */}
-                <motion.div variants={fadeInRightVariants}>
+                {/* Each box is animated with fade-up motion */}
+                <motion.div variants={fadeUpVariants}>
                   <Box
                     sx={{
                       p: 1,

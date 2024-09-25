@@ -9,16 +9,16 @@ import { motion } from 'framer-motion';
 
 
 const DrAkshay = () => {
-       // Define the fade-right animation variants
-const fadeRightVariants = {
-  hidden: { opacity: 0, x: 100 },  // Start from the right (100px offset)
+
+ // Define the fade-up animation variants
+ const fadeUpVariants = {
+  hidden: { opacity: 0, y: 100 },  // Initial state: invisible and below the viewport
   visible: { 
     opacity: 1, 
-    x: 0,  // Move to its original position (x: 0 means no offset)
+    y: 0,  // Moves up to its original position
     transition: {
-      duration: 0.8,  // Duration of the animation
-      ease: 'easeInOut',  // Easing function for a smooth motion
-
+      duration: 0.8, // Duration of the animation
+      ease: 'easeInOut', // Easing function
     },
   },
 };
@@ -60,7 +60,7 @@ const fadeRightVariants = {
           <Grid item xs={12} sm={6} sx={{ p: 1 }}>
                {/* Framer Motion div with whileInView to trigger zoom and position shift */}
       <motion.div
-        initial={{ scale: 1.1, y: 0 }} // Start with normal scale and no shift
+        initial={{ scale: 0.3, y: 0 }} // Start with normal scale and no shift
         whileInView={{ scale: 1, y: 20 }} // Zoom and move the image slightly upwards
         transition={{
           scale: { duration: 0.6, ease: 'easeInOut' }, // Zoom effect
@@ -91,7 +91,7 @@ const fadeRightVariants = {
           <Grid item xs={12} sm={6}>
           <motion.div
   className="textcontainer"
-  variants={fadeRightVariants}
+  variants={fadeUpVariants}
   initial="hidden"         // Start in the hidden state
   whileInView="visible"    // Animate to the visible state when in view
   viewport={{ once: true }} // Optionally only animate once
@@ -105,7 +105,7 @@ const fadeRightVariants = {
                   marginBottom: "5px",
                   fontSize: "30px",
                   color: "primary.dark",
-                  textAlign: 'left'
+                  textAlign: 'left',mt:3
                 }}
               >
 
@@ -158,10 +158,10 @@ const fadeRightVariants = {
 
 
 
-          <Grid item xs={12} sm={6} order={2} sx={{ p: 1 }}>
+          <Grid item xs={12} sm={6} order={{xs:0,md:1}}  sx={{ p: 1 }}>
             {/* Framer Motion div with whileInView to trigger zoom and position shift */}
             <motion.div
-        initial={{ scale: 1.1, y: 0 }} // Start with normal scale and no shift
+        initial={{ scale: 0.3, y: 0 }} // Start with normal scale and no shift
         whileInView={{ scale: 1, y: 20 }} // Zoom and move the image slightly upwards
         transition={{
           scale: { duration: 0.6, ease: 'easeInOut' }, // Zoom effect
@@ -189,7 +189,7 @@ const fadeRightVariants = {
             />
            </motion.div>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} order={{xs:1,md:0}}>
           <motion.div
   className="textcontainer"
   variants={fadeLeftVariants}
@@ -206,7 +206,8 @@ const fadeRightVariants = {
                   marginBottom: "5px",
                   fontSize: "30px",
                   color: "primary.dark",
-                  textAlign: 'left'
+                  textAlign: 'left',
+                  mt:3
                 }}
               >
 

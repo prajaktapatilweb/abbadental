@@ -74,33 +74,20 @@ const Contact = () => {
   };
 
             // Define the fade-right animation variants
-const fadeRightVariants = {
-  hidden: { opacity: 0, x: 100 },  // Start from the right (100px offset)
+ // Define the fade-up animation variants
+ const fadeUpVariants = {
+  hidden: { opacity: 0, y: 100 },  // Initial state: invisible and below the viewport
   visible: { 
     opacity: 1, 
-    x: 0,  // Move to its original position (x: 0 means no offset)
+    y: 0,  // Moves up to its original position
     transition: {
-      duration: 0.8,  // Duration of the animation
-      ease: 'easeInOut',  // Easing function for a smooth motion
-
+      duration: 0.8, // Duration of the animation
+      ease: 'easeInOut', // Easing function
     },
   },
 };
 
-       // Define the fade-left animation variants
-       const fadeLeftVariants = {
-        hidden: { opacity: 0, x: -100, y: 0 },  // Start from the left (-100px offset) and slightly below (50px down)
-      visible: { 
-        opacity: 1, 
-        x: 0,  // Move to original position horizontally
-        y: 0,  // Move to original position vertically
-          transition: {
-            duration: 0.8,  // Duration of the animation
-            ease: 'easeInOut',  // Easing function for a smooth motion
-      
-          },
-        },
-      };
+
 
   return (
    
@@ -130,7 +117,7 @@ const fadeRightVariants = {
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
             <motion.div
   className="textcontainer"
-  variants={fadeRightVariants}
+  variants={fadeUpVariants}
   initial="hidden"         // Start in the hidden state
   whileInView="visible"    // Animate to the visible state when in view
   viewport={{ once: true }} // Optionally only animate once
