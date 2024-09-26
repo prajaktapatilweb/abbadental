@@ -77,8 +77,8 @@ const fadeUpVariants = {
       id="gallery"
       sx={{
         py: { xs: 7, md: 3},
-        backgroundImage: ` url("/images/Slide01.jpg")`,
-        backgroundRepeat:'no-repeat',
+        backgroundImage: ` url("/images/Slide02.jpg")`,
+        backgroundRepeat:'repeat',
         
 
       }}

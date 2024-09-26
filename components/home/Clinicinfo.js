@@ -35,10 +35,17 @@ const fadeLeftVariants = {
 const Clinicinfo = () => {
   
   return (
-    <Container sx={{ py: 10 }}>
-      <Grid container spacing={3}>
-        {/* Left Side (Drgallery) */}
-        <Grid item xs={12} md={6}>
+    <Grid
+    container
+    spacing={0}
+    alignItems="center"
+    justifyContent="center"
+    sx={{ fontFamily: '"Poppins", sans-serif',py:8 }}
+  >
+
+
+    <Grid item xs={12} sm={6} sx={{ p: 2 }}  alignItems="center"
+    justifyContent="center">
           <motion.div
             variants={fadeLeftVariants}
             initial="hidden"
@@ -50,7 +57,8 @@ const Clinicinfo = () => {
         </Grid>
 
         {/* Right Side (Text Content) */}
-        <Grid item xs={12} md={6} textAlign="justify">
+        <Grid item xs={12} md={6} textAlign="justify" sx={{ p: 1 }}  alignItems="center"
+    justifyContent="center">
         <motion.div
   className="textcontainer"
   variants={fadeUpVariants}
@@ -64,8 +72,7 @@ const Clinicinfo = () => {
                 fontSize: { xs: 27, md: 31 },
                 fontWeight: "700",
                 fontFamily: '"Poppins", sans-serif',
-                my: { xs: 3, md: 0 },
-                mb: 1,
+              
               }}
             >
               Abbad Dental Clinic & Implant Centre
@@ -85,7 +92,7 @@ const Clinicinfo = () => {
               and Dr. Leena Abbad, B.D.S., an expert in Endodontics and
               Restorative Dentistry. Together, they offer top-tier, compassionate
               care through a multidisciplinary approach.
-              <br />
+              <br /><br/>
               At our dental clinic in Nashik, we provide comprehensive care for
               all ages, ensuring a comfortable and enjoyable experience. Our
               services include full mouth rehabilitation, dental implants, root
@@ -93,7 +100,7 @@ const Clinicinfo = () => {
               bridges, and braces. With our advanced CBCT machine and
               cutting-edge digital procedures, we deliver precise and effective
               treatments to enhance your smile and overall dental health.
-              <br />
+              <br /><br/>
               Experience exceptional care at Abbad Dental Clinic and Implant
               Center. Contact us today to schedule your appointment and take the
               first step towards a healthier, more beautiful smile. If you're
@@ -103,7 +110,7 @@ const Clinicinfo = () => {
           </motion.div>
         </Grid>
       </Grid>
-    </Container>
+    // </Container>
   );
 };
 

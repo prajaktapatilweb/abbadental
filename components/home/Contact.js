@@ -124,8 +124,8 @@ const Contact = () => {
 >
               <Card sx={{ px: 3, py:3 }}>
               <div class="section-title" style={{textAlign:'left'}}>
-          <h2>Premier Dental Equipment</h2>
-          <p>Innovative Tools for Optimal Patient Care</p>
+          <h2> Elevate Your Dental Experience</h2>
+          <p>Contact Us for a Bespoke Experience Crafted Just for You</p>
         </div>
                 <Formik
                   validateOnChange={true}

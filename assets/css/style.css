@@ -582,3 +582,48 @@ section {
 }
 /* end scroll*/
 
+/* read more part*/
+.ps {
+  max-height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ps::before {
+  content: "";
+  position: absolute;
+  /* height: 1px; */
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+.check {
+  appearance: none;
+  /* border: 1px solid black; */
+  /* background-image: linear-gradient(to right, #309cd1 , #0879b2); */
+  /* background-image: linear-gradient(to right, #a4e100 , #65bb00); */
+  /* background-color: #7fd01e; */
+  color:#2b337d;
+  /* padding: 0.9em; */
+  border-radius: 0.75em;
+  cursor: pointer;
+  font-weight: 550;
+  font-size:17px;
+  /* margin-top: 1rem; */
+}
+
+.check::before {
+  content: "Read more >";
+}
+
+.check:checked::before {
+  content: "Read less";
+}
+
+.ps:has(+ .check:checked) {
+  max-height: none;
+}
+/* end read more part*/
+

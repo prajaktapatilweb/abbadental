@@ -29,7 +29,7 @@ const fadeUpVariants = {
       <div class="testimonial-item">
         <p>
           {item.description}
-          <br></br>
+         
         </p>
         <img src={item.photo} class="testimonial-img" alt="testimonial"  />
 

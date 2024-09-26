@@ -140,8 +140,17 @@ const containerVariants = {
                                     onMouseLeave={() => setHoveredCard(null)}  // Reset hover state when not hovering
 
                                 >
-                                    <Grid container spacing={3} alignItems='center' justifyContent='center'>
+                                    <Grid container spacing={3} alignItems='center' justifyContent='center' textAlign='center'>
                                         <Grid item xs={12} md={3}>
+                                        <Box
+    sx={{
+      display: 'flex',             // Enables flexbox layout
+      justifyContent: 'center',     // Centers horizontally
+      alignItems: 'center',         // Centers vertically
+      textAlign: 'center',          // Ensures text (if any) is centered
+      height: '100%',               // Full height for vertical centering
+    }}
+  >
 
                                             <Avatar alt="R" src='' sx={{
                                                 width: 50, height: 50, backgroundColor: 'primary.dark', padding: 4,
@@ -151,8 +160,10 @@ const containerVariants = {
                                                     src={hoveredCard === i ? item.icons1 : item.icons} // Change image based on hover state
                                                     width={40}
                                                     height={40}
+                                                    
                                                 />
                                             </Avatar>
+                                            </Box>
                                         </Grid>
 
                                         <Grid item xs={12} md={9}>
