@@ -40,6 +40,7 @@ const Clinicinfo = () => {
     spacing={0}
     alignItems="center"
     justifyContent="center"
+    id="aboutus"
     sx={{ fontFamily: '"Poppins", sans-serif',py:8 }}
   >
 

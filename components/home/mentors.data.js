@@ -25,7 +25,7 @@ export const data = [
         photo: '/images/mentors/testis4.jpeg',
         name: 'Vaishnavi Patil',
         category: ' ',
-        description: <span>I highly recommend. He is so far the best dentist I have been to. Dr explains each and every procedure properly , he will clear all your doubts and give you the best solution and the work is perfect.</span>,
+        description: 'I highly recommend. He is so far the best dentist I have been to. Dr explains each and every procedure properly , he will clear all your doubts and give you the best solution and the work is perfect.',
 
     },
     {
@@ -45,7 +45,7 @@ export const data = [
         photo: '/images/mentors/testis5.jpeg',
         name: 'Rajesh Surana',
         category: ' ',
-        description: <span>It was a great experience. I came from Pune to get a proper treatment with expertise and care as I’m diabetic and Dr Nikhil Abbad proved that he is truly an expert in his profession. He is a patient caring person. His first priority is patient’s comfort and satisfaction. I strongly recommend him for a complete dental care for a person of any age. His staff and team is also very cooperative and supportive. Impressed with post operative follow-ups taken by his team.</span>,
+        description: 'It was a great experience. I came from Pune to get a proper treatment with expertise and care as I’m diabetic and Dr Nikhil Abbad proved that he is truly an expert in his profession. He is a patient caring person. His first priority is patient’s comfort and satisfaction. I strongly recommend him for a complete dental care for a person of any age. His staff and team is also very cooperative and supportive. Impressed with post operative follow-ups taken by his team.',
 
     },
     {
@@ -54,7 +54,7 @@ export const data = [
         photo: '/images/mentors/testis6.jpeg',
         name: 'ASHUTOSH JAIN',
         category: ' ',
-        description: <span>I had the pleasure of taking my mother to one of the best dental clinics in Nashik, and I must say it was an excellent experience. The doctor was highly professional and qualified, and we were referred to this clinic by my cousin. From the very first day of the treatment to the post-treatment care, everything was handled with utmost precision and care. The staff was courteous, and their genuine care for patients was evident throughout. I will definitely recommend this clinic to everyone seeking top-notch dental care.</span>,
+        description:'I had the pleasure of taking my mother to one of the best dental clinics in Nashik, and I must say it was an excellent experience. The doctor was highly professional and qualified, and we were referred to this clinic by my cousin. From the very first day of the treatment to the post-treatment care, everything was handled with utmost precision and care. The staff was courteous, and their genuine care for patients was evident throughout. I will definitely recommend this clinic to everyone seeking top-notch dental care.'
 
     },
    

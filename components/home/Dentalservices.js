@@ -94,7 +94,7 @@ const containerVariants = {
     return (
         <div>
             <Box
-                id="services"
+                id="treatments"
                 sx={{ pt: { xs: 10, md: 7 }, pb: 10, backgroundColor: "white" }}
             >
                 <div class="section-title">

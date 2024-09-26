@@ -587,6 +587,7 @@ section {
   max-height: 360px;
   overflow: hidden;
   position: relative;
+ 
 }
 
 .ps::before {
@@ -594,6 +595,7 @@ section {
   position: absolute;
   /* height: 1px; */
   width: 100%;
+  margin: auto;
   bottom: 0;
   pointer-events: none;
   background: linear-gradient(to bottom, transparent, white);
@@ -605,17 +607,19 @@ section {
   /* background-image: linear-gradient(to right, #309cd1 , #0879b2); */
   /* background-image: linear-gradient(to right, #a4e100 , #65bb00); */
   /* background-color: #7fd01e; */
-  color:#2b337d;
+  color:darkblue;
   /* padding: 0.9em; */
   border-radius: 0.75em;
   cursor: pointer;
   font-weight: 550;
   font-size:17px;
+ 
   /* margin-top: 1rem; */
 }
 
 .check::before {
   content: "Read more >";
+ 
 }
 
 .check:checked::before {
