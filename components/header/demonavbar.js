@@ -207,17 +207,17 @@ function ResponsiveAppBar() {
         >
                            <Box  sx={{
                                     position: "relative",
-                                    fontSize:{xs:'32px',sm:'30px',md:'28px'},
+                                    fontSize:{xs:'32px',sm:'30px',md:'35px'},
                                     letterSpacing: 1.5,
-                                    fontWeight: '1000',
+                                   
                                     color: {xs:'white',sm:'white', md:"#28282B"},
                                     lineHeight: 1.3,
-                                    fontFamily: '"Poppins", sans-serif',
+                                   
                                     // '-webkit-text-stroke': '1px #28282B',
                                  
                                     
                                 }}>
-                           <motion.h2  variants={textVariants} >
+                           <motion.h2  variants={textVariants} style={{ fontFamily: "League Spartan, sans-serif", fontWeight: '800',}} >
                               
                                 Where Precision Meets Unmatched Luxury in Dental Care
 
@@ -226,7 +226,7 @@ function ResponsiveAppBar() {
                             <Hidden smDown>
                             <Typography
                                 variant="p"
-                                sx={{ color: "white", lineHeight: 0, fontSize: 23 }}
+                                sx={{ color: "white", lineHeight: 0, fontSize: 23, fontFamily: "ABeeZee, sans-serif" }}
                             >
                                Expert Care for Every Stage of Life
                             </Typography>

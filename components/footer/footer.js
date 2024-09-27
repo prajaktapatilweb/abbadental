@@ -41,7 +41,8 @@ const Footer = () => {
 
 
                 <Typography  sx={{ letterSpacing: 1, mb: 2,textAlign:'justify' }}>
-                  Looking for a dental clinic in Airoli? We're here for you, conveniently located to serve the Airoli community. Whether you're in Navi Mumbai or Thane West, we're happy to welcome you as well.
+                Searching for the best dentist in Nashik? Dr. Nikhil and Dr. Leena Abbad offer top-quality dental care with a focus on patient comfort. From routine check-ups to advanced treatments, their expertise ensures your smile stays healthy and radiant. Book your appointment today!
+
 
                 </Typography>
 

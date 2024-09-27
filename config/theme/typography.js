@@ -1,5 +1,5 @@
 export const fontFamily = [
-    '"Cabin",-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+    ' fontFamily: "League Spartan, sans-serif",',
 ].join(',');
 const headingLineHeight = 1.4;
 const typography = {

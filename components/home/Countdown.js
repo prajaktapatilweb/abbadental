@@ -86,7 +86,7 @@ const fadeUpVariants = {
                                 </Grid>
 
                                 <Grid item xs={8} md={9}>
-                                        <Typography variant='h4' sx={{ py: 1, color: '#312d79', cursor: 'pointer' }}>
+                                        <Typography variant='h4' sx={{ py: 1, color: '#312d79', cursor: 'pointer',fontFamily: "ABeeZee, sans-serif" }}>
                                             {item.title}
                                         </Typography>
                                  

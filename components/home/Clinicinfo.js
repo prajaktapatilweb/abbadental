@@ -70,20 +70,21 @@ const Clinicinfo = () => {
             <Typography
               component="h2"
               sx={{
-                fontSize: { xs: 27, md: 31 },
-                fontWeight: "700",
-                fontFamily: '"Poppins", sans-serif',
+                fontSize: { xs: 27, md: 35 },
+                fontWeight: "600",
+                fontFamily: "League Spartan, sans-serif",
               
               }}
             >
               Abbad Dental Clinic & Implant Centre
             </Typography>
-            <p
-              className="fst-italic"
+            <Typography
+            
               style={{
                 marginTop: 4,
                 marginBottom: 0,
-                fontFamily: '"Poppins", sans-serif',
+                marginRight:2
+               
               }}
             >
               Welcome to Abbad Dental Clinic and Implant Center, where you will
@@ -107,7 +108,7 @@ const Clinicinfo = () => {
               first step towards a healthier, more beautiful smile. If you're
               searching for a "dental clinic near me," look no further—your
               perfect choice is here.
-            </p>
+            </Typography>
           </motion.div>
         </Grid>
       </Grid>

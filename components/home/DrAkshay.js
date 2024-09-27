@@ -127,6 +127,7 @@ const DrAkshay = () => {
 
                 <Box className="ps"
                   sx={{
+                    
                     color: "text.primary",
                     lineHeight: 1.5,
                     marginBottom: 2.5,
@@ -136,6 +137,7 @@ const DrAkshay = () => {
 
                   }}
                 >
+                  <Typography>
                   Dr. Nikhil Abbad is a highly accomplished Consultant Prosthodontist with over 8 years of experience, recognized as one of the best dentists in Nashik. Specializing in Crowns, Bridges, and Oral Implants, he has a distinguished educational background with an M.D.S. in Prosthodontics and Oral Implantology.
 
                   Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, where he provides expert care in Implant Surgery and Full Mouth Rehabilitation. His professional journey and achievements include:
@@ -147,8 +149,9 @@ const DrAkshay = () => {
                   <b>Research: </b>Published articles in international journals; awarded for best paper presentations in implant dentistry<br />
                   <b>Prosthetics Training: </b>Oral and maxillofacial prosthetics at TATA Memorial Hospital, Mumbai<br />
                   <b>Academic Role:</b> Visiting Assistant Professor, SMBT Sangamner<br />
-                 
-                  <p>Dr. Nikhil Abbad is passionate about improving patients' confidence through effective dental treatments. He is a dedicated member of the Indian Dental Association, Nashik Chapter, and remains committed to enhancing global healthcare through his expertise. If you’re searching for a “dentist near me”, your search ends here.</p>
+                Dr. Nikhil Abbad is passionate about improving patients' confidence through effective dental treatments. He is a dedicated member of the Indian Dental Association, Nashik Chapter, and remains committed to enhancing global healthcare through his expertise. If you’re searching for a “dentist near me”, your search ends here.
+                </Typography>
+
 </Box>
               
                 <input type="checkbox" class="check" />

@@ -63,7 +63,17 @@ export default function Awards() {
                         Our Accolades and Recognition
                         </Typography>
                         <br></br>
-                        <Typography variant='body1' sx={{ color: 'black', textAlign: 'justify' }}>
+                         <Typography
+             
+              style={{
+                marginTop: 4,
+                marginBottom: 0,
+                marginRight:2,
+                textAlign:'justify',
+                fontSize:'18px',
+               
+              }}
+            >
                         At Abbad Dental Clinic and Implant Centre, our commitment to excellence in dental care has earned us prestigious awards that reflect our dedication to quality and patient satisfaction. We are proud to be recognized as <b>Health Stalwarts by Lokmat in 2024 </b> and to have received the <b>XL AWARD by Life XL in 2023</b>. Each accolade underscores our team's expertise and innovation. We take pride in these achievements and strive to continue exceeding your expectations with every visit.
 
                         </Typography>
