@@ -82,11 +82,11 @@ const fadeUpVariants = {
                             <Grid container spacing={0} alignItems='center' justifyContent='center'>
                                 <Grid item xs={2} md={3}  textAlign='right'>
 
-                                    <Avatar alt="" src="" sx={{ margin: 'auto', width: '35', height: 35, background: '#312d79', padding: 3, }}>{item.icons}</Avatar>
+                                    <Avatar alt="" src="" sx={{ margin: 'auto', width: '35', height: 35, backgroundImage: 'linear-gradient(to right, #305b9f 0%, #469ce2 100%)', padding: 3, }}>{item.icons}</Avatar>
                                 </Grid>
 
                                 <Grid item xs={8} md={9}>
-                                        <Typography variant='h4' sx={{ py: 1, color: '#312d79', cursor: 'pointer',fontFamily: "ABeeZee, sans-serif" }}>
+                                        <Typography variant='h4' sx={{ py: 1, color: 'primary.dark', cursor: 'pointer',fontFamily: "ABeeZee, sans-serif" }}>
                                             {item.title}
                                         </Typography>
                                  

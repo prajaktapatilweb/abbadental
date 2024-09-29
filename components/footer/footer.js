@@ -9,6 +9,7 @@ import ScrollUp from "../home/ScrollUp";
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 import MoreTimeIcon from '@mui/icons-material/MoreTime';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import { Button } from "@mui/material";
 
 const Footer = () => {
   const contactno1 = "+919833389890";
@@ -19,7 +20,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#121f38",
+        backgroundColor: "primary.light",
         py: 9,
         px:3,
         color: "primary.contrastText",
@@ -37,7 +38,7 @@ const Footer = () => {
             <Grid item xs={12} sm={12} md={4} alignItems='center' justifyContent='center' sx={{p:3}}>
 
               <Box sx={{ mb: { xs: 3, md: 0 } }}>
-                <Image src="/images/logo5.png" width={180} height={100} style={{marginBottom:'7px'}} ></Image>
+                <Image src="/images/logo5.png" width={180} height={100} style={{marginBottom:'7px', filter:'drop-shadow(0px 1px 0px #ffffff)'}} ></Image>
 
 
                 <Typography  sx={{ letterSpacing: 1, mb: 2,textAlign:'justify' }}>
@@ -95,6 +96,9 @@ const Footer = () => {
 
                   0253 2507965, 97134 35111
                 </Grid>
+                <Grid item xs={12} md={12} sx={{ textAlign: 'justify',p:3 }}>
+                 <Link variant="contained" href='https://maps.app.goo.gl/YXgsozYox5TPQDqi7'  style={{backgroundColor:'#305b9f',color:'white',padding:10,borderRadius:5}}>Get Directions On Map</Link>
+                  </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12} sm={12} md={4} alignItems='center' justifyContent='center' textAlign='center' sx={{p:3}} >
@@ -140,6 +144,10 @@ const Footer = () => {
 
                   0253 2507965, 99237 08233
                 </Grid>
+                <Grid item xs={12} md={12} sx={{ textAlign: 'justify',p:3 }}>
+                 <Link variant="contained" href='https://maps.app.goo.gl/Vh1Q3igrYELDUVDDA'  style={{backgroundColor:'#305b9f',color:'white',padding:10,borderRadius:5}}>Get Directions On Map</Link>
+                  </Grid>
+
               </Grid>
             </Grid>
           </Grid>

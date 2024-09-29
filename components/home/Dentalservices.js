@@ -130,7 +130,7 @@ const containerVariants = {
                                             backgroundColor: 'primary.dark',
                                             color: 'white',
                                             '& .MuiAvatar-root': {
-                                                backgroundColor: 'white', // Change avatar color on hover
+                                                backgroundImage: 'linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)' // Change avatar color on hover
 
                                             },
 
@@ -153,9 +153,7 @@ const containerVariants = {
   >
 
                                             <Avatar alt="R" src='' sx={{
-                                                width: 50, height: 50, backgroundColor: 'primary.dark', padding: 4,
-
-                                            }}>
+                                                width: 50, height: 50, backgroundImage: 'linear-gradient(to right, #305b9f 0%, #469ce2 100%)', padding: 4, }}>
                                                 <Image
                                                     src={hoveredCard === i ? item.icons1 : item.icons} // Change image based on hover state
                                                     width={40}

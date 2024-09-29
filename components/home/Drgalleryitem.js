@@ -10,7 +10,7 @@ const Drgalleryitem = ({ item }) => {
           display: 'inline-block',
           borderRadius: '15px', // Adjust as needed for rounded corners
           padding: '4px', // Adjust padding to control border thickness
-          background: 'linear-gradient(280deg,#1799b3 20%,  #2b337d 80%)',
+          backgroundImage: 'linear-gradient(to right, #305b9f 10%, #469ce2 90%)',
         }}
       >
         <div

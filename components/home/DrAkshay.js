@@ -76,10 +76,10 @@ const DrAkshay = () => {
                 layout="responsive"
                 objectFit="contain"
                 style={{
-                  borderTop: '10px  #2b337d solid',
+                  borderTop: '10px  #315fa4 solid',
                   paddingBottom: 3,
                   paddingRight: 3,
-                  borderLeft: '10px  #1799b3 solid',
+                  borderLeft: '10px  #4599df solid',
                   borderBottomLeftRadius: '15px',
                   borderTopRightRadius: '10px',
                   boxShadow:
@@ -181,10 +181,10 @@ const DrAkshay = () => {
                 layout="responsive"
                 objectFit="contain"
                 style={{
-                  borderRight: '10px  #2b337d solid',
+                  borderRight: '10px  #315fa4 solid',
                   paddingTop: 3,
                   paddingLeft: 3,
-                  borderBottom: '10px  #1799b3 solid',
+                  borderBottom: '10px  #4599df solid',
                   borderBottomLeftRadius: '15px',
                   borderTopRightRadius: '10px',
                   boxShadow:

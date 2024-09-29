@@ -57,7 +57,7 @@ export default function Awards() {
   whileInView="visible"    // Animate to the visible state when in view
   viewport={{ once: true }} // Optionally only animate once
 >
-                    <Box sx={{ background: '#d1d2e6', p: 5, marginRight: 0 }}>
+                    <Box sx={{ backgroundColor: 'primary.main', p: 5, marginRight: 0 }}>
 
                         <Typography variant='h1' sx={{ color: 'primary.dark' }}>
                         Our Accolades and Recognition
