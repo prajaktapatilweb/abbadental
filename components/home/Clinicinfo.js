@@ -45,7 +45,7 @@ const Clinicinfo = () => {
   >
 
 
-    <Grid item xs={12} sm={6} sx={{ p: 2 }}  alignItems="center"
+    <Grid item xs={12} sm={6} sx={{ p: 1 }}  alignItems="center"
     justifyContent="center">
           <motion.div
             variants={fadeLeftVariants}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
+import { Box } from '@mui/material';
 
 const MentorCardItem = ({ item }) => {
   // Define the fade-up animation variants
@@ -37,7 +38,7 @@ const MentorCardItem = ({ item }) => {
       whileInView="visible"    // Animate to the visible state when in view
       viewport={{ once: true }} // Optionally only animate once
     >
-      <section id="testimonials" className="testimonials">
+      <Box id="testimonials" className="testimonials" sx={{py:2}}>
         <div className="testimonial-item">
           <p>
             {isReadMore ? description : `${truncatedText}...`} {/* Show full or truncated text */}
@@ -51,7 +52,7 @@ const MentorCardItem = ({ item }) => {
           <img src={item.photo} className="testimonial-img" alt="testimonial" />
           <h3>{item.name}</h3>
         </div>
-      </section>
+      </Box>
     </motion.div>
   );
 };

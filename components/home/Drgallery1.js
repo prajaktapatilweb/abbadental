@@ -5,8 +5,8 @@ import { useTheme, styled } from "@mui/material/styles";
 import { IconButton, useMediaQuery } from "@mui/material";
 import IconArrowBack from "@mui/icons-material/ArrowBack";
 import IconArrowForward from "@mui/icons-material/ArrowForward";
-import Drgalleryitem from "./Drgalleryitem";
 import Drgalleryitem1 from "./Drgalleryitem1";
+
 const SliderArrow = (props) => {
     const { onClick, type, className } = props;
     return (
@@ -39,13 +39,12 @@ const SliderArrow = (props) => {
 };
 const StyledDots = styled("ul")(({ theme }) => ({
     "&.slick-dots": {
-        position: "absolute",
+        position: "relative",
         left: 0,
-        bottom: -40,
         paddingLeft: theme.spacing(1),
         textAlign: "center",
         "& li": {
-            marginRight: theme.spacing(2),
+            marginRight: theme.spacing(1),
             "&.slick-active>div": {
                 backgroundColor: theme.palette.primary.dark,
             },

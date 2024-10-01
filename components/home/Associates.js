@@ -2,47 +2,14 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Slider from "react-slick";
 import Container from "@mui/material/Container";
-import IconButton from "@mui/material/IconButton";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme, styled } from "@mui/material/styles";
-import IconArrowBack from "@mui/icons-material/ArrowBack";
-import IconArrowForward from "@mui/icons-material/ArrowForward";
-import { MentorCardItem } from "../mentor";
-import { data } from "./mentors.data";
-const SliderArrow = (props) => {
-    const { onClick, type, className } = props;
-    return (
-        <IconButton
-            sx={{
-                backgroundColor: "background.paper",
-                color: "primary.dark",
-                "&:hover": {
-                    backgroundColor: "primary.dark",
-                    color: "primary.contrastText",
-                },
-                bottom: "-28px !important",
-                left: "unset !important",
-                right: type === "prev" ? "60px !important" : "0 !important",
-                zIndex: 10,
-                boxShadow: 1,
-            }}
-            disableRipple
-            color="inherit"
-            onClick={onClick}
-            className={className}
-        >
-            {type === "next" ? (
-                <IconArrowForward sx={{ fontSize: 22 }} />
-            ) : (
-                <IconArrowBack sx={{ fontSize: 22 }} />
-            )}
-        </IconButton>
-    );
-};
+import { Details } from "./mentors.data";
+import DownloadCard from "./DownloadCard";
+
 const StyledDots = styled("ul")(({ theme }) => ({
     "&.slick-dots": {
-        position: "absolute",
-        left: 0,
+        position: "relative",
         textAlign: "center",
         "& li": {
             marginRight: theme.spacing(2),
@@ -52,17 +19,16 @@ const StyledDots = styled("ul")(({ theme }) => ({
         },
     },
 }));
-const Testimonial = () => {
+const Associates = () => {
     const { breakpoints } = useTheme();
     const matchMobileView = useMediaQuery(breakpoints.down("sm"));
     const sliderConfig = {
         infinite: true,
+        arrows:false,
         // autoplay: true,
         speed: 300,
         slidesToShow: matchMobileView ? 1 : 3,
         slidesToScroll: 1,
-        prevArrow: <SliderArrow type="prev" />,
-        nextArrow: <SliderArrow type="next" />,
         dots: true,
         appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
         customPaging: () => (
@@ -87,12 +53,12 @@ const Testimonial = () => {
         >
             <Container>
                 <div class="section-title">
-                    <h2>What Our Patients Say</h2>
+                    <h2>Associate Dentists </h2>
                     <p>Hear from Those Who Trust Us with Their Smiles</p>
                 </div>
                 <Slider {...sliderConfig}>
-                    {data.map((item) => (
-                        <MentorCardItem key={String(item.id)} item={item} />
+                    {Details.map((item,i) => (
+                        <DownloadCard key={i} item={item} />
                     ))}
                 </Slider>
 
@@ -101,4 +67,4 @@ const Testimonial = () => {
         </Box>
     );
 };
-export default Testimonial;
+export default Associates;

@@ -59,3 +59,66 @@ export const data = [
     },
    
 ];
+
+
+export const Details = [
+    {
+       img:'/images/dr/drnikhil1.jpg',
+            title:"Dr. Chetan Ahire ",
+            testpara:"MDS Endodontist - Re Root Canal Specialist"
+
+       
+    },
+    {
+        img:'/assets/images/dashboard/welcomImage.svg',
+        title:"Dr. Sayali Gangurde",
+        testpara:"General Dentistry"
+
+      
+
+    },
+    {
+        img:'/assets/images/dashboard/welcomImage.svg',
+        title:"Dr. Akshada Wagh ",
+        testpara:"General Dentistry"
+
+
+    },
+
+    {
+            img:'/images/associate/prathmesh3.jpg',
+            title:"Dr. Prathmesh Kapoor",
+            testpara:"Oral & Maxillofacial Surgeon"
+
+    },
+    {
+        img:'/images/associate/amit.jpg',
+         title:'Dr. Amit Arvind Agrawal',
+        testpara:'Periodontist ',
+    },
+    {
+        img:'/images/associate/khushboo.jpg',
+         title:'Dr. Khusboo Patel',
+        testpara:'Pedodontist',
+    },
+    {
+        img:'/images/associate/aditi.jpg',
+         title:'Dr. Aditi Bulbule',
+        testpara:'Pediatric Dentist',
+       
+    },
+    {
+        img:'/images/associate/saurabh.jpg',
+         title:'Dr. Saurabh Malbade',
+        testpara:'Orthodontist',
+       
+    },
+    {
+        img:'/images/associate/nilesh.jpg',
+        title: 'Dr. Nilesh Raisoni',
+        testpara:'Oral Maxillofacial Surgeon',
+       
+    }
+
+
+]

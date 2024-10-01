@@ -200,7 +200,7 @@ function ResponsiveAppBar() {
                     justifyContent="center"
                     textAlign="left"
                 >
-                    <Grid item xs={12} md={7} sx={{p:3,mt:{xs:0,sm:0,md:-7}}}>
+                    <Grid item xs={12} md={7} sx={{p:3,mt:{xs:-7,sm:-7,md:-7}}}>
                     <motion.div className="textcontainer" variants={textVariants}
         initial="initial"
         animate="animate"

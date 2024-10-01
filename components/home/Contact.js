@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Link } from '@mui/material';
+import { Card, Hidden, Link } from '@mui/material';
 import Box from '@mui/material/Box';
 import Axios from 'axios';
 import { Field, Form, Formik,ErrorMessage } from 'formik';
@@ -106,12 +106,14 @@ const Contact = () => {
   whileInView="visible"    // Animate to the visible state when in view
   viewport={{ once: true }} // Optionally only animate once
 > */}
+<Hidden smDown>
             <Image
                         alt={'Clinic'}
                         src='/images/contactimg3.jpg'
                         width={100}
                         height={100}
                         layout='responsive'></Image>
+                        </Hidden>
                         {/* </motion.div> */}
               </Grid>
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
