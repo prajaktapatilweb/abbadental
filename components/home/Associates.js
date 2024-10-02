@@ -12,7 +12,7 @@ const StyledDots = styled("ul")(({ theme }) => ({
         position: "relative",
         textAlign: "center",
         "& li": {
-            marginRight: theme.spacing(2),
+            marginRight: theme.spacing(1),
             "&.slick-active>div": {
                 backgroundColor: theme.palette.primary.dark,
             },
@@ -27,7 +27,7 @@ const Associates = () => {
         arrows:false,
         // autoplay: true,
         speed: 300,
-        slidesToShow: matchMobileView ? 1 : 3,
+        slidesToShow: matchMobileView ? 1 : 4,
         slidesToScroll: 1,
         dots: true,
         appendDots: (dots) => <StyledDots>{dots}</StyledDots>,

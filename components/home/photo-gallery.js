@@ -27,14 +27,19 @@ const StyledDots = styled("ul")(({ theme }) => ({
 }));
 const Photogallery = () => {
   const { breakpoints } = useTheme();
-  const matchMobileView = useMediaQuery(breakpoints.down("md"));
+   // Breakpoints for screen sizes
+   const matchMobileView = useMediaQuery(breakpoints.down("sm"));  // xs or smaller
+   const matchSmallView = useMediaQuery(breakpoints.between("sm", "md"));  // between sm and md
+   const matchMediumView = useMediaQuery(breakpoints.up("md"));  // md and above
+  // const matchMobileView = useMediaQuery(breakpoints.down("md"));
   const sliderConfig = {
     infinite: true,
     autoplay: true,
     arrows:false,
     adaptiveheight: false,
     speed: 300,
-    slidesToShow: matchMobileView ? 1 : 3,
+    slidesToShow: matchMobileView ? 1 : matchSmallView ? 2 : 3, // 1 slide for xs, 2 for sm, 3 for md+
+    // slidesToShow: matchMobileView ? 1 : 3,
     slidesToScroll: 1,
     dots: true,
     appendDots: (dots) => <StyledDots>{dots}</StyledDots>,

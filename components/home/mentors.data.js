@@ -63,14 +63,14 @@ export const data = [
 
 export const Details = [
     {
-       img:'/images/dr/drnikhil1.jpg',
+       img:'/images/associate/chetan1.jpg',
             title:"Dr. Chetan Ahire ",
             testpara:"MDS Endodontist - Re Root Canal Specialist"
 
        
     },
     {
-        img:'/assets/images/dashboard/welcomImage.svg',
+        img:'/images/associate/sayali1.jpeg',
         title:"Dr. Sayali Gangurde",
         testpara:"General Dentistry"
 
@@ -78,7 +78,7 @@ export const Details = [
 
     },
     {
-        img:'/assets/images/dashboard/welcomImage.svg',
+        img:'/images/associate/akshada2.jpg',
         title:"Dr. Akshada Wagh ",
         testpara:"General Dentistry"
 

@@ -95,7 +95,7 @@ const Contact = () => {
       <Box id="contactform">
         
 
-          <Grid container spacing={0}  sx={{p:0,backgroundColor:'white',mb:2}} >
+          <Grid container spacing={0}  sx={{p:0,backgroundColor:{xs:'#f2f5f5',sm:'#f2f5f5',md:'white'},mb:2}} >
          
 
             <Grid item xs={12} md={6} sx={{display:'flex'}}>
@@ -116,7 +116,7 @@ const Contact = () => {
                         </Hidden>
                         {/* </motion.div> */}
               </Grid>
-            <Grid item xs={12} md={6} sx={{display:'flex'}}>
+            <Grid item xs={12} md={6} sx={{display:'flex',  px: 2, py:2,}}>
             <motion.div
   className="textcontainer"
   variants={fadeUpVariants}
@@ -124,11 +124,17 @@ const Contact = () => {
   whileInView="visible"    // Animate to the visible state when in view
   viewport={{ once: true }} // Optionally only animate once
 >
-              <Card sx={{ px: 3, py:3 }}>
+              <Box>
               <div class="section-title" style={{textAlign:'left'}}>
           <h2> Elevate Your Dental Experience</h2>
           <p>Contact Us for a Bespoke Experience Crafted Just for You</p>
+
         </div>
+        </Box>
+
+        <Box sx={{   boxShadow:{xs:'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',md:'none'},
+       p:{xs:2,sm:3,md:0},borderRadius:{xs:5,sm:5,md:0},backgroundColor:'white'
+}}>
                 <Formik
                   validateOnChange={true}
                   initialValues={{
@@ -141,6 +147,7 @@ const Contact = () => {
                   }}
                   validationSchema={validationSchema}
                   onSubmit={onSubmit}
+                  
                 >
                   {({ isSubmitting }) => (
                     <Form style={{ textAlign: 'left' }}>
@@ -254,7 +261,7 @@ const Contact = () => {
                     </Form>
                   )}
                 </Formik>
-              </Card>
+                </Box>
 </motion.div>
             </Grid>
           {/* </Grid> */}

@@ -83,7 +83,7 @@ export default function Equipment() {
             viewport={{ once: true, amount: 0.2 }} // Ensure the animation triggers once
           >
             {Details.map((item, i) => (
-              <Grid item xs={12} md={3} key={i}>
+              <Grid item xs={12} sm={6} md={3} key={i}>
                 {/* Each box is animated with fade-up motion */}
                 <motion.div variants={fadeUpVariants}>
                   <Box

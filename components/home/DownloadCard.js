@@ -52,7 +52,7 @@ const DownloadCard = ({ item }) => {
          <Typography
                         component="h2"
                         variant="h5"
-                        sx={{ textAlign: "center", fontSize: "1.2rem",fontWeight:500 ,color: 'primary.dark'}}
+                        sx={{ textAlign: "center", fontSize: "1.2rem",fontWeight:600 ,color: 'primary.dark'}}
                       >
            {item.title}
           </Typography>
@@ -60,7 +60,7 @@ const DownloadCard = ({ item }) => {
           <Box
             variant='subtitle'
             sx={{
-              fontSize: 15,
+              fontSize: 14,
               textAlign: 'center',
               color:'#28282b'
             }}

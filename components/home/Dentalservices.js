@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Avatar from '@mui/material/Avatar';
-import { Box, Card, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -91,6 +91,14 @@ const containerVariants = {
       },
     },
   };
+
+  const [visibleCards, setVisibleCards] = useState(4); // Initially show 4 cards on mobile screens
+
+  // Function to show more cards
+  const handleShowMore = () => {
+    setVisibleCards(Details.length); // Show all the cards when the button is clicked
+  };
+
     return (
         <div>
             <Box
@@ -104,79 +112,88 @@ const containerVariants = {
              {/* Framer Motion Container for the animation */}
         <Container component={motion.div} variants={containerVariants} initial="hidden" animate="visible">
          
-                    <Grid container spacing={3}>
-                        {Details.map((item, i) => (
+        <Grid container spacing={3}>
+        {Details.slice(0, visibleCards).map((item, i) => (
+          <Grid item xs={12} md={4} key={i} sx={{ display: 'flex' }}>
+            <motion.div
+              variants={fadeUpVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <Card
+                sx={{
+                  backgroundColor: 'white',
+                  p: 3,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  fontFamily: '"Poppins", sans-serif',
+                  width: '100%',
+                  height: '100%',
+                  boxShadow:
+                    'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',
+                  '&:hover': {
+                    backgroundColor: 'primary.dark',
+                    color: 'white',
+                    '& .MuiAvatar-root': {
+                      backgroundImage: 'linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)',
+                    },
+                  },
+                }}
+                onMouseEnter={() => setHoveredCard(i)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                <Grid container spacing={3} alignItems='center' justifyContent='center' textAlign='center'>
+                  <Grid item xs={12} md={3}>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                        height: '100%',
+                      }}
+                    >
+                      <Avatar
+                        alt="R"
+                        src=''
+                        sx={{
+                          width: 50,
+                          height: 50,
+                          backgroundImage: 'linear-gradient(to right, #305b9f 0%, #469ce2 100%)',
+                          padding: 4,
+                        }}
+                      >
+                        <Image
+                          src={hoveredCard === i ? item.icons1 : item.icons}
+                          width={40}
+                          height={40}
+                        />
+                      </Avatar>
+                    </Box>
+                  </Grid>
 
-                            <Grid item xs={12} md={4} key={i} sx={{ display: 'flex' }}>
-                                   {/* Each card with fade-up animation */}
-                <motion.div  variants={fadeUpVariants}
-                  initial="hidden"
-                  whileInView="visible" // Animation triggers when the element is in view
-                  viewport={{ once: true }} // Only animate once
-                  >
-                                <Card
-                                    sx={{
-                                        backgroundColor: 'white',
-                                        p: 3,
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        fontFamily: '"Poppins", sans-serif',
-                                        width: '100%',
-                                        height: '100%', // Makes sure the card takes up the full height
-                                        boxShadow:
-                                            'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',
+                  <Grid item xs={12} md={9}>
+                    <Typography variant='h4' sx={{ fontFamily: "League Spartan, sans-serif", fontWeight: 500, color: 'primary.dark', fontSize: '20px' }}>
+                      {item.title}
+                    </Typography>
+                    <p style={{ marginTop: 3, textAlign: 'justify' }}>{item.desc}</p>
+                  </Grid>
+                </Grid>
+              </Card>
+            </motion.div>
+          </Grid>
+        ))}
 
-                                        '&:hover': {
-                                            backgroundColor: 'primary.dark',
-                                            color: 'white',
-                                            '& .MuiAvatar-root': {
-                                                backgroundImage: 'linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%)' // Change avatar color on hover
-
-                                            },
-
-                                        },
-                                    }}
-                                    onMouseEnter={() => setHoveredCard(i)} // Set hover state for the current card
-                                    onMouseLeave={() => setHoveredCard(null)}  // Reset hover state when not hovering
-
-                                >
-                                    <Grid container spacing={3} alignItems='center' justifyContent='center' textAlign='center'>
-                                        <Grid item xs={12} md={3}>
-                                        <Box
-    sx={{
-      display: 'flex',             // Enables flexbox layout
-      justifyContent: 'center',     // Centers horizontally
-      alignItems: 'center',         // Centers vertically
-      textAlign: 'center',          // Ensures text (if any) is centered
-      height: '100%',               // Full height for vertical centering
-    }}
-  >
-
-                                            <Avatar alt="R" src='' sx={{
-                                                width: 50, height: 50, backgroundImage: 'linear-gradient(to right, #305b9f 0%, #469ce2 100%)', padding: 4, }}>
-                                                <Image
-                                                    src={hoveredCard === i ? item.icons1 : item.icons} // Change image based on hover state
-                                                    width={40}
-                                                    height={40}
-                                                    
-                                                />
-                                            </Avatar>
-                                            </Box>
-                                        </Grid>
-
-                                        <Grid item xs={12} md={9}>
-
-                                            <Typography variant='h4' sx={{ fontFamily: "League Spartan, sans-serif",fontWeight:500,color:'primary.dark',fontSize:'20px'}}> {item.title} </Typography>
-                                            <p style={{ marginTop: 3, textAlign: 'justify' }}>{item.desc}</p>
-                                        </Grid></Grid>
-                                </Card>
-                                </motion.div>
-                            </Grid>
-
-                        ))}
-
-
-                    </Grid>
+        {/* Show "Explore More" button only if there are hidden cards */}
+        {visibleCards < Details.length && (
+          <Grid item xs={12} textAlign="center">
+            <Button variant="contained" sx={{backgroundColor:'primary.dark',mt:3}} onClick={handleShowMore}>
+              Explore More
+            </Button>
+          </Grid>
+        )}
+      </Grid>
                 </Container >
             </Box>
         </div >
