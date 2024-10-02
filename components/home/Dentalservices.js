@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Avatar from '@mui/material/Avatar';
-import { Box, Button, Card, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, Container, Grid, Hidden, Typography } from '@mui/material';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTheme, useMediaQuery } from '@mui/material';
 
 export default function Dentalservices() {
     var Details = [
@@ -91,7 +92,8 @@ const containerVariants = {
       },
     },
   };
-
+  const { breakpoints } = useTheme();
+  const isMobile = useMediaQuery(breakpoints.down("sm"));// For screens smaller than 'sm'
   const [visibleCards, setVisibleCards] = useState(4); // Initially show 4 cards on mobile screens
 
   // Function to show more cards
@@ -113,7 +115,8 @@ const containerVariants = {
         <Container component={motion.div} variants={containerVariants} initial="hidden" animate="visible">
          
         <Grid container spacing={3}>
-        {Details.slice(0, visibleCards).map((item, i) => (
+         {/* Show limited cards on mobile, and all cards on desktop */}
+         {Details.slice(0, isMobile ? visibleCards : Details.length).map((item, i) => (
           <Grid item xs={12} md={4} key={i} sx={{ display: 'flex' }}>
             <motion.div
               variants={fadeUpVariants}
@@ -188,9 +191,11 @@ const containerVariants = {
         {/* Show "Explore More" button only if there are hidden cards */}
         {visibleCards < Details.length && (
           <Grid item xs={12} textAlign="center">
+            <Hidden smUp>
             <Button variant="contained" sx={{backgroundColor:'primary.dark',mt:3}} onClick={handleShowMore}>
               Explore More
             </Button>
+            </Hidden>
           </Grid>
         )}
       </Grid>
