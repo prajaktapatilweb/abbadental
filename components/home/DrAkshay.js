@@ -119,10 +119,8 @@ const DrAkshay = () => {
                     fontWeight: '500',
                   }}
                 >
-                  M.D.S. Consultant, Prosthodontist, Crown, Bridge & Oral Implantologist
-
-
-                </span>
+                🏅 M.D.S. Gold Medalist Prosthodontist
+                                  </span>
 
 
                 <Box className="ps"

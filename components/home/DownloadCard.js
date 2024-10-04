@@ -65,7 +65,8 @@ const DownloadCard = ({ item }) => {
               color:'#28282b'
             }}
           >
-            {item.testpara}
+            {item.testpara}<br></br>
+            ({item.post})
           </Box>
         </Box>
       </Card>

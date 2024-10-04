@@ -94,7 +94,7 @@ const Footer = () => {
                 </Grid>
                 <Grid item xs={11} md={11} sx={{ textAlign: 'justify' }}>
 
-                  0253 2507965, 97134 35111
+                9923708277, 97134 35111
                 </Grid>
                 <Grid item xs={12} md={12} sx={{ textAlign: 'justify',p:3 }}>
                  <Link variant="contained" href='https://maps.app.goo.gl/YXgsozYox5TPQDqi7'  style={{backgroundColor:'#305b9f',color:'white',padding:10,borderRadius:5}}>Get Directions On Map</Link>
@@ -132,7 +132,7 @@ const Footer = () => {
                 </Grid>
                 <Grid item xs={11} md={11} sx={{ textAlign: 'justify', mb: 2 }}>
                   <b>Monday to Saturday:</b> 10 AM to 08:30 PM<br></br>
-                  <b>Sunday:</b> 10 AM to 01 PM
+                  <b>Sunday:</b> 10 AM to 03 PM
                 </Grid>
               </Grid>
               <Grid container alignItems='center' justifyContent='center' textAlign='center'>

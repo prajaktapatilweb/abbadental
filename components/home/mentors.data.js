@@ -65,14 +65,15 @@ export const Details = [
     {
        img:'/images/associate/chetan1.jpg',
             title:"Dr. Chetan Ahire ",
-            testpara:"MDS Endodontist - Re Root Canal Specialist"
-
+            testpara:"MDS Endodontist - Re Root Canal Specialist",
+post:'Associate Dentist'
        
     },
     {
         img:'/images/associate/sayali1.jpeg',
         title:"Dr. Sayali Gangurde",
-        testpara:"General Dentistry"
+        testpara:"General Dentistry",
+        post:'Associate Dentist'
 
       
 
@@ -80,45 +81,50 @@ export const Details = [
     {
         img:'/images/associate/akshada2.jpg',
         title:"Dr. Akshada Wagh ",
-        testpara:"General Dentistry"
+        testpara:"General Dentistry",
+        post:'Associate Dentist'
 
 
     },
 
     {
-            img:'/images/associate/prathmesh3.jpg',
+            img:'/images/associate/prathmesh.jpg',
             title:"Dr. Prathmesh Kapoor",
-            testpara:"Oral & Maxillofacial Surgeon"
+            testpara:"Oral & Maxillofacial Surgeon",
+            post:'Consultant'
 
     },
     {
         img:'/images/associate/amit.jpg',
          title:'Dr. Amit Arvind Agrawal',
         testpara:'Periodontist ',
+           post:'Consultant'
     },
     {
         img:'/images/associate/khushboo.jpg',
          title:'Dr. Khusboo Patel',
         testpara:'Pedodontist',
+           post:'Consultant'
     },
     {
         img:'/images/associate/aditi.jpg',
          title:'Dr. Aditi Bulbule',
         testpara:'Pediatric Dentist',
+           post:'Consultant'
        
     },
-    {
-        img:'/images/associate/saurabh.jpg',
-         title:'Dr. Saurabh Malbade',
-        testpara:'Orthodontist',
+    // {
+    //     img:'/images/associate/saurabh.jpg',
+    //      title:'Dr. Saurabh Malbade',
+    //     testpara:'Orthodontist',
        
-    },
-    {
-        img:'/images/associate/nilesh.jpg',
-        title: 'Dr. Nilesh Raisoni',
-        testpara:'Oral Maxillofacial Surgeon',
+    // },
+    // {
+    //     img:'/images/associate/nilesh.jpg',
+    //     title: 'Dr. Nilesh Raisoni',
+    //     testpara:'Oral Maxillofacial Surgeon',
        
-    }
+    // }
 
 
 ]

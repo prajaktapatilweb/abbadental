@@ -39,7 +39,7 @@ export default function Equipment() {
       desc: "Dental Scanner",
     },
     {
-      img: "/images/equip/equip22.jpg",
+      img: "/images/equip/xray2.jpg",
       altitle: "Digital X Ray",
       desc: "Digital X Ray",
     },
@@ -49,9 +49,9 @@ export default function Equipment() {
       desc: "Dental Loupes",
     },
     {
-      img: "/images/equip/equip24.jpg",
-      altitle: "Portable X Ray",
-      desc: "Portable X Ray",
+      img: "/images/equip/cbct.jpg",
+      altitle: "CBCT",
+      desc: "CBCT Machine",
     },
   ];
 
