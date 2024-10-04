@@ -70,7 +70,7 @@ post:'Associate Dentist'
        
     },
     {
-        img:'/images/associate/sayali1.jpeg',
+        img:'/images/associate/sayali.jpeg',
         title:"Dr. Sayali Gangurde",
         testpara:"General Dentistry",
         post:'Associate Dentist'
@@ -79,7 +79,7 @@ post:'Associate Dentist'
 
     },
     {
-        img:'/images/associate/akshada2.jpg',
+        img:'/images/associate/akshada1.jpg',
         title:"Dr. Akshada Wagh ",
         testpara:"General Dentistry",
         post:'Associate Dentist'
