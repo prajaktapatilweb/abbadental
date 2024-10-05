@@ -19,8 +19,8 @@ import Navbar from "./navbar";
 
 function ResponsiveAppBar() {
 
-  const contactno1 ="+919713435111";
-  const contactno2 = "+919923708233" 
+  const contactno1 ="9713435111";
+  const contactno2 = "9923708233" 
 
 
   const textVariants={
@@ -92,7 +92,7 @@ function ResponsiveAppBar() {
                                
                                 <Link href={`tel:${contactno1}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                        +919713435111
+                                        9713435111
 
                                     </a>
                                 </Link>
@@ -100,7 +100,7 @@ function ResponsiveAppBar() {
 
                                 <Link  href={`tel:${contactno2}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                    +919923708233
+                                    9923708233
 
                                     </a>
                                 </Link>{" "}
@@ -108,9 +108,9 @@ function ResponsiveAppBar() {
                                     <EmailTwoToneIcon />{" "}
                                 </IconButton>
                                 <Link 
-                               href={`mailto:${'dr.abbaddentalclinic@gmail.com'}`} target="_blank">
+                               href={`mailto:${'abbaddentalclinic@gmail.com'}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                    dr.abbaddentalclinic@gmail.com
+                                    abbaddentalclinic@gmail.com
                                     </a>
                                 </Link>
                             </Box>

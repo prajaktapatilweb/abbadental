@@ -5,15 +5,14 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Link from "next/link";
-import ScrollUp from "../home/ScrollUp";
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 import MoreTimeIcon from '@mui/icons-material/MoreTime';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-import { Button } from "@mui/material";
+
 
 const Footer = () => {
-  const contactno1 = "+919833389890";
-  const contactno2 = "+919702955057";
+  const contactno1 = "9713435111";
+  const contactno2 = "9923708277";
 
 
   return (
@@ -93,8 +92,19 @@ const Footer = () => {
 
                 </Grid>
                 <Grid item xs={11} md={11} sx={{ textAlign: 'justify' }}>
+                <Link href={`tel:${contactno1}`} target="_blank" style={{marginRight:5,color:'white',textDecoration:'underline'
+                }}>
+                                    {/* <a className="nav-link-inner--text" style={{ color: 'white' }}> */}
+                                        9713435111,
 
-                9923708277, 97134 35111
+                                    {/* </a> */}
+                                </Link>
+                                <Link href={`tel:${contactno2}`} target="_blank" style={{marginRight:5,color:'white',textDecoration:'underline'}}>
+                                    9923708277
+
+                                </Link>{" "}
+
+              
                 </Grid>
                 <Grid item xs={12} md={12} sx={{ textAlign: 'justify',p:3 }}>
                  <Link variant="contained" href='https://maps.app.goo.gl/YXgsozYox5TPQDqi7'  style={{backgroundColor:'#305b9f',color:'white',padding:10,borderRadius:5}}>Get Directions On Map</Link>
@@ -141,8 +151,15 @@ const Footer = () => {
 
                 </Grid>
                 <Grid item xs={11} md={11} sx={{ textAlign: 'justify' }}>
+                <Link href={`tel:${2532507965}`} target="_blank" style={{marginRight:5,color:'white',textDecoration:'underline'}}>
 
-                  0253 2507965, 99237 08233
+
+                  0253 2507965,
+                  </Link>
+                  <Link href={`tel:${9923708233}`} target="_blank" style={{marginRight:5,color:'white',textDecoration:'underline'}}>
+
+                   9923708233
+                   </Link>
                 </Grid>
                 <Grid item xs={12} md={12} sx={{ textAlign: 'justify',p:3 }}>
                  <Link variant="contained" href='https://maps.app.goo.gl/Vh1Q3igrYELDUVDDA'  style={{backgroundColor:'#305b9f',color:'white',padding:10,borderRadius:5}}>Get Directions On Map</Link>

@@ -22,7 +22,7 @@ const Drgalleryitem = ({ item }) => {
         >
           <Image
             alt={'Clinic ' + item.id}
-            src={`/images/nashikclinic/clinic${item}.jpg`}
+            src={`/images/nashikclinic/clinics${item}.jpg`}
             width={100}
             height={100}
             layout="responsive" // Responsive layout for the image

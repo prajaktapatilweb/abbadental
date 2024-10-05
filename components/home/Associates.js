@@ -53,8 +53,8 @@ const Associates = () => {
         >
             <Container>
                 <div class="section-title">
-                    <h2>Associate Dentists </h2>
-                    <p>Hear from Those Who Trust Us with Their Smiles</p>
+                    <h2>Your Smile’s Support Team </h2>
+                    <p>Introducing Our Skilled Associate Dentists and Consultants Dedicated to Your Care</p>
                 </div>
                 <Slider {...sliderConfig}>
                     {Details.map((item,i) => (

@@ -35,7 +35,7 @@ export default function Awards() {
   return (
     <div>
 
-<section style={{backgroundColor:'white'}}>
+<section id='awards' style={{backgroundColor:'white'}} >
             <Grid container sx={{ justifyContent: 'center', alignItems: 'center',my:5}} spacing={0}>
                 <Grid item xs={12} sm={6} md={5} order={2} >
                 <motion.div

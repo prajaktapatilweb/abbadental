@@ -36,8 +36,9 @@ const navItems = [
     { linkID: "/#aboutus", label: "About Us" },
     { linkID: "/#treatments", label: "Treatments" },
     { linkID: "/#Doctors", label: "Doctors" },
-    { linkID: "/#testimonials", label: "Testimonials" },
     { linkID: "/#gallery", label: "Gallery" },
+    { linkID: "/#awards", label: "Awards" },
+    { linkID: "/#testimonials", label: "Testimonials" },
     { linkID: "/#contactform", label: "Contact" },
 ];
 
