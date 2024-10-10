@@ -58,7 +58,8 @@ function ResponsiveAppBar() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition:'center',
-        
+           
+          
            
         }}
     >
