@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://www.dynamicdentalcare.in',
+    siteUrl: 'https://www.abbaddentalclinic.com/',
     generateRobotsTxt: true, // (optional)
     generateIndexSitemap: true
     // ...other options

@@ -1,6 +1,4 @@
 import React from 'react'
-import { MainLayout } from '../components/layout';
-import HomeHero from '../components/home/hero';
 import { Box, Button, Container, Grid, Link, Stack, Typography } from '@mui/material';
 
 export default function Thankyou() {
