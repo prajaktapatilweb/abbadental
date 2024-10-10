@@ -41,7 +41,7 @@ export default function Thankyou() {
                                         textAlign: 'center'
                                     }}
                                 >
-                                    Thank you for showing interest in <Link href="/" sx={{ color: 'white' }}>Dynamic Dental Care </Link>. We will contact you shortly.
+                                    Thank you for showing interest in <Link href="/" sx={{ color: 'white' }}>Abbaddentalclinic </Link>. We will contact you shortly.
                                 </Typography>
                                 <Stack direction='column' alignItems='center' >
                                     <Button size="large" variant="contained" sx={{ mt: 2, fontSize: 17, backgroundColor: 'secondary.main', alignContent: 'center', color: 'white' }}>

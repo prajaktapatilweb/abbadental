@@ -1,15 +1,17 @@
 import React from 'react';
-import { Typography, Card } from '@mui/material';
+import { Card, Hidden, Link } from '@mui/material';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Axios from 'axios';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Field, Form, Formik,ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import AppTextField from '../Formik/AppTextField';
 import { Button, FormControl, Grid, InputLabel } from '@mui/material';
 import CustomizedSelectFormik from '../Formik/CustomizedSelectFormik';
 import { useRouter } from 'next/router';
 import GoogleRecaptcha from '../GoogleRecaptcha';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+
 
 
 const All = [
@@ -44,6 +46,7 @@ const validationSchema = yup.object({
 });
 
 const Contact = () => {
+
   const router = useRouter()
   const onSubmit = async (values, submitProps) => {
     console.log({ values })
@@ -70,192 +73,202 @@ const Contact = () => {
       });
   };
 
+            // Define the fade-right animation variants
+ // Define the fade-up animation variants
+ const fadeUpVariants = {
+  hidden: { opacity: 0, y: 100 },  // Initial state: invisible and below the viewport
+  visible: { 
+    opacity: 1, 
+    y: 0,  // Moves up to its original position
+    transition: {
+      duration: 0.8, // Duration of the animation
+      ease: 'easeInOut', // Easing function
+    },
+  },
+};
+
+
+
   return (
-    <Box id='contactform' sx={{ backgroundColor: '#f1efeb', py: { xs: 7, md: 7 } }}>
-      <Container >
-        <Typography variant="h1" sx={{
-          fontSize: { xs: 30, md: 35 }, pb: {
-            xs: 3,
-            md: 3,
-          },
-        }} gutterBottom>
-          Connect with Our Expert Dentists in Chembur
+   
+      
+      <Box id="contactform">
+        
 
-        </Typography>
-        <Card
-          className='box2'
-          sx={{
-            backgroundColor: 'white',
+          <Grid container spacing={0}  sx={{p:0,backgroundColor:{xs:'#f2f5f5',sm:'#f2f5f5',md:'white'},mb:2}} >
+         
 
-            borderRadius: 10,
-            py: { xs: 4, md: 10 },
-            px: { xs: 4, md: 8 },
-            textAlign: 'center',
-          }}>
+            <Grid item xs={12} md={6} sx={{display:'flex'}}>
+            {/* <motion.div
+  className="textcontainer"
+  variants={fadeLeftVariants}
+  initial="hidden"         // Start in the hidden state
+  whileInView="visible"    // Animate to the visible state when in view
+  viewport={{ once: true }} // Optionally only animate once
+> */}
+<Hidden smDown>
+            <Image
+                        alt={'Clinic'}
+                        src='/images/contactimg3.jpg'
+                        width={100}
+                        height={100}
+                        layout='responsive'></Image>
+                        </Hidden>
+                        {/* </motion.div> */}
+              </Grid>
+            <Grid item xs={12} md={6} sx={{display:'flex',  px: 2, py:2,}}>
+            <motion.div
+  className="textcontainer"
+  variants={fadeUpVariants}
+  initial="hidden"         // Start in the hidden state
+  whileInView="visible"    // Animate to the visible state when in view
+  viewport={{ once: true }} // Optionally only animate once
+>
+              <Box>
+              <div class="section-title" style={{textAlign:'left'}}>
+          <h2> Elevate Your Dental Experience</h2>
+          <p>Contact Us for a Bespoke Experience Crafted Just for You</p>
 
-          {/* <Box sx={{
-          // backgroundColor: 'secondary.main',
-          borderRadius: 10,
-          py: { xs: 4, md: 10 },
-          px: { xs: 4, md: 8 },
-          textAlign: 'center',
-        }}> */}
-          <Formik
-            validateOnChange={true}
-            initialValues={{
-              name: '',
-              email: '',
-              mobilenumber: '',
-              msg: '',
-              selection: '',
-              recaptcha:''
-            }}
-            validationSchema={validationSchema}
-            onSubmit={onSubmit}
-          >
-            {({ initialValues, values, errors, isSubmitting }) => (
-              <Form style={{ textAlign: 'left' }}>
-                <Grid container spacing={2}>
-                  <Grid item xs={12} md={6}>
-                    <AppTextField
-                      placeholder='name'
-                      name='name'
-                      label='Name'
-                      sx={{
-                        width: '100%',
-                        '& .MuiInputBase-input': {
-                          fontSize: 14,
-                        },
-                      }}
-                      variant='outlined'
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <AppTextField
-                      placeholder='Email'
-                      name='email'
-                      label='Email ID'
-                      sx={{
-                        width: '100%',
-                        '& .MuiInputBase-input': {
-                          fontSize: 14,
-                        },
-                      }}
-                      variant='outlined'
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <AppTextField
-                      placeholder='Mobile Number'
-                      name='mobilenumber'
-                      label='Mobile Number'
-                      sx={{
-                        width: '100%',
-                        '& .MuiInputBase-input': {
-                          fontSize: 14,
-                        },
-                      }}
-                      variant='outlined'
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <FormControl
-                      sx={{
-                        width: '100%',
-                        // mt: 2,
-                        '&.MuiInputBase-input': { fontSize: 14 },
-                      }}
-                    >
-                      <InputLabel id='demo-simple-select-label'>
-                        Select your interest
-                      </InputLabel>
-                      <Field
-                        name='selection'
-                        as='select'
-                        options={All}
-                        component={CustomizedSelectFormik}
-                      ></Field>
-                    </FormControl>
-                  </Grid>
-                  <Grid item xs={12} >
-                    <Box>
-                      <AppTextField
-                        placeholder='Message'
-                        name='msg'
-                        label='Message'
-                        sx={{
-                          width: '100%',
-                          '& .MuiInputBase-input': {
-                            fontSize: 14,
-                          },
-                        }}
-                        variant='outlined'
-                        multiline
-                        rows='2'
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} sx={{ mb: { xs: 5, lg: 8 } }}>
-                    <GoogleRecaptcha/>
-                    <ErrorMessage name="recaptcha" component="div" style={{ color: 'red' }} />
+        </div>
+        </Box>
 
-                    </Grid>
-                </Grid>
-                {/* <pre>{JSON.stringify(errors, null, 4)}</pre> */}
-                {/* <pre>{JSON.stringify(values, null, 4)}</pre> */}
+        <Box sx={{   boxShadow:{xs:'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',md:'none'},
+       p:{xs:2,sm:3,md:0},borderRadius:{xs:5,sm:5,md:0},backgroundColor:'white'
+}}>
+                <Formik
+                  validateOnChange={true}
+                  initialValues={{
+                    name: '',
+                    email: '',
+                    mobilenumber: '',
+                    msg: '',
+                    selection: '',
+                    recaptcha:''
+                  }}
+                  validationSchema={validationSchema}
+                  onSubmit={onSubmit}
+                  
+                >
+                  {({ isSubmitting }) => (
+                    <Form style={{ textAlign: 'left' }}>
+                      <Grid container spacing={2}>
+                        <Grid item xs={12} md={6}>
+                          <AppTextField
+                            placeholder='name'
+                            name='name'
+                            label='Name'
+                            sx={{
+                              width: '100%',
+                              '& .MuiInputBase-input': {
+                                fontSize: 14,
+                              },
+                            }}
+                            variant='outlined'
+                          />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                          <AppTextField
+                            placeholder='Email'
+                            name='email'
+                            label='Email ID'
+                            sx={{
+                              width: '100%',
+                              '& .MuiInputBase-input': {
+                                fontSize: 14,
+                              },
+                            }}
+                            variant='outlined'
+                          />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                          <AppTextField
+                            placeholder='Mobile Number'
+                            name='mobilenumber'
+                            label='Mobile Number'
+                            sx={{
+                              width: '100%',
+                              '& .MuiInputBase-input': {
+                                fontSize: 14,
+                              },
+                            }}
+                            variant='outlined'
+                          />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                          <FormControl
+                            sx={{
+                              width: '100%',
+                              // mt: 2,
+                              '&.MuiInputBase-input': { fontSize: 14 },
+                            }}
+                          >
+                            <InputLabel id='demo-simple-select-label'>
+                              Select your interest
+                            </InputLabel>
+                            <Field
+                              name='selection'
+                              as='select'
+                              options={All}
+                              component={CustomizedSelectFormik}
+                            ></Field>
+                          </FormControl>
+                        </Grid>
+                        <Grid item xs={12} >
+                          <Box>
+                            <AppTextField
+                              placeholder='Message'
+                              name='msg'
+                              label='Message'
+                              sx={{
+                                width: '100%',
+                                '& .MuiInputBase-input': {
+                                  fontSize: 14,
+                                },
+                              }}
+                              variant='outlined'
+                              multiline
+                              rows='4'
+                            />
+                          </Box>
+                        </Grid>
+                        <Grid item xs={12} sx={{ mb: { xs: 3, lg: 3 } }}>
+                          <GoogleRecaptcha />
+                          <ErrorMessage name="recaptcha" component="div" style={{ color: 'red' }} />
 
-                <div>
-                  <Button
-                    variant='contained'
-                    color='primary'
-                    disabled={isSubmitting}
-                    sx={{
-                      // fontWeight: Fonts.REGULAR,
-                      textTransform: 'capitalize',
-                      fontSize: 16,
-                      minWidth: 160,
-                    }}
-                    type='submit'
-                  >
-                    Submit
-                  </Button>
-                </div>
-              </Form>
-            )}
-          </Formik>
-          {/* <Typography variant="h1" component="h2" sx={{ mb: 1, fontSize: { xs: 32, md: 42 } }}>
-            Subscribe to Our News Letter
-          </Typography>
-          <Typography sx={{ mb: 6 }}>Subscribe to our newsletter to get information about our courses.</Typography>
+                        </Grid>
+                      </Grid>
+                      {/* <pre>{JSON.stringify(errors, null, 4)}</pre> */}
+                      {/* <pre>{JSON.stringify(values, null, 4)}</pre> */}
 
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            flexDirection: { xs: 'column', md: 'row' },
-            justifyContent: 'space-around',
-            width: { xs: '100%', md: 560 },
-            mx: 'auto',
-        }}>
-            <InputBase sx={{
-            backgroundColor: 'background.paper',
-            borderRadius: 3,
-            width: '100%',
-            height: 48,
-            px: 2,
-            mr: { xs: 0, md: 3 },
-            mb: { xs: 2, md: 0 },
-        }} 
-        placeholder="Enter your Email Address"></InputBase>
-            <Box>
-              <StyledButton disableHoverEffect size="large" onClick={onSubmit} >
-                Subscribe
-              </StyledButton>
-            </Box>
-          </Box> */}
-          {/* </Box> */}
-        </Card>
-      </Container>
-    </Box>
+                      <div>
+                        <Button
+                          variant='contained'
+                         
+                          color='primary'
+                          disabled={isSubmitting}
+                          sx={{
+                            // fontWeight: Fonts.REGULAR,
+                            textTransform: 'capitalize',
+                            fontSize: 16,
+                            minWidth: 160,
+                            backgroundColor:'primary.dark'
+                          }}
+                          type='submit'
+                        >
+                          Submit
+                        </Button>
+                      </div>
+                    </Form>
+                  )}
+                </Formik>
+                </Box>
+</motion.div>
+            </Grid>
+          {/* </Grid> */}
+          </Grid>
+        
+          </Box>
+  
   );
 };
 export default Contact;
