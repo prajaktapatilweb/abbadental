@@ -70,7 +70,7 @@ const DrAkshay = () => {
             >
               <Image
                 src="/images/dr/drnikhil2.jpg"
-                alt="Dr Nikhil"
+                alt=" Dr. Nikhil Abbad at College Road Dental Clinic"
                 width={100}
                 height={100}
                 layout="responsive"
@@ -173,7 +173,7 @@ const DrAkshay = () => {
             >
               <Image
                 src="/images/dr/drleena.JPG"
-                alt="Dr Nikhil"
+                alt="Dr. Leena Nikhil Abbad at College Road Dental Clinic"
                 width={100}
                 height={100}
                 layout="responsive"

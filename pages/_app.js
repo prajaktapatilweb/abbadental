@@ -27,69 +27,175 @@ export default function MyApp(props) {
 
                                 </title>
                                 <meta name="title" content="Best Dentist in Nashik - Abbad Dental Clinic & Implant Centre"></meta>
-                                <meta name='description' content="Dental emergencies? We've got you covered. Our dental clinic in Nashik provides fast and reliable emergency dental care to alleviate pain and restore your oral health. 20K+ satisfied patients, 16+ years of experience. Contact us now."></meta>
-                                {/* <meta name='google-site-verification'  content=""></meta> */}
-                                <link rel="canonical" href="https://abbaddentalclinic.com/"/>
-                                {/* <script type="application/ld+json"
+                                <meta name='description' content="Visit Abbad Dental Clinic in Nashik, led by Dr. Nikhil Abbad, a gold medalist prosthodontist specializing in prosthodontics, crowns, and bridges."></meta>
+                                <meta name="google-site-verification" content="TGw02AJsXeaWAtmFxgztAkDkZmYy1ha3GcSdnXCZ8Nk" />
+                                <link rel="canonical" href="https://www.abbaddentalclinic.com/"/>
+
+
+                                {/* OG Tags -  */}
+<meta property="og:type" content="Website" />
+<meta property="og:title" content="Abbad Dental Clinic & Implant Centre" />
+<meta property="og:description" content="Enhance your smile and boost your confidence with expert cosmetic dental procedures at Abbad Dental Clinic & Implant Centre." />
+<meta property="og:url" content="https://www.abbaddentalclinic.com/" />
+<meta property="og:image" content="https://www.abbaddentalclinic.com/_next/image?url=%2Fimages%2Fnashikclinic%2Fclinics2.jpg&w=1920&q=75" />
+
+
+{/* Twitter Card -  */}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@ACenter75541" />
+<meta name="twitter:title" content="Abbad Dental Clinic & Implant Centre" />
+<meta name="twitter:description" content="Enhance your smile and boost your confidence with expert cosmetic dental procedures at Abbad Dental Clinic & Implant Centre." />
+<meta name="twitter:image" content="https://www.abbaddentalclinic.com/_next/image?url=%2Fimages%2Fnashikclinic%2Fclinics2.jpg&w=1920&q=75" />
+
+
+<script type="application/ld+json"
                                  dangerouslySetInnerHTML={{
                                     __html: JSON.stringify({
-
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Dynamic Dental Care",
-  image: "https://www.dynamicdentalcare.in/_next/image?url=%2Fimages%2FThane%2Ft%2Fclinic2.jpg&w=1920&q=75",
+  "name": "Abbad Dental Clinic & Implant Centre",
+  "image": "https://www.abbaddentalclinic.com/_next/image?url=%2Fimages%2Fnashikclinic%2Fclinics2.jpg&w=1920&q=75",
   "@id": "",
-  url: "https://www.dynamicdentalcare.in/",
-  telephone: "9702955057",
-  priceRange: "$",
-  address: {
+  "url": "https://www.abbaddentalclinic.com/",
+  "telephone": "9713435111",
+  "priceRange": "$",
+  "address": {
     "@type": "PostalAddress",
-    streetAddress: "Shop No.1, Ground Floor, New Sahjeevan Society, near Panchganga, 2nd Rabodi",
-    addressLocality: "Thane",
-    postalCode: "400601",
-    addressCountry: "IN"
+    "streetAddress": "2-3, Jubiliant Heights near Nirman House, Vidya Vikas Circle, towards College Rd, Maharashtra",
+    "addressLocality": "Nashik",
+    "postalCode": "422005",
+    "addressCountry": "IN"
   },
-  geo: {
+  "geo": {
     "@type": "GeoCoordinates",
-    latitude: 19.2046766,
-    longitude: 72.9851153
+    "latitude": 20.0073972,
+    "longitude": 73.7640498
   },
-  openingHoursSpecification: [{
+  "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
+    "dayOfWeek": [
       "Monday",
       "Tuesday",
-      "Friday",
-      "Thursday",
       "Wednesday",
-      "Saturday",
-      "Sunday"
+      "Thursday",
+      "Friday",
+      "Saturday"
     ],
-    opens: "10:00",
-    closes: "14:00"
+    "opens": "10:00",
+    "closes": "21:00"
   },{
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
+    "dayOfWeek": "Sunday",
+    "opens": "10:00",
+    "closes": "13:00"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/abbaddentalclinicnashik",
+    "https://x.com/ACenter75541",
+    "https://www.instagram.com/abbaddentalclinic/",
+    "https://www.youtube.com/@abbaddentalclinicnashik",
+    "https://www.linkedin.com/in/abbad-dental-clinic-and-implant-center-00a371324/"
+  ] 
+}
+),
+}}
+/> 
+
+<script type="application/ld+json"
+                                 dangerouslySetInnerHTML={{
+                                    __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Abbad Dental Clinic & Implant Centre",
+  "image": "",
+  "@id": "",
+  "url": "https://www.abbaddentalclinic.com/",
+  "telephone": "9923708233",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2055, Nehru Chowk, next to Sandeep Cut Piece Center, Dahipul, Gulal Wadi, Naikwadi Pura, Panchavati",
+    "addressLocality": "Nashik",
+    "postalCode": "422001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 20.004488,
+    "longitude": 73.791526
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
       "Monday",
       "Tuesday",
       "Wednesday",
       "Thursday",
       "Friday",
-      "Saturday",
-      "Sunday"
+      "Saturday"
     ],
-    opens: "17:00",
-    closes: "22:00"
-                                    }],
-  sameAs: "https://www.facebook.com/dranujdynamicdentalcare/" 
-}),
-                                 }}
-/> */}
+    "opens": "10:00",
+    "closes": "20:30"
+  },{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "Sunday",
+    "opens": "10:00",
+    "closes": "13:00"
+  }
+   
+  ] 
+}
+),
+}}
+/> 
 
-                              
+<script type="application/ld+json"
+                                 dangerouslySetInnerHTML={{
+                                    __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Dr. Nikhil Abbad",
+  "image": "https://www.abbaddentalclinic.com/_next/image?url=%2Fimages%2Fdr%2Fdrnikhil2.jpg&w=1920&q=75",
+  "@id": "",
+  "url": "https://www.abbaddentalclinic.com/",
+  "telephone": "9713435111",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2-3, Jubiliant Heights near Nirman House, Vidya Vikas Circle, towards College Rd, Maharashtra",
+    "addressLocality": "Nashik",
+    "postalCode": "422005",
+    "addressCountry": "IN"
+  }  
+}
 
-                     
-               
+),
+}}
+/> 
+
+<script type="application/ld+json"
+                                 dangerouslySetInnerHTML={{
+                                    __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Dr. Leena Abbad",
+  "image": "https://www.abbaddentalclinic.com/_next/image?url=%2Fimages%2Fdr%2Fdrleena.JPG&w=1920&q=75",
+  "@id": "",
+  "url": "https://www.abbaddentalclinic.com/",
+  "telephone": "9713435111",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2-3, Jubiliant Heights near Nirman House, Vidya Vikas Circle, towards College Rd, Maharashtra",
+    "addressLocality": "Nashik",
+    "postalCode": "422005",
+    "addressCountry": "IN"
+  }  
+}
+
+),
+}}
+/> 
+        
             </Head>
             <MUIProvider>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

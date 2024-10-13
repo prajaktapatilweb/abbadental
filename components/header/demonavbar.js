@@ -178,6 +178,19 @@ function ResponsiveAppBar() {
                                       
                                 </a>
                             </IconButton>
+                            <IconButton aria-label="linktree">
+                                <a
+                                    href="https://linktr.ee/AbbadDentalClinic"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label="linkedin"
+                                >
+                                     <Image src="/images/icons/linktree.webp" width={20} height={20} ></Image>
+
+                                      
+                                      
+                                </a>
+                            </IconButton>
                         </Box>
                     </Box>
                 </Container>

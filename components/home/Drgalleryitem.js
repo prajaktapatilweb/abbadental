@@ -21,7 +21,7 @@ const Drgalleryitem = ({ item }) => {
           }}
         >
           <Image
-            alt={'Clinic ' + item.id}
+            alt='Abbad Dental Clinic and Implant Centre, 2-3, Jubiliant Heights near Nirman House, Vidya Vikas Circle, towards College Rd, Nashik, Maharashtra 422005 Reception Image'
             src={`/images/nashikclinic/clinics${item}.jpg`}
             width={100}
             height={100}
