@@ -68,7 +68,7 @@ const Clinicinfo = () => {
   viewport={{ once: true }} // Optionally only animate once
 >
             <Typography
-              component="h2"
+              component="h1"
               sx={{
                 fontSize: { xs: 27, md: 35 },
                 fontWeight: "600",

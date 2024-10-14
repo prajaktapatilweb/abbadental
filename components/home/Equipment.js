@@ -68,8 +68,8 @@ export default function Equipment() {
       >
         <Container>
           <div className="section-title">
-            <h2>Premier Dental Equipment</h2>
-            <p>Innovative Tools for Optimal Patient Care</p>
+            <h1>Premier Dental Equipment</h1>
+            <h2>Innovative Tools for Optimal Patient Care</h2>
           </div>
 
           {/* Apply motion.div to the container with staggered animation */}

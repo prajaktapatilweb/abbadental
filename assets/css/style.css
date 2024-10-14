@@ -64,7 +64,7 @@ section {
   font-family: "League Spartan, sans-serif",
 }
 
-.section-title h2 {
+.section-title h1 {
   font-size: 32px;
   font-weight: bold;
   text-transform: normal;
@@ -85,11 +85,13 @@ section {
   left: calc(50% - 25px);
 } */
 
-.section-title p {
+.section-title h2 {
   margin-top: 2px;
   margin-bottom: 0;
-  font-size: 19px;
+  font-size: 18px;
+  font-weight: 300;
   font-family: '"Poppins", sans-serif',
+  
 }
 
 

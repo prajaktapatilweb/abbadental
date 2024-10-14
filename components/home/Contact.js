@@ -126,8 +126,8 @@ const Contact = () => {
 >
               <Box>
               <div class="section-title" style={{textAlign:'left'}}>
-          <h2> Elevate Your Dental Experience</h2>
-          <p>Contact Us for a Bespoke Experience Crafted Just for You</p>
+          <h1> Elevate Your Dental Experience</h1>
+          <h2>Contact Us for a Bespoke Experience Crafted Just for You</h2>
 
         </div>
         </Box>

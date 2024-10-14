@@ -90,8 +90,8 @@ const fadeUpVariants = {
     >
       <Container maxWidth="lg">
         <div class="section-title">
-          <h2>Smile Gallery</h2>
-          <p>Where Happiness Shines Bright</p>
+          <h1>Smile Gallery</h1>
+          <h2>Where Happiness Shines Bright</h2>
         </div>
 
 
