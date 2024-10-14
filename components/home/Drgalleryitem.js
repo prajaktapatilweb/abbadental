@@ -2,6 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 
 const Drgalleryitem = ({ item }) => {
+  // Define an array of alt texts for each image
+const altTexts = [
+  "Abbad Dental Clinic - Exterior View",
+  "Abbad Dental Clinic - Reception Area",
+  "Abbad Dental Clinic - Waiting Room",
+  "Abbad Dental Clinic - Treatment Room",
+  "Abbad Dental Clinic - Implant Surgery Setup",
+  "Abbad Dental Clinic - Pediatric Dentistry Section",
+  "Abbad Dental Clinic - Consultation Room",
+  "Abbad Dental Clinic - X-Ray Room",
+  "Abbad Dental Clinic - Surgery Equipment Setup",
+  "Abbad Dental Clinic - Orthodontics Room",
+  "Abbad Dental Clinic - Lab Area",
+ 
+];
     return (
 
         <div
@@ -21,7 +36,7 @@ const Drgalleryitem = ({ item }) => {
           }}
         >
           <Image
-            alt='Abbad Dental Clinic and Implant Centre, 2-3, Jubiliant Heights near Nirman House, Vidya Vikas Circle, towards College Rd, Nashik, Maharashtra 422005 Reception Image'
+            alt={altTexts}
             src={`/images/nashikclinic/clinics${item}.jpg`}
             width={100}
             height={100}
