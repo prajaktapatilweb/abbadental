@@ -26,7 +26,7 @@ export default function Thankyou() {
                         <Grid item xs={12} md={12}>
                             <Box>
                                 <Typography
-                                    component="h1"
+                                    component="h3"
                                     sx={{
                                         // width: { md: 850 },
                                         position: 'relative',

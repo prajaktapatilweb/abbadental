@@ -43,8 +43,8 @@ const DrAkshay = () => {
       <Box id="Doctors" sx={{ py: 8 }}>
         <Container>
           <div class="section-title">
-            <h1>Your Dental Experts Await</h1>
-            <h2>Your Smile is in the Hands of the Best</h2>
+            <h3>Your Dental Experts Await</h3>
+            <h2 style={{fontWeight:300,fontSize:20}}>Your Smile is in the Hands of the Best Dentist in Nashik</h2>
           </div>
         </ Container>
 
@@ -100,7 +100,7 @@ const DrAkshay = () => {
               <Box sx={{ px: 3 }}>
 
                 < Typography
-                  component="h1"
+                  component="h3"
                   sx={{
                     fontWeight: 700,
                     marginBottom: "5px",
@@ -202,7 +202,7 @@ const DrAkshay = () => {
               <Box sx={{ px: 3 }}>
 
                 < Typography
-                  component="h1"
+                  component="h3"
                   sx={{
                     fontWeight: 700,
                     marginBottom: "5px",

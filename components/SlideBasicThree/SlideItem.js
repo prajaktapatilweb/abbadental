@@ -68,7 +68,7 @@ const SlideItem = ({ slide }) => {
                 }}
               >
                 <Typography
-                  variant="h1"
+                  variant="h3"
                   sx={{
                     letterSpacing: 1.5,
                     fontWeight: "bold",

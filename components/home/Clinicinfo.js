@@ -67,8 +67,8 @@ const Clinicinfo = () => {
   whileInView="visible"    // Animate to the visible state when in view
   viewport={{ once: true }} // Optionally only animate once
 >
-            <Typography
-              component="h1"
+<Typography
+              component="h3"
               sx={{
                 fontSize: { xs: 27, md: 35 },
                 fontWeight: "600",
@@ -77,6 +77,18 @@ const Clinicinfo = () => {
               }}
             >
               Abbad Dental Clinic & Implant Centre
+
+              </Typography>
+            <Typography
+              component="h1"
+              sx={{
+                fontSize: { xs: 27, md: 28 },
+                fontWeight: "400",
+                fontFamily: "League Spartan, sans-serif",
+              
+              }}
+            >
+              Home to the Best Dental Clinic in Nashik
             </Typography>
             <Typography
             

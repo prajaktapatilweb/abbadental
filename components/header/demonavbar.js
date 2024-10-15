@@ -53,7 +53,7 @@ function ResponsiveAppBar() {
         <AppBar
         position="static"
         sx={{
-            backgroundImage:{xs: `linear-gradient(rgba(1, 1, 1, 0.0), rgba(1, 1, 1, 0.7)), url("/images/clinics1/clinics9.jpg")`,sm:`linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/clinics1/clinics9.jpg")`,md:` url("/images/heroback1.jpg")`},
+            backgroundImage:{xs: `linear-gradient(rgba(1, 1, 1, 0.0), rgba(1, 1, 1, 0.7)), url("/images/nashikclinic/clinics9.jpg")`,sm:`linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/nashikclinic/clinics9.jpg")`,md:` url("/images/heroback1.jpg")`},
           
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -92,19 +92,19 @@ function ResponsiveAppBar() {
                                 </IconButton>
                                
                                 <Link href={`tel:${contactno1}`} target="_blank">
-                                    <a className="nav-link-inner--text" style={{ color: 'white' }}>
+                                    <a className="nav-link-inner--text" style={{ color: 'white' ,marginRight:10}}>
                                         9713435111
 
                                     </a>
                                 </Link>
-                                /
+                                
 
-                                <Link  href={`tel:${contactno2}`} target="_blank">
+                                {/* <Link  href={`tel:${contactno2}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
                                     9923708233
 
                                     </a>
-                                </Link>{" "}
+                                </Link>{" "} */}
                                 <IconButton aria-label="email" style={{ color: 'white' }}>
                                     <EmailTwoToneIcon />{" "}
                                 </IconButton>

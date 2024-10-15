@@ -59,7 +59,7 @@ export default function Awards() {
 >
                     <Box sx={{ backgroundColor:{xs:'white',sm:'white',md:'primary.main'}, p: {xs:3,sm:3,md:5}, marginRight: 0 }}>
 
-                        <Typography variant='h1' sx={{ color: 'primary.dark' }}>
+                        <Typography variant='h3' sx={{ color: 'primary.dark',fontSize:32 }}>
                         Our Accolades and Recognition
                         </Typography>
                         <br></br>

@@ -108,8 +108,8 @@ const containerVariants = {
                 sx={{ pt: { xs: 10, md: 7 }, pb: 10, backgroundColor: "white" }}
             >
                 <div class="section-title">
-                    <h1>The Art of Luxurious Dentistry</h1>
-                    <h2>Unparalleled Care for Those Who Expect the Best</h2>
+                    <h3>The Art of Luxurious Dentistry</h3>
+                    <p>Unparalleled Care for Those Who Expect the Best</p>
                 </div>
              {/* Framer Motion Container for the animation */}
         <Container component={motion.div} variants={containerVariants} initial="hidden" animate="visible">

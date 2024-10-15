@@ -87,8 +87,8 @@ const Testimonial = () => {
         >
             <Container>
                 <div class="section-title">
-                    <h1>What Our Patients Say</h1>
-                    <h2>Hear from Those Who Trust Us with Their Smiles</h2>
+                    <h3>What Our Patients Say</h3>
+                    <p>Hear from Those Who Trust Us with Their Smiles</p>
                 </div>
                 <Slider {...sliderConfig}>
                     {data.map((item) => (
