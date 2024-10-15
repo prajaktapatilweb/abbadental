@@ -10,7 +10,7 @@ const PhotoCardItem = ({ item }) => {
          
           <Image
             alt={'Course ' + item.id}
-            src={`/images/patients/patients${item}.jpg`}
+            src={`/images/patients/patients${item}.webp`}
             width={100}
             height={100}
             layout='responsive'
