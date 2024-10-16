@@ -109,7 +109,7 @@ const Contact = () => {
 <Hidden smDown>
             <Image
                         alt={'Clinic'}
-                        src='/images/contactimg3.jpg'
+                        src='/images/contactimg3.webp'
                         width={100}
                         height={100}
                         layout='responsive'></Image>
