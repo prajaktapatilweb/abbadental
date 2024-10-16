@@ -37,7 +37,7 @@ const altTexts = [
         >
           <Image
             alt={altTexts}
-            src={`/images/nashikclinic/clinics${item}.jpg`}
+            src={`/images/nashikclinic/clinics${item}.webp`}
             width={100}
             height={100}
             layout="responsive" // Responsive layout for the image

@@ -9,7 +9,7 @@ const PhotoCardItem = ({ item }) => {
         <Box>
          
           <Image
-            alt={'Course ' + item.id}
+            alt='Happy Patients'
             src={`/images/patients/patients${item}.webp`}
             width={100}
             height={100}
