@@ -7,7 +7,7 @@ export default function Thankyou() {
             {/* <HomeHero /> */}
             <Box
                 sx={{
-            backgroundImage:'linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.7)),url("/images/backthank.JPG")',
+            backgroundImage:'linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)),url("/images/backthank.JPG")',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     display: 'flex',
@@ -39,11 +39,11 @@ export default function Thankyou() {
                                         textAlign: 'center'
                                     }}
                                 >
-                                    Thank you for showing interest in <Link href="/" sx={{ color: 'white' }}>Abbaddentalclinic </Link>. We will contact you shortly.
+                                    Thank you for showing interest in <Link href="/" >Abbaddentalclinic </Link>. We will contact you shortly.
                                 </Typography>
                                 <Stack direction='column' alignItems='center' >
                                     <Button size="large" variant="contained" sx={{ mt: 2, fontSize: 17, backgroundColor: 'secondary.main', alignContent: 'center', color: 'white' }}>
-                                        <Link href="/#" >
+                                        <Link href="/#"  sx={{color:'black'}}>
                                             Home
                                         </Link>
                                     </Button>
