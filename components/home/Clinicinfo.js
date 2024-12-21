@@ -82,7 +82,7 @@ const Clinicinfo = () => {
             <Typography
               component="h1"
               sx={{
-                fontSize: { xs: 27, md: 28 },
+                fontSize: { xs: 21, md: 28 },
                 fontWeight: "400",
                 fontFamily: "League Spartan, sans-serif",
               

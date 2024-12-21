@@ -53,7 +53,7 @@ function ResponsiveAppBar() {
         <AppBar
         position="static"
         sx={{
-            backgroundImage:{xs: `linear-gradient(rgba(1, 1, 1, 0.0), rgba(1, 1, 1, 0.7)), url("/images/nashikclinic/clinics9.jpg")`,sm:`linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/nashikclinic/clinics9.jpg")`,md:` url("/images/heroback1.webp")`},
+            backgroundImage:{xs: `linear-gradient(rgba(1, 1, 1, 0.0), rgba(1, 1, 1, 0.7)), url("/images/nashikclinic/clinics9.webp")`,sm:`linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/nashikclinic/clinics9.webp")`,md:` url("/images/heroback1.webp")`},
           
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",

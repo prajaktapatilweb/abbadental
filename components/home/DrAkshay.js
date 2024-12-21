@@ -44,7 +44,7 @@ const DrAkshay = () => {
         <Container>
           <div class="section-title">
             <h3>Your Dental Experts Await</h3>
-            <h2 style={{fontWeight:300,fontSize:20}}>Your Smile is in the Hands of the Best Dentist in Nashik</h2>
+            <h2 style={{ fontWeight: 300, fontSize: 20 }}>Your Smile is in the Hands of the Best Dentist in Nashik</h2>
           </div>
         </ Container>
 
@@ -119,13 +119,13 @@ const DrAkshay = () => {
                     fontWeight: '500',
                   }}
                 >
-                🏅 M.D.S. Gold Medalist Prosthodontist
-                                  </span>
+                  🏅 M.D.S. Gold Medalist Prosthodontist
+                </span>
 
 
                 <Box className="ps"
                   sx={{
-                    
+
                     color: "text.primary",
                     lineHeight: 1.5,
                     marginBottom: 2.5,
@@ -136,22 +136,22 @@ const DrAkshay = () => {
                   }}
                 >
                   <Typography>
-                  Dr. Nikhil Abbad is a highly accomplished Consultant Prosthodontist with over 8 years of experience, recognized as one of the best dentists in Nashik. Specializing in Crowns, Bridges, and Oral Implants, he has a distinguished educational background with an M.D.S. in Prosthodontics and Oral Implantology.
+                    Dr. Nikhil Abbad is a highly accomplished Consultant Prosthodontist with over 8 years of experience, recognized as one of the best dentists in Nashik. Specializing in Crowns, Bridges, and Oral Implants, he has a distinguished educational background with an M.D.S. in Prosthodontics and Oral Implantology.
 
-                  Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Center in Nashik, where he provides expert care in Implant Surgery and Full Mouth Rehabilitation. His professional journey and achievements include:
-                  <br />
-                  <b>Specialty:</b> Prosthodontics, Crown & Bridge, Oral Implantology<br />
-                  <b>Degrees:</b> M.D.S., Modern Dental College, Indore<br />
-                  <b>Experience: </b>Over 8 years in advanced prosthodontics and implantology<br />
-                  <b>Achievements:</b> Gold Medalist in MDS program; specialized training in Digital Smile Designing (University of Los Angeles)<br />
-                  <b>Research: </b>Published articles in international journals; awarded for best paper presentations in implant dentistry<br />
-                  <b>Prosthetics Training: </b>Oral and maxillofacial prosthetics at TATA Memorial Hospital, Mumbai<br />
-                  <b>Academic Role:</b> Visiting Assistant Professor, SMBT Sangamner<br />
-                Dr. Nikhil Abbad is passionate about improving patients' confidence through effective dental treatments. He is a dedicated member of the Indian Dental Association, Nashik Chapter, and remains committed to enhancing global healthcare through his expertise. If you’re searching for a “dentist near me”, your search ends here.
-                </Typography>
+                    Dr. Nikhil is the founder of Abbad Dental Clinic and Implant Centre in Nashik, where he provides expert care in Implant Surgery and Full Mouth Rehabilitation. His professional journey and achievements include:
+                    <br />
+                    <b>Specialty:</b> Prosthodontics, Crown & Bridge, Oral Implantology<br />
+                    <b>Degrees:</b> M.D.S., Modern Dental College, Indore<br />
+                    <b>Experience: </b>Over 8 years in advanced prosthodontics and implantology<br />
+                    <b>Achievements:</b> Gold Medalist in MDS program; specialized training in Digital Smile Designing (University of Los Angeles)<br />
+                    <b>Research: </b>Published articles in international journals; awarded for best paper presentations in implant dentistry<br />
+                    <b>Prosthetics Training: </b>Oral and maxillofacial prosthetics at TATA Memorial Hospital, Mumbai<br />
+                    <b>Academic Role:</b> Visiting Assistant Professor, SMBT Sangamner<br />
+                    Dr. Nikhil Abbad is passionate about improving patients' confidence through effective dental treatments. He is a dedicated member of the Indian Dental Association, Nashik Chapter, and remains committed to enhancing global healthcare through his expertise. If you’re searching for a “dentist near me”, your search ends here.
+                  </Typography>
 
-</Box>
-              
+                </Box>
+
                 <input type="checkbox" class="check" />
 
               </Box>
@@ -239,7 +239,7 @@ const DrAkshay = () => {
                 >
                   Dr. Leena Abbad is a skilled Dental Surgeon with extensive expertise in Endodontics and Restorative Dentistry. Graduating with a B.D.S. from Pravara Institute of Medical Sciences, Loni, she has garnered over 4 years of experience in the field. Dr. Leena is particularly renowned for her proficiency in painless single-sitting root canals and her keen eye for smile correction and design.
                   <br></br>
-                  As the co-founder of Abbad Dental Clinic and Implant Center in Nashik, Dr. Leena combines her deep knowledge and technical skills to deliver exceptional dental care, focusing on advanced endodontic procedures and aesthetic enhancements. Her dedication to staying at the forefront of dental innovation is evident from her active participation in major dental conferences and her commitment to ongoing education.
+                  As the co-founder of Abbad Dental Clinic and Implant Centre in Nashik, Dr. Leena combines her deep knowledge and technical skills to deliver exceptional dental care, focusing on advanced endodontic procedures and aesthetic enhancements. Her dedication to staying at the forefront of dental innovation is evident from her active participation in major dental conferences and her commitment to ongoing education.
                   <br />
                   <b>Specialty : </b>Dental Surgery<br />
                   <b>Degrees : </b>B.D.S., Pravara Institute of Medical Sciences, Loni<br />
@@ -258,7 +258,7 @@ const DrAkshay = () => {
 
 
         </Grid>
-       
+
       </Box>
     </>
   );

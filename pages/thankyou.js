@@ -39,8 +39,9 @@ export default function Thankyou() {
                                         textAlign: 'center'
                                     }}
                                 >
-                                    Thank you for showing interest in <Link href="/" >Abbaddentalclinic </Link>. We will contact you shortly.
+                                  Thank you for contacting us! Your smile matters, and we’ll be in touch soon!
                                 </Typography>
+                                <h4>We appreciate your message! Get ready for a healthier, happier smile—our team will be in touch shortly!</h4>
                                 <Stack direction='column' alignItems='center' >
                                     <Button size="large" variant="contained" sx={{ mt: 2, fontSize: 17, backgroundColor: 'secondary.main', alignContent: 'center', color: 'white' }}>
                                         <Link href="/#"  sx={{color:'black'}}>
