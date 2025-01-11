@@ -93,7 +93,7 @@ const containerVariants = {
     },
   };
   const { breakpoints } = useTheme();
-  const isMobile = useMediaQuery(breakpoints.down("sm"));// For screens smaller than 'sm'
+  const isMobile = useMediaQuery(breakpoints.down("md"));// For screens smaller than 'sm'
   const [visibleCards, setVisibleCards] = useState(4); // Initially show 4 cards on mobile screens
 
   // Function to show more cards
@@ -117,7 +117,7 @@ const containerVariants = {
         <Grid container spacing={3}>
          {/* Show limited cards on mobile, and all cards on desktop */}
          {Details.slice(0, isMobile ? visibleCards : Details.length).map((item, i) => (
-          <Grid item xs={12} md={4} key={i} sx={{ display: 'flex' }}>
+          <Grid item xs={12} sm={6} md={4} key={i} sx={{ display: 'flex' }}>
             <motion.div
               variants={fadeUpVariants}
               initial="hidden"
@@ -191,7 +191,7 @@ const containerVariants = {
         {/* Show "Explore More" button only if there are hidden cards */}
         {visibleCards < Details.length && (
           <Grid item xs={12} textAlign="center">
-            <Hidden smUp>
+            <Hidden mdUp>
             <Button variant="contained" sx={{backgroundColor:'primary.dark',mt:3}} onClick={handleShowMore}>
               Explore More
             </Button>
