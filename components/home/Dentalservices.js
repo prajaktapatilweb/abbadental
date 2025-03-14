@@ -177,7 +177,7 @@ const containerVariants = {
                   </Grid>
 
                   <Grid item xs={12} md={9}>
-                    <Typography variant='h4' sx={{ fontFamily: "League Spartan, sans-serif", fontWeight: 500, color: 'primary.dark', fontSize: '20px' }}>
+                    <Typography variant='h4' sx={{ fontFamily: "League Spartan, sans-serif", fontWeight: 500,  fontSize: '20px' }}>
                       {item.title}
                     </Typography>
                     <p style={{ marginTop: 3, textAlign: 'justify' }}>{item.desc}</p>
